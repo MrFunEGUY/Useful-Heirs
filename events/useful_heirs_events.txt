@@ -191,12 +191,6 @@ country_event = {
 				save_event_target_as = clone_heir_override
 				if = {
 					limit = {
-						owner = { is_ai = no }
-					}
-					set_name = "heir_name_bold"
-				}
-				if = {
-					limit = {
 						OR = {
 							has_trait = leader_trait_strategist
 							has_trait = leader_trait_general_strategist
@@ -322,12 +316,6 @@ country_event = {
 				save_event_target_as = clone_heir_override
 				if = {
 					limit = {
-						owner = { is_ai = no }
-					}
-					set_name = "heir_name_bold"
-				}
-				if = {
-					limit = {
 						OR = {
 							has_trait = leader_trait_general_strategist
 							has_trait = leader_trait_general_strategist2
@@ -441,12 +429,6 @@ country_event = {
 				save_event_target_as = clone_heir_override
 				if = {
 					limit = {
-						owner = { is_ai = no }
-					}
-					set_name = "heir_name_bold"
-				}
-				if = {
-					limit = {
 						OR = {
 							has_trait = leader_trait_strategist
 							has_trait = leader_trait_strategist2
@@ -558,12 +540,6 @@ country_event = {
 				set_leader_flag = clone_heir_scientist
 				set_leader_flag = clone_heir_base
 				save_event_target_as = clone_heir_override
-				if = {
-					limit = {
-						owner = { is_ai = no }
-					}
-					set_name = "heir_name_bold"
-				}
 				if = {
 					limit = {
 						OR = {
