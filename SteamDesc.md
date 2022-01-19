@@ -17,7 +17,7 @@ With Useful Heirs, you can:
 
 - Former Heirs won't stick around. Politically speaking, it would be pretty wild.
 
-- If you fire your Leader Heir, they will also be removed as your heir. On the one hand, this is a little annoying. On the other hand, this lets you get rid of heirs you don't like and reroll them, essentially. In the future, I will be looking for ways around this, but it may be out of my control. To make your heir recognizable (and so you don't accidentally fire them), their name will be orange. 
+- If you fire your Leader Heir, they will also be removed as your heir. On the one hand, this is a little annoying. On the other hand, this lets you get rid of heirs you don't like and reroll them, essentially. In the future, I will be looking for ways around this, but it may be out of my control.
 
 - When your Heir becomes your Ruler, they will not be able to continue doing their old job. Running an empire is a full-time gig.
 
@@ -32,8 +32,6 @@ With Useful Heirs, you can:
 - You can designate any leader as your heir for 500 influence. This will also cause your planets to lose some stability for 10 years. -10 Stability for the capital, -2 Stability for every other planet.
 
 - There is a new civic, Adoptive Dynasties, that grants +10 Stability and allows you to designate heirs without the stability hit or influence cost. If a dynastic heir ascends to the throne while you have this civic, you will lose the bonus stability. The capital will lose 15 stability and every other world will lose 10 stability. Practically, this means that you go from +10 to -10 on non-capital worlds, for a 20 stability hit.
-
-- Leaders you designate as your heir won't have their name color changed, so remember not to accidentally fire them.
 
 --
 
