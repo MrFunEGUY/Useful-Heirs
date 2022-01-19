@@ -1,0 +1,53 @@
+
+on_yearly_pulse_country = {
+	events = {
+		usefulheirs.9001			# AI Abdication event
+		usefulheirs.9004			# Remove No prior heirs flag
+		usefulheirs.9500			# Remove No prior heirs flag
+		usefulheirs.9510			# Remove No prior heirs flag
+	}
+}
+
+on_monthly_pulse_country = {
+	events = {
+		usefulheirs.9004			# Remove No prior heirs flag
+	}
+}
+
+on_bi_yearly_pulse_country = {
+	events = {
+		usefulheirs.9002			# Adoptive Dynasties AI Designate Heir event
+	}
+}
+
+# this = country
+on_five_year_pulse_country = {
+	events = {
+		usefulheirs.9000			# AI Heir Leader event
+	}
+}
+
+# this = country
+on_decade_pulse_country = {
+	events = {
+		usefulheirs.9003			# Random AI Designate Heir event
+	}
+}
+
+# Executed as a leader has died
+# This = Country
+# From = Leader
+on_leader_death = {
+	events = {
+		usefulheirs.3800			# Trigger for notificaction for New Non-Designated Ruler
+		usefulheirs.3850			# Trigger for notificaction dead designated heir
+	}
+}
+
+# Executed as new ruler has been set
+# This = Country
+on_ruler_set = {
+	events = {
+		usefulheirs.9600			# Fix ruler name color
+	}
+}

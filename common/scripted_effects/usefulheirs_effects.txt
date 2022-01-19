@@ -1,0 +1,487 @@
+
+#################################
+### Useful Heirs by MrFunEGUY ###
+#################################
+
+# Heir Setup Non - Adoptive Ddnasties
+heir_setup_non_ad = {
+	if = {
+		limit = {
+			exists = heir
+			has_global_flag = civil_wars_active
+		}
+		heir = { save_global_event_target_as = disinherited_heir_first }
+		clone_leader = {
+			target = event_target:disinherited_heir_first
+			class = ruler
+			effect = { save_global_event_target_as = disinherited_heir }
+		}
+		set_heir = event_target:new_chosen_heir
+		country_event = { id = usefulheirs.3500 }
+	}
+	else = {
+		set_heir = event_target:new_chosen_heir
+		country_event = { id = usefulheirs.3500 }
+	}
+}
+
+# Heir Setup Adoptive Ddnasties
+heir_setup_ad = {
+	if = {
+		limit = {
+			exists = heir
+			has_global_flag = civil_wars_active
+			heir = { has_leader_flag = appointed_heir }
+		}
+		heir = { save_global_event_target_as = disinherited_heir_first }
+		clone_leader = {
+			target = event_target:disinherited_heir_first
+			class = ruler
+			effect = { save_global_event_target_as = disinherited_heir }
+		}
+		set_heir = event_target:new_chosen_heir
+		country_event = { id = usefulheirs.3500 }
+	}
+	else = {
+		set_heir = event_target:new_chosen_heir
+		country_event = { id = usefulheirs.3500 }
+	}
+}
+
+# Heir Setup Non - Adoptive Ddnasties
+heir_setup_non_ad_just_disinherit = {
+	heir = { save_global_event_target_as = disinherited_heir }
+	clone_leader = {
+		target = event_target:disinherited_heir
+		class = ruler
+		effect = { save_global_event_target_as = disinherited_heir }
+	}
+	if = {
+		limit = {
+			has_global_flag = civil_wars_active
+		}
+		country_event = { id = civheir.1000 }
+	}
+}
+
+# Heir Setup Adoptive Ddnasties
+heir_setup_ad_just_disinherit = {
+	heir = {
+		save_global_event_target_as = disinherited_heir
+	}
+	clone_leader = {
+		target = event_target:disinherited_heir
+		class = ruler
+		effect = {
+			save_global_event_target_as = disinherited_heir
+		}
+	}
+	if = {
+		limit = {
+			has_global_flag = civil_wars_active
+		}
+		country_event = { id = civheir.1000 }
+	}
+}
+
+##############
+
+# Get Governor Leaders
+get_governors_heir = {
+	set_variable = { which = total_governors value = 0 }
+
+	every_owned_leader = {
+		limit = {
+			leader_class = governor
+			NOR = {
+				has_leader_flag = clone_heir_base
+				is_same_value = heir
+			}
+		}
+		set_leader_flag = heir_maybe
+		root = { change_variable = { which = total_governors value = 1 } }
+	}
+
+	if = {
+		limit = { check_variable = { which = total_governors value >= 1 } }
+		random_owned_leader = {
+			limit = { has_leader_flag = heir_maybe }
+			remove_leader_flag = heir_maybe
+			save_event_target_as = heir_maybe_1
+		}
+	}
+	if = {
+		limit = { check_variable = { which = total_governors value >= 2 } }
+		random_owned_leader = {
+			limit = { has_leader_flag = heir_maybe }
+			remove_leader_flag = heir_maybe
+			save_event_target_as = heir_maybe_2
+		}
+	}
+	if = {
+		limit = { check_variable = { which = total_governors value >= 3 } }
+		random_owned_leader = {
+			limit = { has_leader_flag = heir_maybe }
+			remove_leader_flag = heir_maybe
+			save_event_target_as = heir_maybe_3
+		}
+	}
+	if = {
+		limit = { check_variable = { which = total_governors value >= 4 } }
+		random_owned_leader = {
+			limit = { has_leader_flag = heir_maybe }
+			remove_leader_flag = heir_maybe
+			save_event_target_as = heir_maybe_4
+		}
+	}
+	if = {
+		limit = { check_variable = { which = total_governors value >= 5 } }
+		random_owned_leader = {
+			limit = { has_leader_flag = heir_maybe }
+			remove_leader_flag = heir_maybe
+			save_event_target_as = heir_maybe_5
+		}
+	}
+	if = {
+		limit = { check_variable = { which = total_governors value >= 6 } }
+		random_owned_leader = {
+			limit = { has_leader_flag = heir_maybe }
+			remove_leader_flag = heir_maybe
+			save_event_target_as = heir_maybe_6
+		}
+	}
+	if = {
+		limit = { check_variable = { which = total_governors value >= 7 } }
+		random_owned_leader = {
+			limit = { has_leader_flag = heir_maybe }
+			remove_leader_flag = heir_maybe
+			save_event_target_as = heir_maybe_7
+		}
+	}
+	if = {
+		limit = { check_variable = { which = total_governors value >= 8 } }
+		random_owned_leader = {
+			limit = { has_leader_flag = heir_maybe }
+			remove_leader_flag = heir_maybe
+			save_event_target_as = heir_maybe_8
+		}
+	}
+	if = {
+		limit = { check_variable = { which = total_governors value >= 9 } }
+		random_owned_leader = {
+			limit = { has_leader_flag = heir_maybe }
+			remove_leader_flag = heir_maybe
+			save_event_target_as = heir_maybe_9
+		}
+	}
+	if = {
+		limit = { check_variable = { which = total_governors value >= 10 } }
+		random_owned_leader = {
+			limit = { has_leader_flag = heir_maybe }
+			remove_leader_flag = heir_maybe
+			save_event_target_as = heir_maybe_10
+		}
+	}
+
+	country_event = { id = usefulheirs.3110 }
+}
+
+# Get Admiral Leaders
+get_admirals_heir = {
+	set_variable = { which = total_admirals value = 0 }
+
+	every_owned_leader = {
+		limit = {
+			leader_class = admiral
+			NOR = {
+				has_leader_flag = clone_heir_base
+				is_same_value = heir
+			}
+		}
+		set_leader_flag = heir_maybe
+		root = { change_variable = { which = total_admirals value = 1 } }
+	}
+
+	if = {
+		limit = { check_variable = { which = total_admirals value >= 1 } }
+		random_owned_leader = {
+			limit = { has_leader_flag = heir_maybe }
+			remove_leader_flag = heir_maybe
+			save_event_target_as = heir_maybe_1
+		}
+	}
+	if = {
+		limit = { check_variable = { which = total_admirals value >= 2 } }
+		random_owned_leader = {
+			limit = { has_leader_flag = heir_maybe }
+			remove_leader_flag = heir_maybe
+			save_event_target_as = heir_maybe_2
+		}
+	}
+	if = {
+		limit = { check_variable = { which = total_admirals value >= 3 } }
+		random_owned_leader = {
+			limit = { has_leader_flag = heir_maybe }
+			remove_leader_flag = heir_maybe
+			save_event_target_as = heir_maybe_3
+		}
+	}
+	if = {
+		limit = { check_variable = { which = total_admirals value >= 4 } }
+		random_owned_leader = {
+			limit = { has_leader_flag = heir_maybe }
+			remove_leader_flag = heir_maybe
+			save_event_target_as = heir_maybe_4
+		}
+	}
+	if = {
+		limit = { check_variable = { which = total_admirals value >= 5 } }
+		random_owned_leader = {
+			limit = { has_leader_flag = heir_maybe }
+			remove_leader_flag = heir_maybe
+			save_event_target_as = heir_maybe_5
+		}
+	}
+	if = {
+		limit = { check_variable = { which = total_admirals value >= 6 } }
+		random_owned_leader = {
+			limit = { has_leader_flag = heir_maybe }
+			remove_leader_flag = heir_maybe
+			save_event_target_as = heir_maybe_6
+		}
+	}
+	if = {
+		limit = { check_variable = { which = total_admirals value >= 7 } }
+		random_owned_leader = {
+			limit = { has_leader_flag = heir_maybe }
+			remove_leader_flag = heir_maybe
+			save_event_target_as = heir_maybe_7
+		}
+	}
+	if = {
+		limit = { check_variable = { which = total_admirals value >= 8 } }
+		random_owned_leader = {
+			limit = { has_leader_flag = heir_maybe }
+			remove_leader_flag = heir_maybe
+			save_event_target_as = heir_maybe_8
+		}
+	}
+	if = {
+		limit = { check_variable = { which = total_admirals value >= 9 } }
+		random_owned_leader = {
+			limit = { has_leader_flag = heir_maybe }
+			remove_leader_flag = heir_maybe
+			save_event_target_as = heir_maybe_9
+		}
+	}
+	if = {
+		limit = { check_variable = { which = total_admirals value >= 10 } }
+		random_owned_leader = {
+			limit = { has_leader_flag = heir_maybe }
+			remove_leader_flag = heir_maybe
+			save_event_target_as = heir_maybe_10
+		}
+	}
+
+	country_event = { id = usefulheirs.3120 }
+}
+
+# Get General Leaders
+get_generals_heir = {
+	set_variable = { which = total_generals value = 0 }
+
+	every_owned_leader = {
+		limit = {
+			leader_class = general
+			NOR = {
+				has_leader_flag = clone_heir_base
+				is_same_value = heir
+			}
+		}
+		set_leader_flag = heir_maybe
+		root = { change_variable = { which = total_generals value = 1 } }
+	}
+
+	if = {
+		limit = { check_variable = { which = total_generals value >= 1 } }
+		random_owned_leader = {
+			limit = { has_leader_flag = heir_maybe }
+			remove_leader_flag = heir_maybe
+			save_event_target_as = heir_maybe_1
+		}
+	}
+	if = {
+		limit = { check_variable = { which = total_generals value >= 2 } }
+		random_owned_leader = {
+			limit = { has_leader_flag = heir_maybe }
+			remove_leader_flag = heir_maybe
+			save_event_target_as = heir_maybe_2
+		}
+	}
+	if = {
+		limit = { check_variable = { which = total_generals value >= 3 } }
+		random_owned_leader = {
+			limit = { has_leader_flag = heir_maybe }
+			remove_leader_flag = heir_maybe
+			save_event_target_as = heir_maybe_3
+		}
+	}
+	if = {
+		limit = { check_variable = { which = total_generals value >= 4 } }
+		random_owned_leader = {
+			limit = { has_leader_flag = heir_maybe }
+			remove_leader_flag = heir_maybe
+			save_event_target_as = heir_maybe_4
+		}
+	}
+	if = {
+		limit = { check_variable = { which = total_generals value >= 5 } }
+		random_owned_leader = {
+			limit = { has_leader_flag = heir_maybe }
+			remove_leader_flag = heir_maybe
+			save_event_target_as = heir_maybe_5
+		}
+	}
+	if = {
+		limit = { check_variable = { which = total_generals value >= 6 } }
+		random_owned_leader = {
+			limit = { has_leader_flag = heir_maybe }
+			remove_leader_flag = heir_maybe
+			save_event_target_as = heir_maybe_6
+		}
+	}
+	if = {
+		limit = { check_variable = { which = total_generals value >= 7 } }
+		random_owned_leader = {
+			limit = { has_leader_flag = heir_maybe }
+			remove_leader_flag = heir_maybe
+			save_event_target_as = heir_maybe_7
+		}
+	}
+	if = {
+		limit = { check_variable = { which = total_generals value >= 8 } }
+		random_owned_leader = {
+			limit = { has_leader_flag = heir_maybe }
+			remove_leader_flag = heir_maybe
+			save_event_target_as = heir_maybe_8
+		}
+	}
+	if = {
+		limit = { check_variable = { which = total_generals value >= 9 } }
+		random_owned_leader = {
+			limit = { has_leader_flag = heir_maybe }
+			remove_leader_flag = heir_maybe
+			save_event_target_as = heir_maybe_9
+		}
+	}
+	if = {
+		limit = { check_variable = { which = total_generals value >= 10 } }
+		random_owned_leader = {
+			limit = { has_leader_flag = heir_maybe }
+			remove_leader_flag = heir_maybe
+			save_event_target_as = heir_maybe_10
+		}
+	}
+
+	country_event = { id = usefulheirs.3130 }
+}
+
+# Get Scientist Leaders
+get_scientists_heir = {
+	set_variable = { which = total_scientists value = 0 }
+
+	every_owned_leader = {
+		limit = {
+			leader_class = scientist
+			NOR = {
+				has_leader_flag = clone_heir_base
+				is_same_value = heir
+			}
+		}
+		set_leader_flag = heir_maybe
+		root = { change_variable = { which = total_scientists value = 1 } }
+	}
+
+	if = {
+		limit = { check_variable = { which = total_scientists value >= 1 } }
+		random_owned_leader = {
+			limit = { has_leader_flag = heir_maybe }
+			remove_leader_flag = heir_maybe
+			save_event_target_as = heir_maybe_1
+		}
+	}
+	if = {
+		limit = { check_variable = { which = total_scientists value >= 2 } }
+		random_owned_leader = {
+			limit = { has_leader_flag = heir_maybe }
+			remove_leader_flag = heir_maybe
+			save_event_target_as = heir_maybe_2
+		}
+	}
+	if = {
+		limit = { check_variable = { which = total_scientists value >= 3 } }
+		random_owned_leader = {
+			limit = { has_leader_flag = heir_maybe }
+			remove_leader_flag = heir_maybe
+			save_event_target_as = heir_maybe_3
+		}
+	}
+	if = {
+		limit = { check_variable = { which = total_scientists value >= 4 } }
+		random_owned_leader = {
+			limit = { has_leader_flag = heir_maybe }
+			remove_leader_flag = heir_maybe
+			save_event_target_as = heir_maybe_4
+		}
+	}
+	if = {
+		limit = { check_variable = { which = total_scientists value >= 5 } }
+		random_owned_leader = {
+			limit = { has_leader_flag = heir_maybe }
+			remove_leader_flag = heir_maybe
+			save_event_target_as = heir_maybe_5
+		}
+	}
+	if = {
+		limit = { check_variable = { which = total_scientists value >= 6 } }
+		random_owned_leader = {
+			limit = { has_leader_flag = heir_maybe }
+			remove_leader_flag = heir_maybe
+			save_event_target_as = heir_maybe_6
+		}
+	}
+	if = {
+		limit = { check_variable = { which = total_scientists value >= 7 } }
+		random_owned_leader = {
+			limit = { has_leader_flag = heir_maybe }
+			remove_leader_flag = heir_maybe
+			save_event_target_as = heir_maybe_7
+		}
+	}
+	if = {
+		limit = { check_variable = { which = total_scientists value >= 8 } }
+		random_owned_leader = {
+			limit = { has_leader_flag = heir_maybe }
+			remove_leader_flag = heir_maybe
+			save_event_target_as = heir_maybe_8
+		}
+	}
+	if = {
+		limit = { check_variable = { which = total_scientists value >= 9 } }
+		random_owned_leader = {
+			limit = { has_leader_flag = heir_maybe }
+			remove_leader_flag = heir_maybe
+			save_event_target_as = heir_maybe_9
+		}
+	}
+	if = {
+		limit = { check_variable = { which = total_scientists value >= 10 } }
+		random_owned_leader = {
+			limit = { has_leader_flag = heir_maybe }
+			remove_leader_flag = heir_maybe
+			save_event_target_as = heir_maybe_10
+		}
+	}
+
+	country_event = { id = usefulheirs.3140 }
+}

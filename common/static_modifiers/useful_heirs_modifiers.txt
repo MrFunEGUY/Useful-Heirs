@@ -1,0 +1,19 @@
+chose_new_heir = {
+	planet_stability_add = -2
+	icon = "gfx/interface/icons/planet_modifiers/pm_alien_propaganda.dds"
+}
+
+chose_new_heir_capital = {
+	planet_stability_add = -10
+	icon = "gfx/interface/icons/planet_modifiers/pm_alien_propaganda.dds"
+}
+
+dynastic_heir = {
+	planet_stability_add = -20
+	icon = "gfx/interface/icons/planet_modifiers/pm_unrest.dds"
+}
+
+dynastic_heir_capital = {
+	planet_stability_add = -25
+	icon = "gfx/interface/icons/planet_modifiers/pm_unrest.dds"
+}
