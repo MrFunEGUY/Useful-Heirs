@@ -1,13 +1,5 @@
 # Triggers when the game starts
-on_game_start = {
-	events = {
-		usefulheirs.9700				# Set heir name color flag
-	}
-}
-
-# No scope, like on_game_start
-# Does not run when loading MP saves due to OOS concerns
-on_single_player_save_game_load = {
+on_game_start_country = {
 	events = {
 		usefulheirs.9700				# Set heir name color flag
 	}
@@ -19,6 +11,7 @@ on_yearly_pulse_country = {
 		usefulheirs.9004			# Remove No prior heirs flag
 		usefulheirs.9500			# Remove No prior heirs flag
 		usefulheirs.9510			# Remove No prior heirs flag
+		usefulheirs.9700			# Set heir name color flag, newly spawned empires or mod installed mid-save
 	}
 }
 

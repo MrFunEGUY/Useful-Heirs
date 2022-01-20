@@ -148,11 +148,11 @@ country_event = {
 		custom_tooltip = usefulheirs.2000.name_color_deactivated.tooltip
 		trigger = {
 			is_ai = no
-			has_global_flag = heir_name_color_deactivated
+			has_country_flag = heir_name_color_deactivated
 		}
 		hidden_effect = {
-			set_global_flag = heir_name_color_activated
-			remove_global_flag = heir_name_color_deactivated
+			set_country_flag = heir_name_color_activated
+			remove_country_flag = heir_name_color_deactivated
 			country_event = { id = usefulheirs.2000 }
 		}
 	}
@@ -162,11 +162,11 @@ country_event = {
 		name = usefulheirs.2000.name_color_activated
 		trigger = {
 			is_ai = no
-			has_global_flag = heir_name_color_activated
+			has_country_flag = heir_name_color_activated
 		}
 		hidden_effect = {
-			set_global_flag = heir_name_color_deactivated
-			remove_global_flag = heir_name_color_activated
+			set_country_flag = heir_name_color_deactivated
+			remove_country_flag = heir_name_color_activated
 			country_event = { id = usefulheirs.2000 }
 		}
 	}
@@ -220,7 +220,7 @@ country_event = {
 				if = {
 					limit = {
 						owner = { is_ai = no }
-						has_global_flag = heir_name_color_activated
+						has_country_flag = heir_name_color_activated
 					}
 					set_name = "heir_name_bold"
 				}
@@ -352,7 +352,7 @@ country_event = {
 				if = {
 					limit = {
 						owner = { is_ai = no }
-						has_global_flag = heir_name_color_activated
+						has_country_flag = heir_name_color_activated
 					}
 					set_name = "heir_name_bold"
 				}
@@ -472,7 +472,7 @@ country_event = {
 				if = {
 					limit = {
 						owner = { is_ai = no }
-						has_global_flag = heir_name_color_activated
+						has_country_flag = heir_name_color_activated
 					}
 					set_name = "heir_name_bold"
 				}
@@ -592,7 +592,7 @@ country_event = {
 				if = {
 					limit = {
 						owner = { is_ai = no }
-						has_global_flag = heir_name_color_activated
+						has_country_flag = heir_name_color_activated
 					}
 					set_name = "heir_name_bold"
 				}
@@ -4064,17 +4064,18 @@ country_event = {
 }
 
 # Set Heir name flag
-event = {
+country_event = {
 	id = usefulheirs.9700
 	hide_window = yes
 	is_triggered_only = yes
 
 	trigger = {
-		NOT = { has_global_flag = heir_name_color_deactivated }
+		NOT = { has_country_flag = useful_heirs_check }
 	}
 
 	immediate = {
-		set_global_flag = heir_name_color_deactivated
+		set_country_flag = useful_heirs_check
+		set_country_flag = heir_name_color_deactivated
 	}
 }
 
