@@ -8,7 +8,7 @@
 
  usefulheirs.2000.AI: "AI"
 
- usefulheirs.1000.name:0 "[root.GetHeirTitle] [event_target:heir_leader.GetName]"
+ usefulheirs.1000.name:0 "[root.GetHeirTitle] §H[event_target:heir_leader.GetName]§!"
  usefulheirs.1000.desc:0 "You summoned me, [root.GetRulerTitle]?"
 
  usefulheirs.1000.a:0 "You need to gain experience within our empire."
@@ -20,14 +20,16 @@
  usefulheirs.1000.c.tooltip:0 "We will retire and our heir shall take over."
  usefulheirs.1000.d:0 "Nevermind."
 
- usefulheirs.2000.name:0 "[root.GetHeirTitle] [event_target:heir_leader.GetName]"
  usefulheirs.2000.desc:0 "How may I best serve you and the [Root.GetName]?"
 
  usefulheirs.2000.a:0 "As a Governor of one of our sectors."
  usefulheirs.2000.b:0 "As an Admiral in our navy."
  usefulheirs.2000.c:0 "As a General in our army."
  usefulheirs.2000.d:0 "As a Scientist within our empire."
- usefulheirs.2000.e:0 "Actually, you don't need any other resposibilities."
+ usefulheirs.2000.back:0 "Actually, you don't need any other resposibilities."
+ usefulheirs.2000.name_color_deactivated:0 "Heir Name Color: §EDefault§!"
+ usefulheirs.2000.name_color_deactivated.tooltip:0 "Activating this will make your heir's name §Horange§! if you assign them as a leader. Once their name is §Horange§!, it will be §Horange§! for the rest of their life."
+ usefulheirs.2000.name_color_activated:0 "Heir Name Color: §HOrange§!"
 
  usefulheirs.3000.name:0 "[root.GetHeirTitle] [event_target:heir_leader.GetName]"
  usefulheirs.3000.desc:0 "My [root.GetRulerTitle], I beg you to reconsider!"

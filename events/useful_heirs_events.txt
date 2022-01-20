@@ -60,11 +60,10 @@ country_event = {
 
 ######################
 
-
 # Pick heir job
 country_event = {
 	id = usefulheirs.2000
-	title = usefulheirs.2000.name
+	title = usefulheirs.1000.name
 	desc = usefulheirs.2000.desc
 	hide_window = no
 	is_triggered_only = yes
@@ -81,7 +80,7 @@ country_event = {
 
 	# Nevermind
 	option = {
-		name = usefulheirs.2000.e
+		name = usefulheirs.2000.back
 		trigger = {
 			is_ai = no
 		}
@@ -143,6 +142,35 @@ country_event = {
 		}
 	}
 
+	# Heir Name Color
+	option = {
+		name = usefulheirs.2000.name_color_deactivated
+		custom_tooltip = usefulheirs.2000.name_color_deactivated.tooltip
+		trigger = {
+			is_ai = no
+			has_global_flag = heir_name_color_deactivated
+		}
+		hidden_effect = {
+			set_global_flag = heir_name_color_activated
+			remove_global_flag = heir_name_color_deactivated
+			country_event = { id = usefulheirs.2000 }
+		}
+	}
+
+	# Heir Name Color
+	option = {
+		name = usefulheirs.2000.name_color_activated
+		trigger = {
+			is_ai = no
+			has_global_flag = heir_name_color_activated
+		}
+		hidden_effect = {
+			set_global_flag = heir_name_color_deactivated
+			remove_global_flag = heir_name_color_activated
+			country_event = { id = usefulheirs.2000 }
+		}
+	}
+
 	# AI Option
 	option = {
 		name = usefulheirs.2000.AI
@@ -189,6 +217,13 @@ country_event = {
 				set_leader_flag = clone_heir_governor
 				set_leader_flag = clone_heir_base
 				save_event_target_as = clone_heir_override
+				if = {
+					limit = {
+						owner = { is_ai = no }
+						has_global_flag = heir_name_color_activated
+					}
+					set_name = "heir_name_bold"
+				}
 				if = {
 					limit = {
 						OR = {
@@ -316,6 +351,13 @@ country_event = {
 				save_event_target_as = clone_heir_override
 				if = {
 					limit = {
+						owner = { is_ai = no }
+						has_global_flag = heir_name_color_activated
+					}
+					set_name = "heir_name_bold"
+				}
+				if = {
+					limit = {
 						OR = {
 							has_trait = leader_trait_general_strategist
 							has_trait = leader_trait_general_strategist2
@@ -429,6 +471,13 @@ country_event = {
 				save_event_target_as = clone_heir_override
 				if = {
 					limit = {
+						owner = { is_ai = no }
+						has_global_flag = heir_name_color_activated
+					}
+					set_name = "heir_name_bold"
+				}
+				if = {
+					limit = {
 						OR = {
 							has_trait = leader_trait_strategist
 							has_trait = leader_trait_strategist2
@@ -540,6 +589,13 @@ country_event = {
 				set_leader_flag = clone_heir_scientist
 				set_leader_flag = clone_heir_base
 				save_event_target_as = clone_heir_override
+				if = {
+					limit = {
+						owner = { is_ai = no }
+						has_global_flag = heir_name_color_activated
+					}
+					set_name = "heir_name_bold"
+				}
 				if = {
 					limit = {
 						OR = {
@@ -4003,6 +4059,22 @@ country_event = {
 	immediate = {
 		ruler = {
 			set_name = "ruler_name_white"
+		}
+	}
+}
+
+# Set Heir name flag
+event = {
+	id = usefulheirs.9700
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = { has_global_flag = heir_name_color_deactivated }
+			}
+			set_global_flag = heir_name_color_deactivated
 		}
 	}
 }
