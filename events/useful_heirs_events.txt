@@ -78,6 +78,17 @@ country_event = {
 		room = root.ruler
 	}
 
+	# Set Heir name flag
+	immediate = {
+		if = {
+			limit = {
+				NOT = { has_country_flag = useful_heirs_check }
+			}
+			set_country_flag = useful_heirs_check
+			set_country_flag = heir_name_color_deactivated
+		}
+	}
+
 	# Nevermind
 	option = {
 		name = usefulheirs.2000.back
@@ -4060,22 +4071,6 @@ country_event = {
 		ruler = {
 			set_name = "ruler_name_white"
 		}
-	}
-}
-
-# Set Heir name flag
-country_event = {
-	id = usefulheirs.9700
-	hide_window = yes
-	is_triggered_only = yes
-
-	trigger = {
-		NOT = { has_country_flag = useful_heirs_check }
-	}
-
-	immediate = {
-		set_country_flag = useful_heirs_check
-		set_country_flag = heir_name_color_deactivated
 	}
 }
 

@@ -1,17 +1,9 @@
-# Triggers when the game starts
-on_game_start_country = {
-	events = {
-		usefulheirs.9700				# Set heir name color flag
-	}
-}
-
 on_yearly_pulse_country = {
 	events = {
 		usefulheirs.9001			# AI Abdication event
 		usefulheirs.9004			# Remove No prior heirs flag
 		usefulheirs.9500			# Remove No prior heirs flag
 		usefulheirs.9510			# Remove No prior heirs flag
-		usefulheirs.9700			# Set heir name color flag, newly spawned empires or mod installed mid-save
 	}
 }
 
