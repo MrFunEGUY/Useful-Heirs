@@ -78,7 +78,7 @@ country_event = {
 		room = root.ruler
 	}
 
-	# Set Heir name flag
+	# Set Heir name color flag
 	immediate = {
 		if = {
 			limit = {
