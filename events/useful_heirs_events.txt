@@ -4069,13 +4069,12 @@ event = {
 	hide_window = yes
 	is_triggered_only = yes
 
+	trigger = {
+		NOT = { has_global_flag = heir_name_color_deactivated }
+	}
+
 	immediate = {
-		if = {
-			limit = {
-				NOT = { has_global_flag = heir_name_color_deactivated }
-			}
-			set_global_flag = heir_name_color_deactivated
-		}
+		set_global_flag = heir_name_color_deactivated
 	}
 }
 
