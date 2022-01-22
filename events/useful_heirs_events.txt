@@ -230,8 +230,10 @@ country_event = {
 				save_event_target_as = clone_heir_override
 				if = {
 					limit = {
-						owner = { is_ai = no }
-						has_country_flag = heir_name_color_activated
+						owner = {
+							is_ai = no
+							has_country_flag = heir_name_color_activated
+						}
 					}
 					set_name = "heir_name_bold"
 				}
@@ -362,8 +364,10 @@ country_event = {
 				save_event_target_as = clone_heir_override
 				if = {
 					limit = {
-						owner = { is_ai = no }
-						has_country_flag = heir_name_color_activated
+						owner = {
+							is_ai = no
+							has_country_flag = heir_name_color_activated
+						}
 					}
 					set_name = "heir_name_bold"
 				}
@@ -482,8 +486,10 @@ country_event = {
 				save_event_target_as = clone_heir_override
 				if = {
 					limit = {
-						owner = { is_ai = no }
-						has_country_flag = heir_name_color_activated
+						owner = {
+							is_ai = no
+							has_country_flag = heir_name_color_activated
+						}
 					}
 					set_name = "heir_name_bold"
 				}
@@ -602,8 +608,10 @@ country_event = {
 				save_event_target_as = clone_heir_override
 				if = {
 					limit = {
-						owner = { is_ai = no }
-						has_country_flag = heir_name_color_activated
+						owner = {
+							is_ai = no
+							has_country_flag = heir_name_color_activated
+						}
 					}
 					set_name = "heir_name_bold"
 				}
@@ -2978,6 +2986,7 @@ country_event = {
 		clone_leader = {
 			target = event_target:deceased_heir
 			effect = {
+				set_leader_flag = dead_ruler
 				save_event_target_as = deceased_heir
 			}
 		}
@@ -3880,6 +3889,27 @@ country_event = {
 	}
 }
 
+# Remove heir flag from ruler
+country_event = {
+	id = usefulheirs.9100
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		ruler = {
+			has_leader_flag = appointed_heir
+		}
+	}
+
+	immediate = {
+		ruler = {
+			remove_leader_flag = appointed_heir
+		}
+	}
+}
+
+# 9200-9400 Free
+
 country_event = { # Psionic Fix - Give heir correct trait
 	id = usefulheirs.9500
 	hide_window = yes
@@ -4057,19 +4087,6 @@ country_event = { # Psionic Fix - Remove traits after switching jobs
 					remove_trait = leader_trait_governor_psionic
 				}
 			}
-		}
-	}
-}
-
-# Set ruler name to white
-country_event = {
-	id = usefulheirs.9600
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = {
-		ruler = {
-			set_name = "ruler_name_white"
 		}
 	}
 }

@@ -47,6 +47,6 @@ on_leader_death = {
 # This = Country
 on_ruler_set = {
 	events = {
-		usefulheirs.9600			# Fix ruler name color
+		usefulheirs.9100			# Remove heir flag from ruler
 	}
 }
