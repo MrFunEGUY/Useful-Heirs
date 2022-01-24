@@ -3,7 +3,7 @@
  edict_useful_heirs_1:0 "Вызвать моего наследника"
  edict_useful_heirs_1_desc:0 "Есть вопросы, которые нужно обсудить с моим наследником ."
 
- usefulheirs.1000.name:0 "[root.GetHeirTitle] [event_target:heir_leader.GetName]"
+ usefulheirs.1000.name:0 "[root.GetHeirTitle] §H[event_target:heir_leader.GetName]§!"
  usefulheirs.1000.desc:0 "Ты вызвал меня, [root.GetRulerTitle]?"
 
  usefulheirs.1000.a:0 "Тебе нужно набираться опыта в нашей империи."
@@ -14,7 +14,6 @@
  usefulheirs.1000.c.tooltip:0 "Мы уйдем на пенсию, и наш наследник вступит на престол."
  usefulheirs.1000.d:0 "Забудь."
 
- usefulheirs.2000.name:0 "[root.GetHeirTitle] [event_target:heir_leader.GetName]"
  usefulheirs.2000.desc:0 "Как я могу лучше всего служить вам и [Root.GetName]?"
 
  usefulheirs.2000.a:0 "Как Губернатор одного из наших секторов."
@@ -23,7 +22,6 @@
  usefulheirs.2000.d:0 "Как Ученый в нашей империи."
  usefulheirs.2000.e:0 "Собственно, никаких других обязанностей тебе не нужно."
 
- usefulheirs.3000.name:0 "[root.GetHeirTitle] [event_target:heir_leader.GetName]"
  usefulheirs.3000.desc:0 "Мой [root.GetRulerTitle], Прошу пересмотреть!"
 
  usefulheirs.3000.a:0 "Один из наших Губернаторов займет ваше место."

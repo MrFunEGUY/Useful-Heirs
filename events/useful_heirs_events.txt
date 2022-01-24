@@ -731,7 +731,7 @@ country_event = {
 # Designate any leader as your heir
 country_event = {
 	id = usefulheirs.3000
-	title = usefulheirs.3000.name
+	title = usefulheirs.1000.name
 
 	desc = {
 		text = usefulheirs.3000.desc

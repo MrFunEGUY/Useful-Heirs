@@ -50,11 +50,15 @@ heir_setup_ad = {
 
 # Heir Setup Non - Adoptive Ddnasties
 heir_setup_non_ad_just_disinherit = {
-	heir = { save_global_event_target_as = disinherited_heir }
+	heir = { save_global_event_target_as = disinherited_heir_first }
 	clone_leader = {
-		target = event_target:disinherited_heir
+		target = event_target:disinherited_heir_first
 		class = ruler
 		effect = { save_global_event_target_as = disinherited_heir }
+	}
+	event_target:disinherited_heir_first = {
+		set_leader_flag = dead_ruler
+		kill_leader = { show_notification = no }
 	}
 	if = {
 		limit = {
@@ -67,14 +71,18 @@ heir_setup_non_ad_just_disinherit = {
 # Heir Setup Adoptive Ddnasties
 heir_setup_ad_just_disinherit = {
 	heir = {
-		save_global_event_target_as = disinherited_heir
+		save_global_event_target_as = disinherited_heir_first
 	}
 	clone_leader = {
-		target = event_target:disinherited_heir
+		target = event_target:disinherited_heir_first
 		class = ruler
 		effect = {
 			save_global_event_target_as = disinherited_heir
 		}
+	}
+	event_target:disinherited_heir_first = {
+		set_leader_flag = dead_ruler
+		kill_leader = { show_notification = no }
 	}
 	if = {
 		limit = {
