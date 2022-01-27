@@ -3916,6 +3916,7 @@ country_event = { # Psionic Fix - Give heir correct trait
 	is_triggered_only = yes
 
 	trigger = {
+		exists = heir
 		heir = {
 			has_trait = leader_trait_ruler_psionic
 			NOR = {
@@ -3962,6 +3963,7 @@ country_event = { # Psionic Fix - Remove traits after switching jobs
 	is_triggered_only = yes
 
 	trigger = {
+		exists = heir
 		heir = {
 			OR = {
 				AND = {

@@ -42,7 +42,7 @@ With Useful Heirs, you can:
 
 [hr][/hr]
 
-If you're also using my [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2434790082]Civil Wars[/url] mod, disinherited heirs can cause a problems. The consquences may take years to occur, such as when the old leader dies, or they may occur quickly. This can be mitigated by Adoptive Dynasties, but even then once an heir is appointed they will not take kindly to being disinherited. Disinherited heirs may also try to run away to a foreign empire. Foreign empires will have the choice of whether to grant them asylum. If they accept, the heir will become a leader for that empire, and they will gain a Casus Belli to install them on their old throne. You will also gain a Casus Belli to retrieve them.
+If you're also using my [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2434790082]Civil Wars[/url] mod, disinherited heirs can cause problems. The consquences may take years to occur, such as when the old leader dies, or they may occur quickly. This can be mitigated by Adoptive Dynasties, but even then once an heir is appointed they will not take kindly to being disinherited. Disinherited heirs may also try to run away to a foreign empire. Foreign empires will have the choice of whether to grant them asylum. If they accept, the heir will become a leader for that empire, and they will gain a Casus Belli to install them on their old throne. You will also gain a Casus Belli to retrieve them.
 
 The player may also be given the option to accept disinherited Heirs (and other leaders, because you do need my [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2434790082]Civil Wars[/url] mod for these features) from other countries into their empire, if the situation occurs.
 
@@ -91,6 +91,8 @@ This can even happen if you change your government type away from Imperial (or a
 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2493028212]- End Truce & Close Borders[/url]
 
 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2452302093]- We Require Borders[/url]
+
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2732567565]- No More Exclaves[/url]
 
 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2183551683]- Vassals Expanded and Reworked - FunEFork[/url]
 
