@@ -3660,8 +3660,6 @@ country_event = {
 				has_leader_flag = clone_heir_admiral
 				has_leader_flag = clone_heir_general
 				has_leader_flag = clone_heir_scientist
-			}
-			NOR = {
 				leader_class = governor
 				leader_class = admiral
 				leader_class = general
