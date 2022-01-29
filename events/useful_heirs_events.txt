@@ -4099,11 +4099,131 @@ country_event = { # Psionic Fix - Remove traits after switching jobs
 # 	hide_window = yes
 # 	is_triggered_only = yes
 
-# 	trigger = { 
-# 		from = { leader_class = ruler }
+# 	trigger = {
 # 		exists = heir
+# 		heir = {
+# 			NOR = {
+# 				has_leader_flag = heir_age_set
+# 				has_leader_flag = appointed_heir
+# 			}
+# 		}
 # 	}
 
 # 	immediate = {
+# 		ruler = {
+# 			if = {
+# 				limit = {
+# 					leader_age <= 50
+# 				}
+# 			}
+# 			else_if = {
+# 				limit= {
+# 					leader_age > 50
+# 					leader_age <= 60
+# 				}
+# 				heir = {
+# 					random_list = {
+# 						10 = { set_age = 16 }
+# 						10 = { set_age = 17 }
+# 						10 = { set_age = 18 }
+# 						10 = { set_age = 19 }
+# 						10 = { set_age = 20 }
+# 						10 = { set_age = 21 }
+# 						10 = { set_age = 22 }
+# 						10 = { set_age = 23 }
+# 						10 = { set_age = 24 }
+# 						10 = { set_age = 25 }
+# 						10 = { set_age = 26 }
+# 						10 = { set_age = 27 }
+# 						10 = { set_age = 28 }
+# 						10 = { set_age = 29 }
+# 						10 = { set_age = 31 }
+# 						10 = { set_age = 32 }
+# 						10 = { set_age = 33 }
+# 						10 = { set_age = 34 }
+# 						10 = { set_age = 35 }
+# 						10 = { set_age = 36 }
+# 						10 = { set_age = 37 }
+# 						10 = { set_age = 38 }
+# 						10 = { set_age = 39 }
+# 						10 = { set_age = 40 }
+# 					}
+# 				}
+# 			}
+# 			else_if = {
+# 				limit= {
+# 					leader_age > 60
+# 					leader_age <= 70
+# 				}
+# 				heir = {
+# 					random_list = {
+# 						10 = { set_age = 16 }
+# 						10 = { set_age = 17 }
+# 						10 = { set_age = 18 }
+# 						10 = { set_age = 19 }
+# 						10 = { set_age = 20 }
+# 						10 = { set_age = 21 }
+# 						10 = { set_age = 22 }
+# 						10 = { set_age = 23 }
+# 						10 = { set_age = 24 }
+# 						10 = { set_age = 25 }
+# 						10 = { set_age = 26 }
+# 						10 = { set_age = 27 }
+# 						10 = { set_age = 28 }
+# 						10 = { set_age = 29 }
+# 						10 = { set_age = 31 }
+# 						10 = { set_age = 32 }
+# 						10 = { set_age = 33 }
+# 						10 = { set_age = 34 }
+# 						10 = { set_age = 35 }
+# 						10 = { set_age = 36 }
+# 						10 = { set_age = 37 }
+# 						10 = { set_age = 38 }
+# 						10 = { set_age = 39 }
+# 						10 = { set_age = 40 }
+# 					}
+# 				}
+# 			}
+# 			else_if = {
+# 				limit= {
+# 					leader_age > 70
+# 					leader_age <= 80
+# 				}
+# 				heir = {
+# 					random_list = {
+# 						10 = { set_age = 36 }
+# 						10 = { set_age = 37 }
+# 						10 = { set_age = 38 }
+# 						10 = { set_age = 39 }
+# 						10 = { set_age = 40 }
+# 						10 = { set_age = 41 }
+# 						10 = { set_age = 42 }
+# 						10 = { set_age = 43 }
+# 						10 = { set_age = 44 }
+# 						10 = { set_age = 45 }
+# 					}
+# 				}
+# 			}
+# 			else_if = {
+# 				limit= {
+# 					leader_age > 80
+# 					leader_age <= 90
+# 				}
+# 				heir = {
+# 					random_list = {
+# 						10 = { set_age =  }
+# 						10 = { set_age = 37 }
+# 						10 = { set_age = 38 }
+# 						10 = { set_age = 39 }
+# 						10 = { set_age = 40 }
+# 						10 = { set_age = 41 }
+# 						10 = { set_age = 42 }
+# 						10 = { set_age = 43 }
+# 						10 = { set_age = 44 }
+# 						10 = { set_age = 45 }
+# 					}
+# 				}
+# 			}
+# 		}
 # 	}
 # }
