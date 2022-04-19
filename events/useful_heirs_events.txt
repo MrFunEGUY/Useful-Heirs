@@ -744,7 +744,12 @@ country_event = {
 	}
 	desc = {
 		text = usefulheirs.3000.ad.desc
-		trigger = { has_valid_civic = civic_adoptive_dynasties }
+		trigger = {
+			has_valid_civic = civic_adoptive_dynasties
+			heir = {
+				NOT = {has_leader_flag = appointed_heir }
+			}
+		}
 	}
 	
 	hide_window = no
@@ -3832,18 +3837,31 @@ country_event = {
 
 	trigger = { 
 		is_ai = yes
-		exists = heir
 		has_valid_civic = civic_adoptive_dynasties
-		heir = {
-			NOT = { has_leader_flag = appointed_heir }
+		OR = {
+			NOT = { exists = heir }
+			AND = {
+				exists = heir
+				heir = {
+					NOT = { has_leader_flag = appointed_heir }
+				}
+			}
 		}
+		
 	}
 
 	immediate = {
-		heir = {
-			save_event_target_as = heir_leader
+		if = {
+			limit = { 
+				exists = heir
+			}
+			heir = { save_event_target_as = heir_leader }
+			country_event = { id = usefulheirs.3000 }
 		}
-		country_event = { id = usefulheirs.3000 }
+		else = {
+			country_event = { id = usefulheirs.3100 }
+		}
+		
 	}
 }
 

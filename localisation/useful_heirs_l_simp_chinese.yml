@@ -1,4 +1,12 @@
-﻿l_simp_chinese:
+﻿# l_english:
+# l_spanish:
+# l_german:
+# l_french:
+# l_polish:
+# l_russian:
+# l_braz_por:
+l_simp_chinese:
+
  edict_useful_heirs_1:0 "传唤我的继承人"
  edict_useful_heirs_1_desc:0 "有些事情必须和我的继承人商量。"
  edict_useful_heirs_2:0 "指定继承人"

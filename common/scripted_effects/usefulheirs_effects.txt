@@ -20,7 +20,38 @@ heir_setup_non_ad = {
 		country_event = { id = usefulheirs.3500 }
 	}
 	else = {
+		heir = { save_event_target_as = disinherited_heir_fine }
+		random_list = {
+			40 = {
+				clone_leader = {
+					target = event_target:disinherited_heir_fine
+					class = governor
+				}
+			}
+			30 = {
+				clone_leader = {
+					target = event_target:disinherited_heir_fine
+					class = admiral
+				}
+			}
+			20 = {
+				clone_leader = {
+					target = event_target:disinherited_heir_fine
+					class = general
+				}
+			}
+			10 = {
+				clone_leader = {
+					target = event_target:disinherited_heir_fine
+					class = scientist
+				}
+			}
+		}
 		set_heir = event_target:new_chosen_heir
+		event_target:disinherited_heir_fine = {
+			set_leader_flag = dead_ruler
+			kill_leader = { show_notification = no }
+		}
 		country_event = { id = usefulheirs.3500 }
 	}
 }
@@ -43,7 +74,38 @@ heir_setup_ad = {
 		country_event = { id = usefulheirs.3500 }
 	}
 	else = {
+		heir = { save_event_target_as = disinherited_heir_fine }
+		random_list = {
+			40 = {
+				clone_leader = {
+					target = event_target:disinherited_heir_fine
+					class = governor
+				}
+			}
+			30 = {
+				clone_leader = {
+					target = event_target:disinherited_heir_fine
+					class = admiral
+				}
+			}
+			20 = {
+				clone_leader = {
+					target = event_target:disinherited_heir_fine
+					class = general
+				}
+			}
+			10 = {
+				clone_leader = {
+					target = event_target:disinherited_heir_fine
+					class = scientist
+				}
+			}
+		}
 		set_heir = event_target:new_chosen_heir
+		event_target:disinherited_heir_fine = {
+			set_leader_flag = dead_ruler
+			kill_leader = { show_notification = no }
+		}
 		country_event = { id = usefulheirs.3500 }
 	}
 }

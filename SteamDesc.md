@@ -60,11 +60,13 @@ This can even happen if you change your government type away from Imperial (or a
 
 [hr][/hr]
 
-[h1]Credit :[/h1]
+[h1]Credit:[/h1]
 
 - Russian translation by [url=https://steamcommunity.com/profiles/76561198084274558]Tuvka[/url]. Thank you!
 
 - Chinese translation by [url=https://steamcommunity.com/profiles/76561198840278562]Del[/url]. Thank you!
+
+- German translation by [url=https://steamcommunity.com/id/Lucanoria]Lucanoria[/url]. Thank you!
 
 
 [hr][/hr]

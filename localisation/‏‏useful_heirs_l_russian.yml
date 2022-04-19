@@ -1,4 +1,11 @@
-﻿l_russian:
+﻿# l_english:
+# l_spanish:
+# l_german:
+# l_french:
+# l_polish:
+l_russian:
+# l_braz_por:
+# l_simp_chinese:
 
  edict_useful_heirs_1:0 "Вызвать моего наследника"
  edict_useful_heirs_1_desc:0 "Есть вопросы, которые нужно обсудить с моим наследником ."
