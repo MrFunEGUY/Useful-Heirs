@@ -89,7 +89,7 @@ l_simp_chinese:
  usefulheirs.4051.a:0 "我将领导。"
  response_they_shall_accept:0 "他们会接受的。"
  response_excellent:0 "杰出的"
- influencefail_text_useful_heirs:0 "§R要求§!§Y500§!£influence£§Y影响力§!"
+ unity_fail_text:0 "§R要求§!§Y500§!£influence£§Y影响力§!"
  civic_adoptive_dynasties: "禅让王朝"
  civic_adoptive_dynasties_desc: "在遥远的过去，一个由无能的统治者组成的王朝导致了这个社会的传统，即君主通常从宫廷中最有能力的人中任命他们的继承人。这导致了一个非常稳定的帝国。然而，在指定继承人之前，继承人仍然是通过绝对长子继承制选择的。"
  civic_tooltip_adoptive_dynasties_effects: "指定继承人没有£stability£§Y稳定度§!惩罚或£influence£§Y影响力§!消耗。一个未被指定的继承人成为统治者将在除首都以外的星球上降低§Y20§!£stability£§Y稳定度§!§R10§!年，首都将降低§Y25§!。"

@@ -1,6 +1,9 @@
 ## Useful Heirs Civics
 civic_adoptive_dynasties = {
 	description =  "civic_tooltip_adoptive_dynasties_effects"
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+	}
 	possible = {
 		authority = {
 			OR = {
@@ -10,7 +13,7 @@ civic_adoptive_dynasties = {
     		}
     	}
 	}
-	random_weight = { base = 5 }
+	random_weight = { base = 2 }
 	modifier = {
 		planet_stability_add = 10
 	}

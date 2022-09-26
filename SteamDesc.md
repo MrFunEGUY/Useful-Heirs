@@ -23,17 +23,23 @@ With Useful Heirs, you can:
 
 - There is currently no way to completely unassign an heir so that they are not a leader anymore. I will try to figure out a way around this.
 
-- In relation to my Civil Wars mod, Leader Heirs will not be able to rebel. I'll probably look into further interactions with this, though. Seems ripe for opportunity.
+- In relation to my Civil Wars mod, heirs have unique rebellion mechanics. Check out that mod for more information.
 
 - Sometimes, there is a small graphical bug that occurs after switching an heir's leader role where they will appear as -1 years old, unnamed, and not be able to be fired. This is only graphical, and can be fixed by reassigning a leader or recruiting a new leader.
 
 --
 
-- You can designate any leader as your heir for 500 influence. This will also cause your planets to lose some stability for 10 years. -10 Stability for the capital, -2 Stability for every other planet.
+- You can designate any leader as your heir for 2 years worth of Unity. This will also cause your planets to lose some stability for 10 years. -10 Stability for the capital, -2 Stability for every other planet.
 
-- There is a new civic, Adoptive Dynasties, that grants +10 Stability and allows you to designate heirs without the stability hit or influence cost. If a dynastic heir ascends to the throne while you have this civic, you will lose the bonus stability. The capital will lose 15 stability and every other world will lose 10 stability. Practically, this means that you go from +10 to -10 on non-capital worlds, for a 20 stability hit.
+- There is a new civic, Adoptive Dynasties, that grants +10 Stability and allows you to designate heirs without the stability hit or Unity cost. If a dynastic heir ascends to the throne while you have this civic, you will lose the bonus stability. The capital will lose 15 stability and every other world will lose 10 stability. Practically, this means that you go from +10 to -10 on non-capital worlds, for a 20 stability hit.
 
---
+[h1]Other Features:[/h1]
+
+- For species without the Venerable trait: If your leader is 50 years of age or older when they ascend to the throne, your heir will now be limited to being between 15 and 47 years younger than them. So, for example, if you have a ruler who takes the throne at 118 years of age, the heir that spawns will be between 71 and 103 years old.
+
+- For species with the Venerable trait: If your leader is 100 years of age or older when they ascend to the throne, your heir will now be limited to being between 30 and 94 years younger than them. So, for example, if you have a ruler who takes the throne at 203 years of age, the heir that spawns will be between 109 and 173 years old.
+
+- However, I couldn't find a way to set the heir's age as they spawn, so wait for the month to change for the age-fixing event to take place.
 
 - The AI will use the feature to designate their heir as a leader.
 
@@ -95,6 +101,8 @@ This can even happen if you change your government type away from Imperial (or a
 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2452302093]- We Require Borders[/url]
 
 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2732567565]- No More Exclaves[/url]
+
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2801992671]- Occupied Resources[/url]
 
 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2183551683]- Vassals Expanded and Reworked - FunEFork[/url]
 

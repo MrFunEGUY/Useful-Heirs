@@ -120,7 +120,7 @@ l_german:
 
  #usefulheirs.3500.no_name_change: "They shall keep the name they were born with."
  usefulheirs.3500.no_name_change: "Sie sollen den Namen behalten, mit dem sie geboren wurden."
- #usefulheirs.3500.yes_name_change: "They shall join the House of [ruler.GetSecondName] and adopt our name."
+ #usefulheirs.3500.yes_name_change: "They shall join the House of §H[ruler.GetSecondName]§! and adopt our name."
  usefulheirs.3500.yes_name_change: "Sie werden sich dem Haus von [ruler.GetSecondName] anschließen und unseren Namen annehmen."
  #usefulheirs.3500.yes_name_change.tooltip: "§H[new_chosen_heir.GetName]§! will adopt the §H[ruler.GetSecondName]§! name and become §H[new_chosen_heir.GetName] [ruler.GetSecondName]§!."
  usefulheirs.3500.yes_name_change.tooltip: "§H[new_chosen_heir.GetName]§! übernimmt den Namen §H[ruler.GetSecondName]§! und wird zu §H[new_chosen_heir.GetName] [ruler.GetSecondName]§!."
@@ -193,8 +193,8 @@ l_german:
  #response_excellent:0 "Excellent"
  response_excellent:0 "Ausgezeichnet"
 
- #influencefail_text_useful_heirs:0 "§RRequires§! §Y500§! £influence£ §YInfluence§!"
- influencefail_text_useful_heirs:0 "§RBenötigt§! §Y500§! £influence£ §YEinfluss§!"
+ #unity_fail_text:0 "§RRequires§! §Y[Root.monthly_unity_prod]§! £unity£ §YUnity§!"
+ unity_fail_text:0 "§RBenötigt§! §Y500§! £influence£ §YEinfluss§!"
 
  ### Civics
  #civic_adoptive_dynasties: "Adoptive Dynasties"

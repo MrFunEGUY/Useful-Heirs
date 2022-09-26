@@ -16,7 +16,7 @@
  usefulheirs.2000.AI: "AI"
 
  usefulheirs.1000.name:0 "[root.GetHeirTitle] §H[event_target:heir_leader.GetName]§!"
- usefulheirs.1000.desc:0 "You summoned me, [root.GetRulerTitle]?"
+ usefulheirs.1000.desc:0 "You summoned me, §Y[root.GetRulerTitle]§!?"
 
  usefulheirs.1000.a:0 "You need to gain experience within our empire."
  usefulheirs.1000.a.tooltip:0 "Will we will able to assign our heir to a leadership position within our empire."
@@ -27,7 +27,7 @@
  usefulheirs.1000.c.tooltip:0 "We will retire and our heir shall take over."
  usefulheirs.1000.d:0 "Nevermind."
 
- usefulheirs.2000.desc:0 "How may I best serve you and the [Root.GetName]?"
+ usefulheirs.2000.desc:0 "How may I best serve you and the §Y[Root.GetName]§!?"
 
  usefulheirs.2000.a:0 "As a Governor of one of our sectors."
  usefulheirs.2000.b:0 "As an Admiral in our navy."
@@ -74,11 +74,14 @@
  usefulheirs.3500.desc: "As we prepare for the coronation of §H[new_chosen_heir.GetName]§!, the decision must be made as to whether or not they will join the imperial House. If not, they shall keep their old name."
 
  usefulheirs.3500.no_name_change: "They shall keep the name they were born with."
- usefulheirs.3500.yes_name_change: "They shall join the House of [ruler.GetSecondName] and adopt our name."
- usefulheirs.3500.yes_name_change.tooltip: "§H[new_chosen_heir.GetName]§! will adopt the §H[ruler.GetSecondName]§! name and become §H[new_chosen_heir.GetName] [ruler.GetSecondName]§!."
+ usefulheirs.3500.yes_name_change: "They shall join the House of §H[event_target:dynastic_name_leader.GetName]§! and adopt our name."
+ usefulheirs.3500.yes_name_change.tooltip: "§H[new_chosen_heir.GetName]§! will adopt the §H[event_target:dynastic_name_leader.GetName]§! name and become §H[new_chosen_heir.GetName] [event_target:dynastic_name_leader.GetName]§!."
+
+ usefulheirs.3500.new_heir_name: "[this.GetName] [event_target:dynastic_name_leader.GetName]"
+ saved_dynastic_name: "[root.ruler.GetSecondName]"
 
  usefulheirs.3501.name: "§YNew Heir Apparent§!"
- usefulheirs.3501.desc: "A grand coronation ceremony was held today in the capital, and broadcast throughout our empire. §H[new_chosen_heir.GetName]§! has been proclaimed the new §Y[root.GetHeirTitle]§!, and is now §Yheir§! to the throne. As expected with a change of this magnitude, there are some in the empire that have been expressing their discontent. The former §Yheir§!, §H[disinherited_heir_first.GetName]§!, still has their supporters. However, this discontent is likely to die down given enough time."
+ usefulheirs.3501.desc: "A grand coronation ceremony was held today in the capital, and broadcast throughout our empire. §H[new_chosen_heir.GetName]§! has been proclaimed the new §Y[root.GetHeirTitle]§!, and is now §Yheir§! to the throne. As expected with a change of this magnitude, there are those throughout the realm that have been expressing their discontent. The former §Yheir§!, §H[disinherited_heir.GetName]§!, still has their supporters. Hopefully this discontent will die down in time."
  usefulheirs.3501.ad.desc: "In line with our customs and traditions, a grand coronation ceremony was held today in the capital, and broadcast throughout our empire. §H[new_chosen_heir.GetName]§! has been proclaimed the new §Y[root.GetHeirTitle]§!, and is now heir to the throne."
 
  usefulheirs.3900.name: "§RDynastic Heir Ascends§!"
@@ -118,7 +121,7 @@
  response_they_shall_accept:0 "They will accept it."
  response_excellent:0 "Excellent"
 
- influencefail_text_useful_heirs:0 "§RRequires§! §Y500§! £influence£ §YInfluence§!"
+ unity_fail_text:0 "§RRequires§! §Y[Root.monthly_unity_prod]§! £unity£ §YUnity§!"
 
  ### Civics
  civic_adoptive_dynasties: "Adoptive Dynasties"

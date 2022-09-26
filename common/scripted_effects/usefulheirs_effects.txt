@@ -7,150 +7,94 @@
 heir_setup_non_ad = {
 	if = {
 		limit = {
-			exists = heir
 			has_global_flag = civil_wars_active
+			exists = heir
 		}
-		heir = { save_global_event_target_as = disinherited_heir_first }
-		clone_leader = {
-			target = event_target:disinherited_heir_first
-			class = ruler
-			effect = { save_global_event_target_as = disinherited_heir }
+		heir = {
+			save_event_target_as = disinherited_heir
 		}
-		set_heir = event_target:new_chosen_heir
-		country_event = { id = usefulheirs.3500 }
+		set_country_flag = dissed_heir
 	}
-	else = {
-		heir = { save_event_target_as = disinherited_heir_fine }
-		random_list = {
-			40 = {
-				clone_leader = {
-					target = event_target:disinherited_heir_fine
-					class = governor
-				}
-			}
-			30 = {
-				clone_leader = {
-					target = event_target:disinherited_heir_fine
-					class = admiral
-				}
-			}
-			20 = {
-				clone_leader = {
-					target = event_target:disinherited_heir_fine
-					class = general
-				}
-			}
-			10 = {
-				clone_leader = {
-					target = event_target:disinherited_heir_fine
-					class = scientist
-				}
-			}
-		}
-		set_heir = event_target:new_chosen_heir
-		event_target:disinherited_heir_fine = {
+	else_if = {
+		limit = { exists = heir }
+		heir = {
 			set_leader_flag = dead_ruler
 			kill_leader = { show_notification = no }
 		}
-		country_event = { id = usefulheirs.3500 }
 	}
+	set_heir = event_target:new_chosen_heir
+	country_event = { id = usefulheirs.3500 }
 }
 
 # Heir Setup Adoptive Ddnasties
 heir_setup_ad = {
 	if = {
 		limit = {
-			exists = heir
 			has_global_flag = civil_wars_active
+			exists = heir
 			heir = { has_leader_flag = appointed_heir }
 		}
-		heir = { save_global_event_target_as = disinherited_heir_first }
-		clone_leader = {
-			target = event_target:disinherited_heir_first
-			class = ruler
-			effect = { save_global_event_target_as = disinherited_heir }
+		heir = {
+			save_event_target_as = disinherited_heir
+			# exile_leader_as = disinherited_heir
 		}
-		set_heir = event_target:new_chosen_heir
-		country_event = { id = usefulheirs.3500 }
+		set_country_flag = dissed_heir
 	}
-	else = {
-		heir = { save_event_target_as = disinherited_heir_fine }
-		random_list = {
-			40 = {
-				clone_leader = {
-					target = event_target:disinherited_heir_fine
-					class = governor
-				}
-			}
-			30 = {
-				clone_leader = {
-					target = event_target:disinherited_heir_fine
-					class = admiral
-				}
-			}
-			20 = {
-				clone_leader = {
-					target = event_target:disinherited_heir_fine
-					class = general
-				}
-			}
-			10 = {
-				clone_leader = {
-					target = event_target:disinherited_heir_fine
-					class = scientist
-				}
-			}
-		}
-		set_heir = event_target:new_chosen_heir
-		event_target:disinherited_heir_fine = {
+	else_if = {
+		limit = { exists = heir }
+		heir = {
 			set_leader_flag = dead_ruler
 			kill_leader = { show_notification = no }
 		}
-		country_event = { id = usefulheirs.3500 }
 	}
+	set_heir = event_target:new_chosen_heir
+	country_event = { id = usefulheirs.3500 }
 }
 
 # Heir Setup Non - Adoptive Ddnasties
 heir_setup_non_ad_just_disinherit = {
-	heir = { save_global_event_target_as = disinherited_heir_first }
-	clone_leader = {
-		target = event_target:disinherited_heir_first
-		class = ruler
-		effect = { save_global_event_target_as = disinherited_heir }
-	}
-	event_target:disinherited_heir_first = {
-		set_leader_flag = dead_ruler
-		kill_leader = { show_notification = no }
-	}
 	if = {
 		limit = {
 			has_global_flag = civil_wars_active
+			exists = heir
 		}
+		heir = {
+			save_event_target_as = disinherited_heir
+			# exile_leader_as = disinherited_heir
+		}
+		set_country_flag = dissed_heir
 		country_event = { id = civheir.1000 }
+	}
+	else_if = {
+		limit = { exists = heir }
+		heir = {
+			set_leader_flag = dead_ruler
+			kill_leader = { show_notification = no }
+		}
 	}
 }
 
 # Heir Setup Adoptive Ddnasties
 heir_setup_ad_just_disinherit = {
-	heir = {
-		save_global_event_target_as = disinherited_heir_first
-	}
-	clone_leader = {
-		target = event_target:disinherited_heir_first
-		class = ruler
-		effect = {
-			save_global_event_target_as = disinherited_heir
-		}
-	}
-	event_target:disinherited_heir_first = {
-		set_leader_flag = dead_ruler
-		kill_leader = { show_notification = no }
-	}
 	if = {
 		limit = {
 			has_global_flag = civil_wars_active
+			exists = heir
+			heir = { has_leader_flag = appointed_heir }
 		}
+		heir = {
+			save_event_target_as = disinherited_heir
+			exile_leader_as = disinherited_heir
+		}
+		set_country_flag = dissed_heir
 		country_event = { id = civheir.1000 }
+	}
+	else_if = {
+		limit = { exists = heir }
+		heir = {
+			set_leader_flag = dead_ruler
+			kill_leader = { show_notification = no }
+		}
 	}
 }
 
@@ -164,7 +108,7 @@ get_governors_heir = {
 		limit = {
 			leader_class = governor
 			NOR = {
-				has_leader_flag = clone_heir_base
+				# has_leader_flag = clone_heir_base
 				is_same_value = heir
 			}
 		}
@@ -264,7 +208,7 @@ get_admirals_heir = {
 		limit = {
 			leader_class = admiral
 			NOR = {
-				has_leader_flag = clone_heir_base
+				# has_leader_flag = clone_heir_base
 				is_same_value = heir
 			}
 		}
@@ -364,7 +308,7 @@ get_generals_heir = {
 		limit = {
 			leader_class = general
 			NOR = {
-				has_leader_flag = clone_heir_base
+				# has_leader_flag = clone_heir_base
 				is_same_value = heir
 			}
 		}
@@ -464,7 +408,7 @@ get_scientists_heir = {
 		limit = {
 			leader_class = scientist
 			NOR = {
-				has_leader_flag = clone_heir_base
+				# has_leader_flag = clone_heir_base
 				is_same_value = heir
 			}
 		}
@@ -554,4 +498,41 @@ get_scientists_heir = {
 	}
 
 	country_event = { id = usefulheirs.3140 }
+}
+
+get_heir_leader_clone_effect = {
+
+	save_event_target_as = new_cloned_heir
+	if = {
+		limit = {
+			owner = {
+				is_ai = no
+				has_country_flag = heir_name_color_activated
+			}
+		}
+		set_name = {
+			key = heir_name_bold
+			variable_string = "\\[event_target:heir_leader.GetName]"
+		}
+	}
+}
+
+get_heir_leader_switch_effect = {
+
+	last_created_leader = {
+		if = {
+			limit = { event_target:heir_leader = { has_leader_flag = appointed_heir } }
+			set_leader_flag = appointed_heir
+		}
+		if = {
+			limit = { event_target:heir_leader = { has_leader_flag = adopted_dynastic_name } }
+			set_leader_flag = adopted_dynastic_name
+		}
+	}
+
+	set_heir = event_target:new_cloned_heir
+
+	event_target:heir_leader = {
+		kill_leader = { show_notification = no }
+	}
 }

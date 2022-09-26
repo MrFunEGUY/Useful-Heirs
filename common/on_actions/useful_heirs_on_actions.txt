@@ -1,7 +1,13 @@
+# this = country
+on_game_start_country = {
+	events = {
+		usefulheirs.9300			# Save dynastic name
+	}
+}
+
 on_yearly_pulse_country = {
 	events = {
 		usefulheirs.9001			# AI Abdication event
-		usefulheirs.9004			# Remove No prior heirs flag
 		usefulheirs.9500			# Remove No prior heirs flag
 		usefulheirs.9510			# Remove No prior heirs flag
 	}
@@ -9,7 +15,7 @@ on_yearly_pulse_country = {
 
 on_monthly_pulse_country = {
 	events = {
-		usefulheirs.9004			# Remove No prior heirs flag
+		usefulheirs.9600 			# Set Realistic Heir Ages 
 	}
 }
 
@@ -48,5 +54,13 @@ on_leader_death = {
 on_ruler_set = {
 	events = {
 		usefulheirs.9100			# Remove heir flag from ruler
+		usefulheirs.9200			# Change Country Species to new ruler species so new heirs are of the new species
+		usefulheirs.9300			# Save dynastic name
+	}
+}
+
+uncivic_on_leader_converted  = {
+	events = {
+		usefulheirs.9400			# Uncivic leader change compatch
 	}
 }

@@ -74,7 +74,7 @@ l_polish:
  usefulheirs.3500.desc: "As we prepare for the coronation of §H[new_chosen_heir.GetName]§!, the decision must be made as to whether or not they will join the imperial House. If not, they shall keep their old name."
 
  usefulheirs.3500.no_name_change: "They shall keep the name they were born with."
- usefulheirs.3500.yes_name_change: "They shall join the House of [ruler.GetSecondName] and adopt our name."
+ usefulheirs.3500.yes_name_change: "They shall join the House of §H[ruler.GetSecondName]§! and adopt our name."
  usefulheirs.3500.yes_name_change.tooltip: "§H[new_chosen_heir.GetName]§! will adopt the §H[ruler.GetSecondName]§! name and become §H[new_chosen_heir.GetName] [ruler.GetSecondName]§!."
 
  usefulheirs.3501.name: "§YNew Heir Apparent§!"
@@ -118,7 +118,7 @@ l_polish:
  response_they_shall_accept:0 "They will accept it."
  response_excellent:0 "Excellent"
 
- influencefail_text_useful_heirs:0 "§RRequires§! §Y500§! £influence£ §YInfluence§!"
+ unity_fail_text:0 "§RRequires§! §Y[Root.monthly_unity_prod]§! £unity£ §YUnity§!"
 
  ### Civics
  civic_adoptive_dynasties: "Adoptive Dynasties"
