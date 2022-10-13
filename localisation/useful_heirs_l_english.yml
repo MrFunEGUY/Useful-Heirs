@@ -16,7 +16,7 @@
  usefulheirs.2000.AI: "AI"
 
  usefulheirs.1000.name:0 "[root.GetHeirTitle] §H[event_target:heir_leader.GetName]§!"
- usefulheirs.1000.desc:0 "You summoned me, §Y[root.GetRulerTitle]§!?"
+ usefulheirs.1000.desc:0 "You summoned me, my §Y[root.GetRulerTitle]§!?"
 
  usefulheirs.1000.a:0 "You need to gain experience within our empire."
  usefulheirs.1000.a.tooltip:0 "Will we will able to assign our heir to a leadership position within our empire."

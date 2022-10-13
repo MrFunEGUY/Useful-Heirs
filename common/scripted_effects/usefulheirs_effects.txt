@@ -11,6 +11,10 @@ heir_setup_non_ad = {
 			exists = heir
 		}
 		heir = {
+			if = {
+				limit = { NOT = { has_leader_flag = appointed_heir } }
+				set_leader_flag = true_born_heir
+			}
 			save_event_target_as = disinherited_heir
 		}
 		set_country_flag = dissed_heir
@@ -59,8 +63,11 @@ heir_setup_non_ad_just_disinherit = {
 			exists = heir
 		}
 		heir = {
+			if = {
+				limit = { NOT = { has_leader_flag = appointed_heir } }
+				set_leader_flag = true_born_heir
+			}
 			save_event_target_as = disinherited_heir
-			# exile_leader_as = disinherited_heir
 		}
 		set_country_flag = dissed_heir
 		country_event = { id = civheir.1000 }
@@ -84,7 +91,6 @@ heir_setup_ad_just_disinherit = {
 		}
 		heir = {
 			save_event_target_as = disinherited_heir
-			exile_leader_as = disinherited_heir
 		}
 		set_country_flag = dissed_heir
 		country_event = { id = civheir.1000 }
