@@ -81,15 +81,15 @@ l_spanish:
  usefulheirs.3501.desc: "A grand coronation ceremony was held today in the capital, and broadcast throughout our empire. §H[new_chosen_heir.GetName]§! has been proclaimed the new §Y[root.GetHeirTitle]§!, and is now §Yheir§! to the throne. As expected with a change of this magnitude, there are some in the empire that have been expressing their discontent. The former §Yheir§!, §H[disinherited_heir_first.GetName]§!, still has their supporters. However, this discontent is likely to die down given enough time."
  usefulheirs.3501.ad.desc: "In line with our customs and traditions, a grand coronation ceremony was held today in the capital, and broadcast throughout our empire. §H[new_chosen_heir.GetName]§! has been proclaimed the new §Y[root.GetHeirTitle]§!, and is now heir to the throne."
 
- usefulheirs.3900.name: "§RDynastic Heir Ascends§!"
- usefulheirs.3900.desc: "In a break with tradition, §H[deceased_ruler.GetName]§! passed away without desginating an heir. As the next in the dynastic line of succession, §H[root.ruler.GetName]§! has ascended to the throne. This has caused widespread unease, with the populace worried that the newly-crowned §Y[root.GetRulerTitle]§! §H[root.ruler.GetName]§! will not be up to the task."
+ usefulheirs.3810.name: "§RDynastic Heir Ascends§!"
+ usefulheirs.3810.desc: "In a break with tradition, §H[deceased_ruler.GetName]§! passed away without desginating an heir. As the next in the dynastic line of succession, §H[root.ruler.GetName]§! has ascended to the throne. This has caused widespread unease, with the populace worried that the newly-crowned §Y[root.GetRulerTitle]§! §H[root.ruler.GetName]§! will not be up to the task."
 
- usefulheirs.3900.a: "We will prove ourselves."
+ usefulheirs.3810.a: "We will prove ourselves."
 
- usefulheirs.3950.name: "§RDesignated Heir Dies§!"
- usefulheirs.3950.desc: "In a great loss to the empire, [deceased_heir.GetTitle] §H[deceased_heir.GetName]§!, the §Yheir apparent§!, has passed away. A new §Yheir§! will need to be appointed."
+ usefulheirs.3910.name: "§RDesignated Heir Dies§!"
+ usefulheirs.3910.desc: "In a great loss to the empire, [deceased_heir.GetTitle] §H[deceased_heir.GetName]§!, the §Yheir apparent§!, has passed away. A new §Yheir§! will need to be appointed."
 
- usefulheirs.3950.a: "Tragic."
+ usefulheirs.3910.a: "Tragic."
 
  heir_fired_name:0 "[event_target:clone_leader_name_1.GetName]"
  heir_name_bold:0 "§H[event_target:heir_leader.GetName]§!"

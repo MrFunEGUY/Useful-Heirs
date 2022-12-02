@@ -132,21 +132,21 @@ l_german:
  #usefulheirs.3501.ad.desc: "In line with our customs and traditions, a grand coronation ceremony was held today in the capital, and broadcast throughout our empire. §H[new_chosen_heir.GetName]§! has been proclaimed the new §Y[root.GetHeirTitle]§!, and is now heir to the throne."
  usefulheirs.3501.ad.desc: "Gemäß unseren Sitten und Gebräuchen wurde heute in der Hauptstadt eine große Krönungszeremonie abgehalten, die im ganzen Reich übertragen wurde. §H[new_chosen_heir.GetName]§! wurde zum neuen §Y[root.GetHeirTitle]§! ausgerufen und ist nun Thronfolger."
 
- #usefulheirs.3900.name: "§RDynastic Heir Ascends§!"
- usefulheirs.3900.name: "§RDynastic Heir Ascends§!"
- #usefulheirs.3900.desc: "In a break with tradition, §H[deceased_ruler.GetName]§! passed away without desginating an heir. As the next in the dynastic line of succession, §H[root.ruler.GetName]§! has ascended to the throne. This has caused widespread unease, with the populace worried that the newly-crowned §Y[root.GetRulerTitle]§! §H[root.ruler.GetName]§! will not be up to the task."
- usefulheirs.3900.desc: "In einem Bruch mit der Tradition ist §H[deceased_ruler.GetName]§! verstorben, ohne einen Erben zu benennen. Als nächster in der dynastischen Erbfolge bestieg §H[root.ruler.GetName]§! den Thron. Dies hat zu großer Unruhe geführt, da die Bevölkerung befürchtet, dass der neu gekrönte §Y[root.GetRulerTitle]§! §H[root.ruler.GetName]§! der Aufgabe nicht gewachsen sein wird."
+ #usefulheirs.3810.name: "§RDynastic Heir Ascends§!"
+ usefulheirs.3810.name: "§RDynastic Heir Ascends§!"
+ #usefulheirs.3810.desc: "In a break with tradition, §H[deceased_ruler.GetName]§! passed away without desginating an heir. As the next in the dynastic line of succession, §H[root.ruler.GetName]§! has ascended to the throne. This has caused widespread unease, with the populace worried that the newly-crowned §Y[root.GetRulerTitle]§! §H[root.ruler.GetName]§! will not be up to the task."
+ usefulheirs.3810.desc: "In einem Bruch mit der Tradition ist §H[deceased_ruler.GetName]§! verstorben, ohne einen Erben zu benennen. Als nächster in der dynastischen Erbfolge bestieg §H[root.ruler.GetName]§! den Thron. Dies hat zu großer Unruhe geführt, da die Bevölkerung befürchtet, dass der neu gekrönte §Y[root.GetRulerTitle]§! §H[root.ruler.GetName]§! der Aufgabe nicht gewachsen sein wird."
 
- #usefulheirs.3900.a: "We will prove ourselves."
- usefulheirs.3900.a: "Wir werden uns beweisen."
+ #usefulheirs.3810.a: "We will prove ourselves."
+ usefulheirs.3810.a: "Wir werden uns beweisen."
 
- #usefulheirs.3950.name: "§RDer designierte Erbe stirbt§!"
- usefulheirs.3950.name: "§RDer designierte Erbe stirbt§!"
- #usefulheirs.3950.desc: "In a great loss to the empire, [deceased_heir.GetTitle] §H[deceased_heir.GetName]§!, the §Yheir apparent§!, has passed away. A new §Yheir§! will need to be appointed."
- usefulheirs.3950.desc: "Ein großer Verlust für das Reich ist der Tod von [deceased_heir.GetTitle] <@H[deceased_heir.GetName]§!, dem §YThronfolger§! Ein neuer §YErbe§! muss ernannt werden."
+ #usefulheirs.3910.name: "§RDer designierte Erbe stirbt§!"
+ usefulheirs.3910.name: "§RDer designierte Erbe stirbt§!"
+ #usefulheirs.3910.desc: "In a great loss to the empire, [deceased_heir.GetTitle] §H[deceased_heir.GetName]§!, the §Yheir apparent§!, has passed away. A new §Yheir§! will need to be appointed."
+ usefulheirs.3910.desc: "Ein großer Verlust für das Reich ist der Tod von [deceased_heir.GetTitle] <@H[deceased_heir.GetName]§!, dem §YThronfolger§! Ein neuer §YErbe§! muss ernannt werden."
 
- #usefulheirs.3950.a: "Tragic."
- usefulheirs.3950.a: "Tragisch."
+ #usefulheirs.3910.a: "Tragic."
+ usefulheirs.3910.a: "Tragisch."
 
  #heir_fired_name:0 "[event_target:clone_leader_name_1.GetName]"
  heir_fired_name:0 "[event_target:clone_leader_name_1.GetName]"

@@ -13,6 +13,10 @@
  edict_useful_heirs_2:0 "Appoint Heir"
  edict_useful_heirs_2_desc:0 "The absence of an heir is a danger to the realm. I must appoint an heir."
 
+ decision_set_dynasty_name: "Begin New Dynasty"
+ decision_set_dynasty_name_desc: "We will forge ahead into the future under the care of a new dynasty."
+ decision_set_dynasty_name_tooltip: "This decision will change our dynasty name §Yto that of our capital§!. Should we choose to adopt an heir, we will have the ability to have that heir take this new dynasty name.\n\n Dynasty name will become: §H[root.GetName]§!"
+
  usefulheirs.2000.AI: "AI"
 
  usefulheirs.1000.name:0 "[root.GetHeirTitle] §H[event_target:heir_leader.GetName]§!"
@@ -79,20 +83,21 @@
 
  usefulheirs.3500.new_heir_name: "[this.GetName] [event_target:dynastic_name_leader.GetName]"
  saved_dynastic_name: "[root.ruler.GetSecondName]"
+ new_dynastic_name: "[root.GetName]"
 
  usefulheirs.3501.name: "§YNew Heir Apparent§!"
  usefulheirs.3501.desc: "A grand coronation ceremony was held today in the capital, and broadcast throughout our empire. §H[new_chosen_heir.GetName]§! has been proclaimed the new §Y[root.GetHeirTitle]§!, and is now §Yheir§! to the throne. As expected with a change of this magnitude, there are those throughout the realm that have been expressing their discontent. The former §Yheir§!, §H[disinherited_heir.GetName]§!, still has their supporters. Hopefully this discontent will die down in time."
  usefulheirs.3501.ad.desc: "In line with our customs and traditions, a grand coronation ceremony was held today in the capital, and broadcast throughout our empire. §H[new_chosen_heir.GetName]§! has been proclaimed the new §Y[root.GetHeirTitle]§!, and is now heir to the throne."
 
- usefulheirs.3900.name: "§RDynastic Heir Ascends§!"
- usefulheirs.3900.desc: "In a break with tradition, §H[deceased_ruler.GetName]§! passed away without desginating an heir. As the next in the dynastic line of succession, §H[root.ruler.GetName]§! has ascended to the throne. This has caused widespread unease, with the populace worried that the newly-crowned §Y[root.GetRulerTitle]§! §H[root.ruler.GetName]§! will not be up to the task."
+ usefulheirs.3810.name: "§RDynastic Heir Ascends§!"
+ usefulheirs.3810.desc: "In a break with tradition, our previous ruler passed away without desginating an heir. As the next in the dynastic line of succession, §H[ruler.GetName]§! has ascended to the throne. This has caused widespread unease, with the populace worried that the newly-crowned §Y[root.GetRulerTitle]§! §H[root.ruler.GetName]§! will not be up to the task."
 
- usefulheirs.3900.a: "We will prove ourselves."
+ usefulheirs.3810.a: "We will prove ourselves."
 
- usefulheirs.3950.name: "§RDesignated Heir Dies§!"
- usefulheirs.3950.desc: "In a great loss to the empire, [deceased_heir.GetTitle] §H[deceased_heir.GetName]§!, the §Yheir apparent§!, has passed away. A new §Yheir§! will need to be appointed."
+ usefulheirs.3910.name: "§RDesignated Heir Dies§!"
+ usefulheirs.3910.desc: "In a great loss to the empire, [deceased_heir.GetTitle] §H[deceased_heir.GetName]§!, the §Yheir apparent§!, has passed away. A new §Yheir§! will need to be appointed."
 
- usefulheirs.3950.a: "Tragic."
+ usefulheirs.3910.a: "Tragic."
 
  heir_fired_name:0 "[event_target:clone_leader_name_1.GetName]"
  heir_name_bold:0 "§H[event_target:heir_leader.GetName]§!"

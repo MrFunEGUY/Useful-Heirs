@@ -15,7 +15,8 @@ on_yearly_pulse_country = {
 
 on_monthly_pulse_country = {
 	events = {
-		usefulheirs.9600 			# Set Realistic Heir Ages 
+		usefulheirs.9600 			# Set Realistic Heir Ages
+		usefulheirs.3600			# Check for dynastic heir and set flag monthly
 	}
 }
 
@@ -44,8 +45,7 @@ on_decade_pulse_country = {
 # From = Leader
 on_leader_death = {
 	events = {
-		usefulheirs.3800			# Trigger for notificaction for New Non-Designated Ruler
-		usefulheirs.3850			# Trigger for notificaction dead designated heir
+		usefulheirs.3900			# Trigger for notificaction dead designated heir
 	}
 }
 
@@ -53,8 +53,17 @@ on_leader_death = {
 # This = Country
 on_ruler_set = {
 	events = {
+		usefulheirs.3800			# On Ruler set, if dynastic heir, set penalties
 		usefulheirs.9100			# Remove heir flag from ruler
 		usefulheirs.9200			# Change Country Species to new ruler species so new heirs are of the new species
+		usefulheirs.9300			# Save dynastic name
+	}
+}
+
+# Executed just as country is changing its government, after the new one is applied
+# THIS = country
+on_post_government_changed = {
+	events = {
 		usefulheirs.9300			# Save dynastic name
 	}
 }

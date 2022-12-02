@@ -281,7 +281,7 @@ country_event = {
 			rounded = yes
 		}
 
-		multiply_variable = { which = monthly_unity_prod value = 24 }
+		multiply_variable = { which = monthly_unity_prod value = 12 }
 	}
 
 	# Nevermind
@@ -1783,76 +1783,53 @@ country_event = {
 	}
 }
 
-# Dead Ruler - Get Name if Adoptive Dynasties and Non-Designated ruler takes over
+# Check for dynastic heir and set flag monthly
+country_event = {
+	id = usefulheirs.3600
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_imperial = yes
+		has_civic = civic_adoptive_dynasties
+		exists = heir
+		heir = { NOT = { has_leader_flag = dynastic_heir } }
+		heir = { NOT = { has_leader_flag = appointed_heir } }
+	}
+
+	immediate = {
+		heir = { set_leader_flag = dynastic_heir }
+	}
+}
+
+# On Ruler set, if dynastic heir, set penalties
 country_event = {
 	id = usefulheirs.3800
 	hide_window = yes
 	is_triggered_only = yes
 
 	trigger = {
-		from = {
-			leader_class = ruler
-			NOT = { has_leader_flag = dead_ruler }
-		}
+		is_imperial = yes
 		has_civic = civic_adoptive_dynasties
-		heir = { NOT = { has_leader_flag = appointed_heir } }
+		ruler = { has_leader_flag = dynastic_heir }
 	}
 
 	immediate = {
-		from = {
-			save_event_target_as = deceased_ruler
-		}
-		clone_leader = {
-			target = event_target:deceased_ruler
-			effect = {
-				set_leader_flag = dead_ruler
-				save_event_target_as = deceased_ruler
-			}
-		}
-		country_event = { id = usefulheirs.3900 days = 7 }
-	}
-}
-
-# Dead Designated Heir - Initializer
-country_event = {
-	id = usefulheirs.3850
-	hide_window = yes
-	is_triggered_only = yes
-
-	trigger = {
-		from = {
-			has_leader_flag = appointed_heir
-			NOT = { has_leader_flag = dead_ruler }
-		}
-		has_civic = civic_adoptive_dynasties
-	}
-
-	immediate = {
-		from = {
-			save_event_target_as = deceased_heir
-		}
-		clone_leader = {
-			target = event_target:deceased_heir
-			effect = {
-				set_leader_flag = dead_ruler
-				save_event_target_as = deceased_heir
-			}
-		}
-		country_event = { id = usefulheirs.3950 }
+		country_event = { id = usefulheirs.3810 days = 7 }
 	}
 }
 
 # New Non-Designated Ruler
 country_event = {
-	id = usefulheirs.3900
+	id = usefulheirs.3810
 	picture = GFX_evt_news_room
-	title = usefulheirs.3900.name
-	desc = usefulheirs.3900.desc
+	title = usefulheirs.3810.name
+	desc = usefulheirs.3810.desc
 	hide_window = no
 	is_triggered_only = yes
 
 	option = {
-		name = usefulheirs.3900.a
+		name = usefulheirs.3810.a
 		hidden_effect = {
 			every_owned_planet = {
 				limit = {
@@ -1877,17 +1854,45 @@ country_event = {
 	}
 }
 
+# Dead Designated Heir - Initializer
+country_event = {
+	id = usefulheirs.3900
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		from = {
+			has_leader_flag = appointed_heir
+			NOT = { has_leader_flag = dead_ruler }
+			NOT = { has_leader_flag = switch_ruler }
+		}
+		has_civic = civic_adoptive_dynasties
+	}
+
+	immediate = {
+		from = { save_event_target_as = deceased_heir }
+		clone_leader = {
+			target = event_target:deceased_heir
+			effect = {
+				set_leader_flag = dead_ruler
+				save_event_target_as = deceased_heir
+			}
+		}
+		country_event = { id = usefulheirs.3910 }
+	}
+}
+
 # Designated Heir Dies - Notification
 country_event = {
-	id = usefulheirs.3950
+	id = usefulheirs.3910
 	picture = GFX_evt_space_funeral
-	title = usefulheirs.3950.name
-	desc = usefulheirs.3950.desc
+	title = usefulheirs.3910.name
+	desc = usefulheirs.3910.desc
 	hide_window = no
 	is_triggered_only = yes
 
 	option = {
-		name = usefulheirs.3950.a
+		name = usefulheirs.3910.a
 		hidden_effect = {
 			event_target:deceased_heir = {
 				kill_leader = { show_notification = no }

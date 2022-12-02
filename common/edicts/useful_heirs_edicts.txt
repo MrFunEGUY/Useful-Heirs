@@ -19,9 +19,7 @@ useful_heirs_1 = {
 	}
 	
 	effect = {
-		heir = {
-			save_event_target_as = heir_leader
-		}
+		heir = { save_event_target_as = heir_leader }
 		country_event = { id = usefulheirs.1000 }
 	}
 
@@ -43,11 +41,7 @@ useful_heirs_2 = {
 	}
 	
 	potential = {
-		OR = {
-			has_authority = auth_imperial
-			has_authority = auth_corporate_imperial
-			has_authority = auth_corporate_fiefdom
-		}
+		is_imperial = yes
 		NOT = { exists = heir }
 	}
 	

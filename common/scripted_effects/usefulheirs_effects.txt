@@ -113,10 +113,7 @@ get_governors_heir = {
 	every_owned_leader = {
 		limit = {
 			leader_class = governor
-			NOR = {
-				# has_leader_flag = clone_heir_base
-				is_same_value = heir
-			}
+			NOT = { has_leader_flag = appointed_heir }
 		}
 		set_leader_flag = heir_maybe
 		root = { change_variable = { which = total_governors value = 1 } }
@@ -213,10 +210,7 @@ get_admirals_heir = {
 	every_owned_leader = {
 		limit = {
 			leader_class = admiral
-			NOR = {
-				# has_leader_flag = clone_heir_base
-				is_same_value = heir
-			}
+			NOT = { has_leader_flag = appointed_heir }
 		}
 		set_leader_flag = heir_maybe
 		root = { change_variable = { which = total_admirals value = 1 } }
@@ -313,10 +307,7 @@ get_generals_heir = {
 	every_owned_leader = {
 		limit = {
 			leader_class = general
-			NOR = {
-				# has_leader_flag = clone_heir_base
-				is_same_value = heir
-			}
+			NOT = { has_leader_flag = appointed_heir }
 		}
 		set_leader_flag = heir_maybe
 		root = { change_variable = { which = total_generals value = 1 } }
@@ -413,10 +404,7 @@ get_scientists_heir = {
 	every_owned_leader = {
 		limit = {
 			leader_class = scientist
-			NOR = {
-				# has_leader_flag = clone_heir_base
-				is_same_value = heir
-			}
+			NOT = { has_leader_flag = appointed_heir }
 		}
 		set_leader_flag = heir_maybe
 		root = { change_variable = { which = total_scientists value = 1 } }
@@ -539,6 +527,7 @@ get_heir_leader_switch_effect = {
 	set_heir = event_target:new_cloned_heir
 
 	event_target:heir_leader = {
+		set_leader_flag = switch_ruler
 		kill_leader = { show_notification = no }
 	}
 }
