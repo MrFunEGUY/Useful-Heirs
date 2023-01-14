@@ -2580,18 +2580,9 @@ country_event = {
 		}
 
 		if = {
-			limit = {
-				heir.species = {
-					NOT = { has_trait = trait_venerable }
-				}
-			}
+			limit = { heir.species = { NOT = { has_trait = trait_venerable } } }
 			if = {
-				limit = {
-					check_variable = {
-						which = ruler_age_for_calc_1
-						value >= 50
-					}
-				}
+				limit = { check_variable = { which = ruler_age_for_calc_1 value >= 50 } }
 				random_list = {
 					1 = { subtract_variable = { which = ruler_age_for_calc_2 value = 15 } }
 					1 = { subtract_variable = { which = ruler_age_for_calc_2 value = 16 } }
@@ -2638,12 +2629,7 @@ country_event = {
 		}
 		else = {
 			if = {
-				limit = {
-					check_variable = {
-						which = ruler_age_for_calc_1
-						value >= 100
-					}
-				}
+				limit = { check_variable = { which = ruler_age_for_calc_1 value >= 100 } }
 				random_list = {
 					1 = { subtract_variable = { which = ruler_age_for_calc_2 value = 30 } }
 					1 = { subtract_variable = { which = ruler_age_for_calc_2 value = 31 } }

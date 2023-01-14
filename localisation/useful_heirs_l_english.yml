@@ -133,6 +133,8 @@
  civic_adoptive_dynasties_desc: "A dynasty of inneffective rulers in the distant past has led to a tradition in this society whereby the monarch typically appoints their heir from amongst the most capable individuals in their court. This has resulted in a very stable empire. However, until an heir is appointed, the heir is still chosen via absolute primogeniture."
  civic_tooltip_adoptive_dynasties_effects: "No £stability£ §YStability§! penalty or £influence£ §YInfluence§! cost to designate an heir. A non-designated heir becoming ruler will lower £stability£ §YStability§! for §R10§! years by §Y20§! on every planet except the capital, where stability will be lowered by §Y25§!."
 
+ civic_tooltip_heir:0 "Must have an §YHeir§!"
+
  # Modifiers
  chose_new_heir: "New Heir"
  chose_new_heir_desc: "The appointment of a new heir has caused some disruption to the ruling elite on this planet. It will take them some time to adjust to this new reality."
