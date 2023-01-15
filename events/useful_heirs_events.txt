@@ -1766,13 +1766,13 @@ country_event = {
 				}
 				add_modifier = {
 					modifier = chose_new_heir
-					days = 720
+					years = 2
 				}
 			}
 			capital_scope = {
 				add_modifier = {
 					modifier = chose_new_heir_capital
-					days = 2520
+					years = 7
 				}
 			}
 			if = {
@@ -1838,13 +1838,13 @@ country_event = {
 				}
 				add_modifier = {
 					modifier = dynastic_heir
-					days = 3600
+					years = 10
 				}
 			}
 			capital_scope = {
 				add_modifier = {
 					modifier = dynastic_heir_capital
-					days = 3600
+					years = 10
 				}
 			}
 			event_target:deceased_ruler = {
@@ -2157,10 +2157,7 @@ country_event = {
 					leader_age < 75
 				}
 			}
-			random_list = {
-				10 = { country_event = { id = usefulheirs.4000 } }
-				90 = { }
-			}
+			random = { chance = 10 country_event = { id = usefulheirs.4000 } }
 		}
 		else_if = {
 			limit = {
@@ -2169,10 +2166,7 @@ country_event = {
 					leader_age < 80
 				}
 			}
-			random_list = {
-				15 = { country_event = { id = usefulheirs.4000 } }
-				85 = { }
-			}
+			random = { chance = 15 country_event = { id = usefulheirs.4000 } }
 		}
 		else_if = {
 			limit = {
@@ -2181,10 +2175,7 @@ country_event = {
 					leader_age < 85
 				}
 			}
-			random_list = {
-				20 = { country_event = { id = usefulheirs.4000 } }
-				80 = { }
-			}
+			random = { chance = 20 country_event = { id = usefulheirs.4000 } }
 		}
 		else_if = {
 			limit = {
@@ -2193,10 +2184,7 @@ country_event = {
 					leader_age < 90
 				}
 			}
-			random_list = {
-				25 = { country_event = { id = usefulheirs.4000 } }
-				75 = { }
-			}
+			random = { chance = 25 country_event = { id = usefulheirs.4000 } }
 		}
 		else_if = {
 			limit = {
@@ -2205,10 +2193,7 @@ country_event = {
 					leader_age < 95
 				}
 			}
-			random_list = {
-				30 = { country_event = { id = usefulheirs.4000 } }
-				70 = { }
-			}
+			random = { chance = 30 country_event = { id = usefulheirs.4000 } }
 		}
 		else_if = {
 			limit = {
@@ -2217,10 +2202,7 @@ country_event = {
 					leader_age < 100
 				}
 			}
-			random_list = {
-				35 = { country_event = { id = usefulheirs.4000 } }
-				65 = { }
-			}
+			random = { chance = 35 country_event = { id = usefulheirs.4000 } }
 		}
 		else_if = {
 			limit = {
@@ -2229,10 +2211,7 @@ country_event = {
 					leader_age < 105
 				}
 			}
-			random_list = {
-				40 = { country_event = { id = usefulheirs.4000 } }
-				60 = { }
-			}
+			random = { chance = 40 country_event = { id = usefulheirs.4000 } }
 		}
 		else_if = {
 			limit = {
@@ -2240,10 +2219,7 @@ country_event = {
 					leader_age >= 105
 				}
 			}
-			random_list = {
-				45 = { country_event = { id = usefulheirs.4000 } }
-				55 = { }
-			}
+			random = { chance = 45 country_event = { id = usefulheirs.4000 } }
 		}
 	}
 }

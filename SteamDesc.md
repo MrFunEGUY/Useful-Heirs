@@ -81,8 +81,6 @@ This can even happen if you change your government type away from Imperial (or a
 
 - Should be compatible with everything, as it alters no vanilla files. It will also be compatible with any additional modded government authority that uses heirs.
 
-- Compatible with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2077690562]Enhanced Traits,[/url] but I advise using my [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2198699628]Enhanced Traits - Bugfixes patch,[/url] that fixes some issues in Enhanced Traits.
-
 
 [hr][/hr]
 
@@ -120,4 +118,4 @@ This can even happen if you change your government type away from Imperial (or a
 
 For the best support, find me at [b]#mrfuneguys-mods[/b] on the Stellaris Modding Den Discord:
 
-[url=https://discord.gg/REvVK2fjJF][img]https://i.imgur.com/4Und3QN.png[/img][/url]
+[url=https://discord.gg/REvVK2fjJF][img]https://i.imgur.com/jZkBbLR.png[/img][/url]
