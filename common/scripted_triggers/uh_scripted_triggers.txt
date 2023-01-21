@@ -1,6 +1,6 @@
 
-is_real_leader = {
-	NOR = {
+is_fake_leader = {
+	OR = {
 		has_leader_flag = dead_ruler
 		has_leader_flag = dummy_leader
 		has_leader_flag = switch_ruler
