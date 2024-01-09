@@ -5,24 +5,16 @@ on_game_start_country = {
 	}
 }
 
-on_yearly_pulse_country = {
-	events = {
-		usefulheirs.9001			# AI Abdication event
-		usefulheirs.9500			# Remove No prior heirs flag
-		usefulheirs.9510			# Remove No prior heirs flag
-	}
-}
-
 on_monthly_pulse_country = {
 	events = {
 		usefulheirs.9600 			# Set Realistic Heir Ages
-		usefulheirs.3600			# Check for dynastic heir and set flag monthly
+		uh_adoptive.1000			# Check for dynastic heir and set flag monthly
 	}
 }
 
 on_bi_yearly_pulse_country = {
 	events = {
-		usefulheirs.9002			# Adoptive Dynasties AI Designate Heir event
+		uh_adoptive.9000			# Adoptive Dynasties AI Designate Heir event
 	}
 }
 
@@ -30,6 +22,7 @@ on_bi_yearly_pulse_country = {
 on_five_year_pulse_country = {
 	events = {
 		usefulheirs.9000			# AI Heir Leader event
+		usefulheirs.9001			# AI Abdication event
 	}
 }
 
@@ -45,7 +38,7 @@ on_decade_pulse_country = {
 # From = Leader
 on_leader_death = {
 	events = {
-		usefulheirs.3900			# Trigger for notificaction dead designated heir
+		uh_adoptive.2000			# Trigger for notificaction dead designated heir
 	}
 }
 
@@ -53,10 +46,18 @@ on_leader_death = {
 # This = Country
 on_ruler_set = {
 	events = {
-		usefulheirs.3800			# On Ruler set, if dynastic heir, set penalties
+		uh_adoptive.1100			# On Ruler set, if dynastic heir, set penalties
 		usefulheirs.9100			# Remove heir flag from ruler
 		usefulheirs.9200			# Change Country Species to new ruler species so new heirs are of the new species
 		usefulheirs.9300			# Save dynastic name
+	}
+}
+
+# Executed just as country is changing its government, before the new one is applied
+# THIS = country
+on_pre_government_changed = {
+	events = {
+		uh_adoptive.3000			# Government Reform - Pre Check for AD
 	}
 }
 
@@ -65,11 +66,6 @@ on_ruler_set = {
 on_post_government_changed = {
 	events = {
 		usefulheirs.9300			# Save dynastic name
-	}
-}
-
-uncivic_on_leader_converted  = {
-	events = {
-		usefulheirs.9400			# Uncivic leader change compatch
+		uh_adoptive.3010			# Government Reform - Post Check for AD
 	}
 }

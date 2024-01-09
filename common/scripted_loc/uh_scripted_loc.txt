@@ -1,0 +1,12 @@
+# Get Honorific
+defined_text = {
+	name = GetDisinheritedHeir
+	text = {
+		trigger = { exists = event_target:disinherited_heir }
+		localization_key = dis_heir_reg
+	}
+	text = {
+		trigger = { exists = event_target:disinherited_heir_fatherland }
+		localization_key = dis_heir_fatherland
+	}
+}

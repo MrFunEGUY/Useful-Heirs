@@ -36,7 +36,7 @@ country_event = {
 
 	# You are unworthy of being my heir.
 	option = {
-		trigger	 = { NOT = { has_valid_civic = civic_adoptive_dynasties } }
+		trigger	= { has_adoptive_dynasties = no }
 		name = usefulheirs.1000.b
 		custom_tooltip = usefulheirs.1000.b.tooltip
 		hidden_effect = { country_event = { id = usefulheirs.3000 } }
@@ -44,7 +44,7 @@ country_event = {
 
 	# The time has come to designate an heir.
 	option = {
-		trigger	 = { has_valid_civic = civic_adoptive_dynasties }
+		trigger	= { has_adoptive_dynasties = yes }
 		name = usefulheirs.1000.b.ad
 		custom_tooltip = usefulheirs.1000.b.tooltip
 		hidden_effect = { country_event = { id = usefulheirs.3000 } }
@@ -64,7 +64,7 @@ country_event = {
 country_event = {
 	id = usefulheirs.2000
 	title = usefulheirs.1000.name
-	desc = usefulheirs.2000.desc
+	desc = usefulheirs.2000.cesc
 	hide_window = no
 	is_triggered_only = yes
 
@@ -78,14 +78,6 @@ country_event = {
 		room = root.ruler
 	}
 
-	# Set Initial Heir name color flag
-	immediate = {
-		if = {
-			limit = { NOT = { has_country_flag = useful_heirs_check } }
-			set_country_flag = useful_heirs_check
-			set_country_flag = heir_name_color_deactivated
-		}
-	}
 
 	# Nevermind
 	option = {
@@ -95,145 +87,28 @@ country_event = {
 		}
 	}
 
-	# Governor
+	# Commander
 	option = {
 		name = usefulheirs.2000.a
-		trigger = { event_target:heir_leader = { NOT = { leader_class = governor } } }
-		hidden_effect = { country_event = { id = usefulheirs.2001 } }
+		trigger = { event_target:heir_leader = { NOT = { leader_class = official } } }
+		hidden_effect = { event_target:heir_leader = { change_leader_class = official } }
 		ai_chance = { factor = 6 }
 	}
 
-	# Admiral
+	# Commander
 	option = {
 		name = usefulheirs.2000.b
-		trigger = { event_target:heir_leader = { NOT = { leader_class = admiral } } }
-		hidden_effect = { country_event = { id = usefulheirs.2002 } }
+		trigger = { event_target:heir_leader = { NOT = { leader_class = commander } } }
+		hidden_effect = { event_target:heir_leader = { change_leader_class = commander } }
 		ai_chance = { factor = 5 }
-	}
-
-	# General
-	option = {
-		name = usefulheirs.2000.c
-		trigger = { event_target:heir_leader = { NOT = { leader_class = general } } }
-		hidden_effect = { country_event = { id = usefulheirs.2003 } }
-		ai_chance = { factor = 3 }
 	}
 
 	# Scientist
 	option = {
-		name = usefulheirs.2000.d
+		name = usefulheirs.2000.c
 		trigger = { event_target:heir_leader = { NOT = { leader_class = scientist } } }
-		hidden_effect = { country_event = { id = usefulheirs.2004 } }
+		hidden_effect = { event_target:heir_leader = { change_leader_class = scientist } }
 		ai_chance = { factor = 1 }
-	}
-
-	# Heir Name Color
-	option = {
-		name = usefulheirs.2000.name_color_deactivated
-		custom_tooltip = usefulheirs.2000.name_color_deactivated.tooltip
-		trigger = {
-			is_ai = no
-			has_country_flag = heir_name_color_deactivated
-		}
-		hidden_effect = {
-			set_country_flag = heir_name_color_activated
-			remove_country_flag = heir_name_color_deactivated
-			country_event = { id = usefulheirs.2000 }
-		}
-	}
-
-	# Heir Name Color
-	option = {
-		name = usefulheirs.2000.name_color_activated
-		trigger = {
-			is_ai = no
-			has_country_flag = heir_name_color_activated
-		}
-		hidden_effect = {
-			set_country_flag = heir_name_color_deactivated
-			remove_country_flag = heir_name_color_activated
-			country_event = { id = usefulheirs.2000 }
-		}
-	}
-}
-
-# Governor
-country_event = {
-	id = usefulheirs.2001
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = {
-
-		clone_leader = {
-			target = event_target:heir_leader
-			class = governor
-			effect = {
-				get_heir_leader_clone_effect = yes
-			}
-		}
-
-		get_heir_leader_switch_effect = yes
-	}
-}
-
-# Admiral
-country_event = {
-	id = usefulheirs.2002
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = {
-
-		clone_leader = {
-			target = event_target:heir_leader
-			class = admiral
-			effect = {
-				get_heir_leader_clone_effect = yes
-			}
-		}
-
-		get_heir_leader_switch_effect = yes
-	}
-}
-
-# General
-country_event = {
-	id = usefulheirs.2003
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = {
-
-		clone_leader = {
-			target = event_target:heir_leader
-			class = general
-			effect = {
-				get_heir_leader_clone_effect = yes
-			}
-		}
-
-		get_heir_leader_switch_effect = yes
-	}
-}
-
-# Scientist
-country_event = {
-	id = usefulheirs.2004
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = {
-
-		clone_leader = {
-			target = event_target:heir_leader
-			class = scientist
-			effect = {
-				get_heir_leader_clone_effect = yes
-			}
-		}
-
-		get_heir_leader_switch_effect = yes
 	}
 }
 
@@ -248,14 +123,14 @@ country_event = {
 		text = usefulheirs.3000.desc
 		trigger = {
 			OR = {
-				NOT = { has_valid_civic = civic_adoptive_dynasties }
+				has_adoptive_dynasties = no
 				heir = { has_leader_flag = appointed_heir }
 			}
 		}
 	}
 	desc = {
 		text = usefulheirs.3000.ad.desc
-		trigger = { has_valid_civic = civic_adoptive_dynasties }
+		trigger = { has_adoptive_dynasties = yes }
 	}
 	
 	hide_window = no
@@ -288,64 +163,47 @@ country_event = {
 	option = {
 		name = {
 			text = usefulheirs.3000.f
-			trigger = { NOT = { has_valid_civic = civic_adoptive_dynasties } }
+			trigger = { has_adoptive_dynasties = no }
 		}
 		name = {
 			text = usefulheirs.3000.f.ad
-			trigger = { has_valid_civic = civic_adoptive_dynasties }
+			trigger = { has_adoptive_dynasties = yes }
 		}
 		hidden_effect = { clear_variable = monthly_unity_prod }
 	}
 
-	# Governor
+	# Commander
 	option = {
 		name = usefulheirs.3000.a
 		allow = {
 			if = {
-				limit = { NOT = { has_valid_civic = civic_adoptive_dynasties } }
+				limit = { has_adoptive_dynasties = no }
 				custom_tooltip = {
 					fail_text = unity_fail_text
 					has_country_resource = { type = unity amount >= monthly_unity_prod }
 				}
 			}
-			any_owned_leader = { leader_class = governor }
+			any_owned_leader = { leader_class = official }
 		}
-		hidden_effect = { get_governors_heir = yes }
+		hidden_effect = { get_officials_heir = yes }
 		ai_chance = { factor = 5 }
 	}
 
-	# Admiral
+	# Commander
 	option = {
 		name = usefulheirs.3000.b
 		allow = {
 			if = {
-				limit = { NOT = { has_valid_civic = civic_adoptive_dynasties } }
+				limit = { has_adoptive_dynasties = no }
 				custom_tooltip = {
 					fail_text = unity_fail_text
 					has_country_resource = { type = unity amount >= monthly_unity_prod }
 				}
 			}
-			any_owned_leader = { leader_class = admiral }
+			any_owned_leader = { leader_class = commander }
 		}
-		hidden_effect = { get_admirals_heir = yes }
-		ai_chance = { factor = 4 }
-	}
-
-	# General
-	option = {
-		name = usefulheirs.3000.c
-		allow = {
-			if = {
-				limit = { NOT = { has_valid_civic = civic_adoptive_dynasties } }
-				custom_tooltip = {
-					fail_text = unity_fail_text
-					has_country_resource = { type = unity amount >= monthly_unity_prod }
-				}
-			}
-			any_owned_leader = { leader_class = general }
-		}
-		hidden_effect = { get_generals_heir = yes }
-		ai_chance = { factor = 4 }
+		hidden_effect = { get_commanders_heir = yes }
+		ai_chance = { factor = 5 }
 	}
 
 	# Scientist
@@ -353,7 +211,7 @@ country_event = {
 		name = usefulheirs.3000.d
 		allow = {
 			if = {
-				limit = { NOT = { has_valid_civic = civic_adoptive_dynasties } }
+				limit = { has_adoptive_dynasties = no }
 				custom_tooltip = {
 					fail_text = unity_fail_text
 					has_country_resource = { type = unity amount >= monthly_unity_prod }
@@ -370,14 +228,14 @@ country_event = {
 		name = usefulheirs.3000.e
 		hidden_effect = {
 			if = {
-				limit =  { has_global_flag = civil_wars_active }
+				limit =  { has_civil_wars_mod = yes }
 				if = {
-					limit = { NOT = { has_valid_civic = civic_adoptive_dynasties } }
+					limit = { has_adoptive_dynasties = no }
 					heir_setup_non_ad_just_disinherit = yes
 				}
 				else_if = {
 					limit = {
-						has_valid_civic = civic_adoptive_dynasties
+						has_adoptive_dynasties = yes
 						heir = { has_leader_flag = appointed_heir }
 					}
 					heir_setup_ad_just_disinherit = yes
@@ -385,7 +243,7 @@ country_event = {
 			}
 			heir = { kill_leader = { show_notification = no } }
 		}
-		ai_chance = { factor = 0 }
+		ai_chance = { factor = 1 }
 	}
 }
 
@@ -424,63 +282,46 @@ country_event = {
 	option = {
 		name = {
 			text = usefulheirs.3000.f
-			trigger = { NOT = { has_valid_civic = civic_adoptive_dynasties } }
+			trigger = { has_adoptive_dynasties = no }
 		}
 		name = {
 			text = usefulheirs.3000.f.ad
-			trigger = { has_valid_civic = civic_adoptive_dynasties }
+			trigger = { has_adoptive_dynasties = yes }
 		}
 		hidden_effect = { clear_variable = monthly_unity_prod }
 	}
 
-	# Governor
+	# Commander
 	option = {
 		name = usefulheirs.3000.a
 		allow = {
 			if = {
-				limit = { NOT = { has_valid_civic = civic_adoptive_dynasties } }
+				limit = { has_adoptive_dynasties = no }
 				custom_tooltip = {
 					fail_text = unity_fail_text
 					has_country_resource = { type = unity amount >= monthly_unity_prod }
 				}
 			}
-			any_owned_leader = { leader_class = governor }
+			any_owned_leader = { leader_class = official }
 		}
-		hidden_effect = { get_governors_heir = yes }
+		hidden_effect = { get_officials_heir = yes }
 		ai_chance = { factor = 5 }
 	}
 
-	# Admiral
+	# Commander
 	option = {
 		name = usefulheirs.3000.b
 		allow = {
 			if = {
-				limit = { NOT = { has_valid_civic = civic_adoptive_dynasties } }
+				limit = { has_adoptive_dynasties = no }
 				custom_tooltip = {
 					fail_text = unity_fail_text
 					has_country_resource = { type = unity amount >= monthly_unity_prod }
 				}
 			}
-			any_owned_leader = { leader_class = admiral }
+			any_owned_leader = { leader_class = commander }
 		}
-		hidden_effect = { get_admirals_heir = yes }
-		ai_chance = { factor = 4 }
-	}
-
-	# General
-	option = {
-		name = usefulheirs.3000.c
-		allow = {
-			if = {
-				limit = { NOT = { has_valid_civic = civic_adoptive_dynasties } }
-				custom_tooltip = {
-					fail_text = unity_fail_text
-					has_country_resource = { type = unity amount >= monthly_unity_prod }
-				}
-			}
-			any_owned_leader = { leader_class = general }
-		}
-		hidden_effect = { get_generals_heir = yes }
+		hidden_effect = { get_commanders_heir = yes }
 		ai_chance = { factor = 4 }
 	}
 
@@ -489,7 +330,7 @@ country_event = {
 		name = usefulheirs.3000.d
 		allow = {
 			if = {
-				limit = { NOT = { has_valid_civic = civic_adoptive_dynasties } }
+				limit = { has_adoptive_dynasties = no }
 				custom_tooltip = {
 					fail_text = unity_fail_text
 					has_country_resource = { type = unity amount >= monthly_unity_prod }
@@ -506,15 +347,15 @@ country_event = {
 		name = usefulheirs.3000.e
 		hidden_effect = {
 			if = {
-				limit =  { has_global_flag = civil_wars_active }
+				limit =  { has_civil_wars_mod = yes }
 				if = {
 					log = "HEIR EVENT"
-					limit = { NOT = { has_valid_civic = civic_adoptive_dynasties } }
+					limit = { has_adoptive_dynasties = no }
 					heir_setup_non_ad_just_disinherit = yes
 				}
 				else_if = {
 					limit = {
-						has_valid_civic = civic_adoptive_dynasties
+						has_adoptive_dynasties = yes
 						heir = { has_leader_flag = appointed_heir }
 					}
 					heir_setup_ad_just_disinherit = yes
@@ -526,7 +367,7 @@ country_event = {
 	}
 }
 
-# Governor
+# Commander
 country_event = {
 	id = usefulheirs.3110
 	title = usefulheirs.3110.name
@@ -554,9 +395,9 @@ country_event = {
 
 	option = {
 		name = usefulheirs.3110.heir_maybe_1
-		trigger = { check_variable = { which = total_governors value >= 1 } }
+		trigger = { check_variable = { which = total_officials value >= 1 } }
 		if = {
-			limit = { NOT = { has_valid_civic = civic_adoptive_dynasties } }
+			limit = { has_adoptive_dynasties = no }
 			add_resource = {
 				unity = -1
 				mult = monthly_unity_prod
@@ -568,7 +409,7 @@ country_event = {
 				set_leader_flag = appointed_heir
 			}
 			if = {
-				limit = { has_valid_civic = civic_adoptive_dynasties }
+				limit = { has_adoptive_dynasties = yes }
 				heir_setup_ad = yes
 			}
 			else = {
@@ -580,9 +421,9 @@ country_event = {
 
 	option = {
 		name = usefulheirs.3110.heir_maybe_2
-		trigger = { check_variable = { which = total_governors value >= 2 } }
+		trigger = { check_variable = { which = total_officials value >= 2 } }
 		if = {
-			limit = { NOT = { has_valid_civic = civic_adoptive_dynasties } }
+			limit = { has_adoptive_dynasties = no }
 			add_resource = {
 				unity = -1
 				mult = monthly_unity_prod
@@ -594,7 +435,7 @@ country_event = {
 				set_leader_flag = appointed_heir
 			}
 			if = {
-				limit = { has_valid_civic = civic_adoptive_dynasties }
+				limit = { has_adoptive_dynasties = yes }
 				heir_setup_ad = yes
 			}
 			else = {
@@ -606,9 +447,9 @@ country_event = {
 
 	option = {
 		name = usefulheirs.3110.heir_maybe_3
-		trigger = { check_variable = { which = total_governors value >= 3 } }
+		trigger = { check_variable = { which = total_officials value >= 3 } }
 		if = {
-			limit = { NOT = { has_valid_civic = civic_adoptive_dynasties } }
+			limit = { has_adoptive_dynasties = no }
 			add_resource = {
 				unity = -1
 				mult = monthly_unity_prod
@@ -620,7 +461,7 @@ country_event = {
 				set_leader_flag = appointed_heir
 			}
 			if = {
-				limit = { has_valid_civic = civic_adoptive_dynasties }
+				limit = { has_adoptive_dynasties = yes }
 				heir_setup_ad = yes
 			}
 			else = {
@@ -632,9 +473,9 @@ country_event = {
 
 	option = {
 		name = usefulheirs.3110.heir_maybe_4
-		trigger = { check_variable = { which = total_governors value >= 4 } }
+		trigger = { check_variable = { which = total_officials value >= 4 } }
 		if = {
-			limit = { NOT = { has_valid_civic = civic_adoptive_dynasties } }
+			limit = { has_adoptive_dynasties = no }
 			add_resource = {
 				unity = -1
 				mult = monthly_unity_prod
@@ -646,7 +487,7 @@ country_event = {
 				set_leader_flag = appointed_heir
 			}
 			if = {
-				limit = { has_valid_civic = civic_adoptive_dynasties }
+				limit = { has_adoptive_dynasties = yes }
 				heir_setup_ad = yes
 			}
 			else = {
@@ -658,9 +499,9 @@ country_event = {
 
 	option = {
 		name = usefulheirs.3110.heir_maybe_5
-		trigger = { check_variable = { which = total_governors value >= 5 } }
+		trigger = { check_variable = { which = total_officials value >= 5 } }
 		if = {
-			limit = { NOT = { has_valid_civic = civic_adoptive_dynasties } }
+			limit = { has_adoptive_dynasties = no }
 			add_resource = {
 				unity = -1
 				mult = monthly_unity_prod
@@ -672,7 +513,7 @@ country_event = {
 				set_leader_flag = appointed_heir
 			}
 			if = {
-				limit = { has_valid_civic = civic_adoptive_dynasties }
+				limit = { has_adoptive_dynasties = yes }
 				heir_setup_ad = yes
 			}
 			else = {
@@ -684,9 +525,9 @@ country_event = {
 
 	option = {
 		name = usefulheirs.3110.heir_maybe_6
-		trigger = { check_variable = { which = total_governors value >= 6 } }
+		trigger = { check_variable = { which = total_officials value >= 6 } }
 		if = {
-			limit = { NOT = { has_valid_civic = civic_adoptive_dynasties } }
+			limit = { has_adoptive_dynasties = no }
 			add_resource = {
 				unity = -1
 				mult = monthly_unity_prod
@@ -698,7 +539,7 @@ country_event = {
 				set_leader_flag = appointed_heir
 			}
 			if = {
-				limit = { has_valid_civic = civic_adoptive_dynasties }
+				limit = { has_adoptive_dynasties = yes }
 				heir_setup_ad = yes
 			}
 			else = {
@@ -710,9 +551,9 @@ country_event = {
 
 	option = {
 		name = usefulheirs.3110.heir_maybe_7
-		trigger = { check_variable = { which = total_governors value >= 7 } }
+		trigger = { check_variable = { which = total_officials value >= 7 } }
 		if = {
-			limit = { NOT = { has_valid_civic = civic_adoptive_dynasties } }
+			limit = { has_adoptive_dynasties = no }
 			add_resource = {
 				unity = -1
 				mult = monthly_unity_prod
@@ -724,7 +565,7 @@ country_event = {
 				set_leader_flag = appointed_heir
 			}
 			if = {
-				limit = { has_valid_civic = civic_adoptive_dynasties }
+				limit = { has_adoptive_dynasties = yes }
 				heir_setup_ad = yes
 			}
 			else = {
@@ -736,9 +577,9 @@ country_event = {
 
 	option = {
 		name = usefulheirs.3110.heir_maybe_8
-		trigger = { check_variable = { which = total_governors value >= 8 } }
+		trigger = { check_variable = { which = total_officials value >= 8 } }
 		if = {
-			limit = { NOT = { has_valid_civic = civic_adoptive_dynasties } }
+			limit = { has_adoptive_dynasties = no }
 			add_resource = {
 				unity = -1
 				mult = monthly_unity_prod
@@ -750,7 +591,7 @@ country_event = {
 				set_leader_flag = appointed_heir
 			}
 			if = {
-				limit = { has_valid_civic = civic_adoptive_dynasties }
+				limit = { has_adoptive_dynasties = yes }
 				heir_setup_ad = yes
 			}
 			else = {
@@ -762,9 +603,9 @@ country_event = {
 
 	option = {
 		name = usefulheirs.3110.heir_maybe_9
-		trigger = { check_variable = { which = total_governors value >= 9 } }
+		trigger = { check_variable = { which = total_officials value >= 9 } }
 		if = {
-			limit = { NOT = { has_valid_civic = civic_adoptive_dynasties } }
+			limit = { has_adoptive_dynasties = no }
 			add_resource = {
 				unity = -1
 				mult = monthly_unity_prod
@@ -776,7 +617,7 @@ country_event = {
 				set_leader_flag = appointed_heir
 			}
 			if = {
-				limit = { has_valid_civic = civic_adoptive_dynasties }
+				limit = { has_adoptive_dynasties = yes }
 				heir_setup_ad = yes
 			}
 			else = {
@@ -788,9 +629,9 @@ country_event = {
 
 	option = {
 		name = usefulheirs.3110.heir_maybe_10
-		trigger = { check_variable = { which = total_governors value >= 10 } }
+		trigger = { check_variable = { which = total_officials value >= 10 } }
 		if = {
-			limit = { NOT = { has_valid_civic = civic_adoptive_dynasties } }
+			limit = { has_adoptive_dynasties = no }
 			add_resource = {
 				unity = -1
 				mult = monthly_unity_prod
@@ -802,7 +643,7 @@ country_event = {
 				set_leader_flag = appointed_heir
 			}
 			if = {
-				limit = { has_valid_civic = civic_adoptive_dynasties }
+				limit = { has_adoptive_dynasties = yes }
 				heir_setup_ad = yes
 			}
 			else = {
@@ -817,7 +658,7 @@ country_event = {
 	}
 }
 
-# Admiral
+# Commander
 country_event = {
 	id = usefulheirs.3120
 	title = usefulheirs.3120.name
@@ -845,9 +686,9 @@ country_event = {
 
 	option = {
 		name = usefulheirs.3110.heir_maybe_1
-		trigger = { check_variable = { which = total_admirals value >= 1 } }
+		trigger = { check_variable = { which = total_commanders value >= 1 } }
 		if = {
-			limit = { NOT = { has_valid_civic = civic_adoptive_dynasties } }
+			limit = { has_adoptive_dynasties = no }
 			add_resource = {
 				unity = -1
 				mult = monthly_unity_prod
@@ -859,7 +700,7 @@ country_event = {
 				set_leader_flag = appointed_heir
 			}
 			if = {
-				limit = { has_valid_civic = civic_adoptive_dynasties }
+				limit = { has_adoptive_dynasties = yes }
 				heir_setup_ad = yes
 			}
 			else = {
@@ -871,9 +712,9 @@ country_event = {
 
 	option = {
 		name = usefulheirs.3110.heir_maybe_2
-		trigger = { check_variable = { which = total_admirals value >= 2 } }
+		trigger = { check_variable = { which = total_commanders value >= 2 } }
 		if = {
-			limit = { NOT = { has_valid_civic = civic_adoptive_dynasties } }
+			limit = { has_adoptive_dynasties = no }
 			add_resource = {
 				unity = -1
 				mult = monthly_unity_prod
@@ -885,7 +726,7 @@ country_event = {
 				set_leader_flag = appointed_heir
 			}
 			if = {
-				limit = { has_valid_civic = civic_adoptive_dynasties }
+				limit = { has_adoptive_dynasties = yes }
 				heir_setup_ad = yes
 			}
 			else = {
@@ -897,9 +738,9 @@ country_event = {
 
 	option = {
 		name = usefulheirs.3110.heir_maybe_3
-		trigger = { check_variable = { which = total_admirals value >= 3 } }
+		trigger = { check_variable = { which = total_commanders value >= 3 } }
 		if = {
-			limit = { NOT = { has_valid_civic = civic_adoptive_dynasties } }
+			limit = { has_adoptive_dynasties = no }
 			add_resource = {
 				unity = -1
 				mult = monthly_unity_prod
@@ -911,7 +752,7 @@ country_event = {
 				set_leader_flag = appointed_heir
 			}
 			if = {
-				limit = { has_valid_civic = civic_adoptive_dynasties }
+				limit = { has_adoptive_dynasties = yes }
 				heir_setup_ad = yes
 			}
 			else = {
@@ -923,9 +764,9 @@ country_event = {
 
 	option = {
 		name = usefulheirs.3110.heir_maybe_4
-		trigger = { check_variable = { which = total_admirals value >= 4 } }
+		trigger = { check_variable = { which = total_commanders value >= 4 } }
 		if = {
-			limit = { NOT = { has_valid_civic = civic_adoptive_dynasties } }
+			limit = { has_adoptive_dynasties = no }
 			add_resource = {
 				unity = -1
 				mult = monthly_unity_prod
@@ -937,7 +778,7 @@ country_event = {
 				set_leader_flag = appointed_heir
 			}
 			if = {
-				limit = { has_valid_civic = civic_adoptive_dynasties }
+				limit = { has_adoptive_dynasties = yes }
 				heir_setup_ad = yes
 			}
 			else = {
@@ -949,9 +790,9 @@ country_event = {
 
 	option = {
 		name = usefulheirs.3110.heir_maybe_5
-		trigger = { check_variable = { which = total_admirals value >= 5 } }
+		trigger = { check_variable = { which = total_commanders value >= 5 } }
 		if = {
-			limit = { NOT = { has_valid_civic = civic_adoptive_dynasties } }
+			limit = { has_adoptive_dynasties = no }
 			add_resource = {
 				unity = -1
 				mult = monthly_unity_prod
@@ -963,7 +804,7 @@ country_event = {
 				set_leader_flag = appointed_heir
 			}
 			if = {
-				limit = { has_valid_civic = civic_adoptive_dynasties }
+				limit = { has_adoptive_dynasties = yes }
 				heir_setup_ad = yes
 			}
 			else = {
@@ -975,9 +816,9 @@ country_event = {
 
 	option = {
 		name = usefulheirs.3110.heir_maybe_6
-		trigger = { check_variable = { which = total_admirals value >= 6 } }
+		trigger = { check_variable = { which = total_commanders value >= 6 } }
 		if = {
-			limit = { NOT = { has_valid_civic = civic_adoptive_dynasties } }
+			limit = { has_adoptive_dynasties = no }
 			add_resource = {
 				unity = -1
 				mult = monthly_unity_prod
@@ -989,7 +830,7 @@ country_event = {
 				set_leader_flag = appointed_heir
 			}
 			if = {
-				limit = { has_valid_civic = civic_adoptive_dynasties }
+				limit = { has_adoptive_dynasties = yes }
 				heir_setup_ad = yes
 			}
 			else = {
@@ -1001,9 +842,9 @@ country_event = {
 
 	option = {
 		name = usefulheirs.3110.heir_maybe_7
-		trigger = { check_variable = { which = total_admirals value >= 7 } }
+		trigger = { check_variable = { which = total_commanders value >= 7 } }
 		if = {
-			limit = { NOT = { has_valid_civic = civic_adoptive_dynasties } }
+			limit = { has_adoptive_dynasties = no }
 			add_resource = {
 				unity = -1
 				mult = monthly_unity_prod
@@ -1015,7 +856,7 @@ country_event = {
 				set_leader_flag = appointed_heir
 			}
 			if = {
-				limit = { has_valid_civic = civic_adoptive_dynasties }
+				limit = { has_adoptive_dynasties = yes }
 				heir_setup_ad = yes
 			}
 			else = {
@@ -1027,9 +868,9 @@ country_event = {
 
 	option = {
 		name = usefulheirs.3110.heir_maybe_8
-		trigger = { check_variable = { which = total_admirals value >= 8 } }
+		trigger = { check_variable = { which = total_commanders value >= 8 } }
 		if = {
-			limit = { NOT = { has_valid_civic = civic_adoptive_dynasties } }
+			limit = { has_adoptive_dynasties = no }
 			add_resource = {
 				unity = -1
 				mult = monthly_unity_prod
@@ -1041,7 +882,7 @@ country_event = {
 				set_leader_flag = appointed_heir
 			}
 			if = {
-				limit = { has_valid_civic = civic_adoptive_dynasties }
+				limit = { has_adoptive_dynasties = yes }
 				heir_setup_ad = yes
 			}
 			else = {
@@ -1053,9 +894,9 @@ country_event = {
 
 	option = {
 		name = usefulheirs.3110.heir_maybe_9
-		trigger = { check_variable = { which = total_admirals value >= 9 } }
+		trigger = { check_variable = { which = total_commanders value >= 9 } }
 		if = {
-			limit = { NOT = { has_valid_civic = civic_adoptive_dynasties } }
+			limit = { has_adoptive_dynasties = no }
 			add_resource = {
 				unity = -1
 				mult = monthly_unity_prod
@@ -1067,7 +908,7 @@ country_event = {
 				set_leader_flag = appointed_heir
 			}
 			if = {
-				limit = { has_valid_civic = civic_adoptive_dynasties }
+				limit = { has_adoptive_dynasties = yes }
 				heir_setup_ad = yes
 			}
 			else = {
@@ -1079,9 +920,9 @@ country_event = {
 
 	option = {
 		name = usefulheirs.3110.heir_maybe_10
-		trigger = { check_variable = { which = total_admirals value >= 10 } }
+		trigger = { check_variable = { which = total_commanders value >= 10 } }
 		if = {
-			limit = { NOT = { has_valid_civic = civic_adoptive_dynasties } }
+			limit = { has_adoptive_dynasties = no }
 			add_resource = {
 				unity = -1
 				mult = monthly_unity_prod
@@ -1093,7 +934,7 @@ country_event = {
 				set_leader_flag = appointed_heir
 			}
 			if = {
-				limit = { has_valid_civic = civic_adoptive_dynasties }
+				limit = { has_adoptive_dynasties = yes }
 				heir_setup_ad = yes
 			}
 			else = {
@@ -1108,7 +949,7 @@ country_event = {
 	}
 }
 
-# General
+# Scientist
 country_event = {
 	id = usefulheirs.3130
 	title = usefulheirs.3130.name
@@ -1136,300 +977,9 @@ country_event = {
 
 	option = {
 		name = usefulheirs.3110.heir_maybe_1
-		trigger = { check_variable = { which = total_generals value >= 1 } }
-		if = {
-			limit = { NOT = { has_valid_civic = civic_adoptive_dynasties } }
-			add_resource = {
-				unity = -1
-				mult = monthly_unity_prod
-			}
-		}		
-		hidden_effect = {
-			event_target:heir_maybe_1 = {
-				save_event_target_as = new_chosen_heir
-				set_leader_flag = appointed_heir
-			}
-			if = {
-				limit = { has_valid_civic = civic_adoptive_dynasties }
-				heir_setup_ad = yes
-			}
-			else = {
-				heir_setup_non_ad = yes
-			}
-		}
-		ai_chance = { factor = 1 }
-	}
-
-	option = {
-		name = usefulheirs.3110.heir_maybe_2
-		trigger = { check_variable = { which = total_generals value >= 2 } }
-		if = {
-			limit = { NOT = { has_valid_civic = civic_adoptive_dynasties } }
-			add_resource = {
-				unity = -1
-				mult = monthly_unity_prod
-			}
-		}		
-		hidden_effect = {
-			event_target:heir_maybe_2 = {
-				save_event_target_as = new_chosen_heir
-				set_leader_flag = appointed_heir
-			}
-			if = {
-				limit = { has_valid_civic = civic_adoptive_dynasties }
-				heir_setup_ad = yes
-			}
-			else = {
-				heir_setup_non_ad = yes
-			}
-		}
-		ai_chance = { factor = 1 }
-	}
-
-	option = {
-		name = usefulheirs.3110.heir_maybe_3
-		trigger = { check_variable = { which = total_generals value >= 3 } }
-		if = {
-			limit = { NOT = { has_valid_civic = civic_adoptive_dynasties } }
-			add_resource = {
-				unity = -1
-				mult = monthly_unity_prod
-			}
-		}		
-		hidden_effect = {
-			event_target:heir_maybe_3 = {
-				save_event_target_as = new_chosen_heir
-				set_leader_flag = appointed_heir
-			}
-			if = {
-				limit = { has_valid_civic = civic_adoptive_dynasties }
-				heir_setup_ad = yes
-			}
-			else = {
-				heir_setup_non_ad = yes
-			}
-		}
-		ai_chance = { factor = 1 }
-	}
-
-	option = {
-		name = usefulheirs.3110.heir_maybe_4
-		trigger = { check_variable = { which = total_generals value >= 4 } }
-		if = {
-			limit = { NOT = { has_valid_civic = civic_adoptive_dynasties } }
-			add_resource = {
-				unity = -1
-				mult = monthly_unity_prod
-			}
-		}		
-		hidden_effect = {
-			event_target:heir_maybe_4 = {
-				save_event_target_as = new_chosen_heir
-				set_leader_flag = appointed_heir
-			}
-			if = {
-				limit = { has_valid_civic = civic_adoptive_dynasties }
-				heir_setup_ad = yes
-			}
-			else = {
-				heir_setup_non_ad = yes
-			}
-		}
-		ai_chance = { factor = 1 }
-	}
-
-	option = {
-		name = usefulheirs.3110.heir_maybe_5
-		trigger = { check_variable = { which = total_generals value >= 5 } }
-		if = {
-			limit = { NOT = { has_valid_civic = civic_adoptive_dynasties } }
-			add_resource = {
-				unity = -1
-				mult = monthly_unity_prod
-			}
-		}		
-		hidden_effect = {
-			event_target:heir_maybe_5 = {
-				save_event_target_as = new_chosen_heir
-				set_leader_flag = appointed_heir
-			}
-			if = {
-				limit = { has_valid_civic = civic_adoptive_dynasties }
-				heir_setup_ad = yes
-			}
-			else = {
-				heir_setup_non_ad = yes
-			}
-		}
-		ai_chance = { factor = 1 }
-	}
-
-	option = {
-		name = usefulheirs.3110.heir_maybe_6
-		trigger = { check_variable = { which = total_generals value >= 6 } }
-		if = {
-			limit = { NOT = { has_valid_civic = civic_adoptive_dynasties } }
-			add_resource = {
-				unity = -1
-				mult = monthly_unity_prod
-			}
-		}		
-		hidden_effect = {
-			event_target:heir_maybe_6 = {
-				save_event_target_as = new_chosen_heir
-				set_leader_flag = appointed_heir
-			}
-			if = {
-				limit = { has_valid_civic = civic_adoptive_dynasties }
-				heir_setup_ad = yes
-			}
-			else = {
-				heir_setup_non_ad = yes
-			}
-		}
-		ai_chance = { factor = 1 }
-	}
-
-	option = {
-		name = usefulheirs.3110.heir_maybe_7
-		trigger = { check_variable = { which = total_generals value >= 7 } }
-		if = {
-			limit = { NOT = { has_valid_civic = civic_adoptive_dynasties } }
-			add_resource = {
-				unity = -1
-				mult = monthly_unity_prod
-			}
-		}		
-		hidden_effect = {
-			event_target:heir_maybe_7 = {
-				save_event_target_as = new_chosen_heir
-				set_leader_flag = appointed_heir
-			}
-			if = {
-				limit = { has_valid_civic = civic_adoptive_dynasties }
-				heir_setup_ad = yes
-			}
-			else = {
-				heir_setup_non_ad = yes
-			}
-		}
-		ai_chance = { factor = 1 }
-	}
-
-	option = {
-		name = usefulheirs.3110.heir_maybe_8
-		trigger = { check_variable = { which = total_generals value >= 8 } }
-		if = {
-			limit = { NOT = { has_valid_civic = civic_adoptive_dynasties } }
-			add_resource = {
-				unity = -1
-				mult = monthly_unity_prod
-			}
-		}		
-		hidden_effect = {
-			event_target:heir_maybe_8 = {
-				save_event_target_as = new_chosen_heir
-				set_leader_flag = appointed_heir
-			}
-			if = {
-				limit = { has_valid_civic = civic_adoptive_dynasties }
-				heir_setup_ad = yes
-			}
-			else = {
-				heir_setup_non_ad = yes
-			}
-		}
-		ai_chance = { factor = 1 }
-	}
-
-	option = {
-		name = usefulheirs.3110.heir_maybe_9
-		trigger = { check_variable = { which = total_generals value >= 9 } }
-		if = {
-			limit = { NOT = { has_valid_civic = civic_adoptive_dynasties } }
-			add_resource = {
-				unity = -1
-				mult = monthly_unity_prod
-			}
-		}		
-		hidden_effect = {
-			event_target:heir_maybe_9 = {
-				save_event_target_as = new_chosen_heir
-				set_leader_flag = appointed_heir
-			}
-			if = {
-				limit = { has_valid_civic = civic_adoptive_dynasties }
-				heir_setup_ad = yes
-			}
-			else = {
-				heir_setup_non_ad = yes
-			}
-		}
-		ai_chance = { factor = 1 }
-	}
-
-	option = {
-		name = usefulheirs.3110.heir_maybe_10
-		trigger = { check_variable = { which = total_generals value >= 10 } }
-		if = {
-			limit = { NOT = { has_valid_civic = civic_adoptive_dynasties } }
-			add_resource = {
-				unity = -1
-				mult = monthly_unity_prod
-			}
-		}		
-		hidden_effect = {
-			event_target:heir_maybe_10 = {
-				save_event_target_as = new_chosen_heir
-				set_leader_flag = appointed_heir
-			}
-			if = {
-				limit = { has_valid_civic = civic_adoptive_dynasties }
-				heir_setup_ad = yes
-			}
-			else = {
-				heir_setup_non_ad = yes
-			}
-		}
-		ai_chance = { factor = 1 }
-	}
-
-	after = {
-		hidden_effect = { clear_variable = monthly_unity_prod }
-	}
-}
-
-# Scientist
-country_event = {
-	id = usefulheirs.3140
-	title = usefulheirs.3140.name
-	desc = usefulheirs.3110.desc
-	hide_window = no
-	is_triggered_only = yes
-
-	diplomatic = yes
-
-	picture_event_data = {
-		portrait = root.ruler
-		planet_background = root.capital_scope
-		graphical_culture = root.owner
-		city_level = root.capital_scope
-		room = root.ruler
-	}
-
-	# Nevermind
-	option = {
-		name = usefulheirs.3110.back
-		ai_chance = {
-			factor = 0.5
-		}
-	}
-
-	option = {
-		name = usefulheirs.3110.heir_maybe_1
 		trigger = { check_variable = { which = total_scientists value >= 1 } }
 		if = {
-			limit = { NOT = { has_valid_civic = civic_adoptive_dynasties } }
+			limit = { has_adoptive_dynasties = no }
 			add_resource = {
 				unity = -1
 				mult = monthly_unity_prod
@@ -1441,7 +991,7 @@ country_event = {
 				set_leader_flag = appointed_heir
 			}
 			if = {
-				limit = { has_valid_civic = civic_adoptive_dynasties }
+				limit = { has_adoptive_dynasties = yes }
 				heir_setup_ad = yes
 			}
 			else = {
@@ -1455,7 +1005,7 @@ country_event = {
 		name = usefulheirs.3110.heir_maybe_2
 		trigger = { check_variable = { which = total_scientists value >= 2 } }
 		if = {
-			limit = { NOT = { has_valid_civic = civic_adoptive_dynasties } }
+			limit = { has_adoptive_dynasties = no }
 			add_resource = {
 				unity = -1
 				mult = monthly_unity_prod
@@ -1467,7 +1017,7 @@ country_event = {
 				set_leader_flag = appointed_heir
 			}
 			if = {
-				limit = { has_valid_civic = civic_adoptive_dynasties }
+				limit = { has_adoptive_dynasties = yes }
 				heir_setup_ad = yes
 			}
 			else = {
@@ -1481,7 +1031,7 @@ country_event = {
 		name = usefulheirs.3110.heir_maybe_3
 		trigger = { check_variable = { which = total_scientists value >= 3 } }
 		if = {
-			limit = { NOT = { has_valid_civic = civic_adoptive_dynasties } }
+			limit = { has_adoptive_dynasties = no }
 			add_resource = {
 				unity = -1
 				mult = monthly_unity_prod
@@ -1493,7 +1043,7 @@ country_event = {
 				set_leader_flag = appointed_heir
 			}
 			if = {
-				limit = { has_valid_civic = civic_adoptive_dynasties }
+				limit = { has_adoptive_dynasties = yes }
 				heir_setup_ad = yes
 			}
 			else = {
@@ -1507,7 +1057,7 @@ country_event = {
 		name = usefulheirs.3110.heir_maybe_4
 		trigger = { check_variable = { which = total_scientists value >= 4 } }
 		if = {
-			limit = { NOT = { has_valid_civic = civic_adoptive_dynasties } }
+			limit = { has_adoptive_dynasties = no }
 			add_resource = {
 				unity = -1
 				mult = monthly_unity_prod
@@ -1519,7 +1069,7 @@ country_event = {
 				set_leader_flag = appointed_heir
 			}
 			if = {
-				limit = { has_valid_civic = civic_adoptive_dynasties }
+				limit = { has_adoptive_dynasties = yes }
 				heir_setup_ad = yes
 			}
 			else = {
@@ -1533,7 +1083,7 @@ country_event = {
 		name = usefulheirs.3110.heir_maybe_5
 		trigger = { check_variable = { which = total_scientists value >= 5 } }
 		if = {
-			limit = { NOT = { has_valid_civic = civic_adoptive_dynasties } }
+			limit = { has_adoptive_dynasties = no }
 			add_resource = {
 				unity = -1
 				mult = monthly_unity_prod
@@ -1545,7 +1095,7 @@ country_event = {
 				set_leader_flag = appointed_heir
 			}
 			if = {
-				limit = { has_valid_civic = civic_adoptive_dynasties }
+				limit = { has_adoptive_dynasties = yes }
 				heir_setup_ad = yes
 			}
 			else = {
@@ -1559,7 +1109,7 @@ country_event = {
 		name = usefulheirs.3110.heir_maybe_6
 		trigger = { check_variable = { which = total_scientists value >= 6 } }
 		if = {
-			limit = { NOT = { has_valid_civic = civic_adoptive_dynasties } }
+			limit = { has_adoptive_dynasties = no }
 			add_resource = {
 				unity = -1
 				mult = monthly_unity_prod
@@ -1571,7 +1121,7 @@ country_event = {
 				set_leader_flag = appointed_heir
 			}
 			if = {
-				limit = { has_valid_civic = civic_adoptive_dynasties }
+				limit = { has_adoptive_dynasties = yes }
 				heir_setup_ad = yes
 			}
 			else = {
@@ -1585,7 +1135,7 @@ country_event = {
 		name = usefulheirs.3110.heir_maybe_7
 		trigger = { check_variable = { which = total_scientists value >= 7 } }
 		if = {
-			limit = { NOT = { has_valid_civic = civic_adoptive_dynasties } }
+			limit = { has_adoptive_dynasties = no }
 			add_resource = {
 				unity = -1
 				mult = monthly_unity_prod
@@ -1597,7 +1147,7 @@ country_event = {
 				set_leader_flag = appointed_heir
 			}
 			if = {
-				limit = { has_valid_civic = civic_adoptive_dynasties }
+				limit = { has_adoptive_dynasties = yes }
 				heir_setup_ad = yes
 			}
 			else = {
@@ -1611,7 +1161,7 @@ country_event = {
 		name = usefulheirs.3110.heir_maybe_8
 		trigger = { check_variable = { which = total_scientists value >= 8 } }
 		if = {
-			limit = { NOT = { has_valid_civic = civic_adoptive_dynasties } }
+			limit = { has_adoptive_dynasties = no }
 			add_resource = {
 				unity = -1
 				mult = monthly_unity_prod
@@ -1623,7 +1173,7 @@ country_event = {
 				set_leader_flag = appointed_heir
 			}
 			if = {
-				limit = { has_valid_civic = civic_adoptive_dynasties }
+				limit = { has_adoptive_dynasties = yes }
 				heir_setup_ad = yes
 			}
 			else = {
@@ -1637,7 +1187,7 @@ country_event = {
 		name = usefulheirs.3110.heir_maybe_9
 		trigger = { check_variable = { which = total_scientists value >= 9 } }
 		if = {
-			limit = { NOT = { has_valid_civic = civic_adoptive_dynasties } }
+			limit = { has_adoptive_dynasties = no }
 			add_resource = {
 				unity = -1
 				mult = monthly_unity_prod
@@ -1649,7 +1199,7 @@ country_event = {
 				set_leader_flag = appointed_heir
 			}
 			if = {
-				limit = { has_valid_civic = civic_adoptive_dynasties }
+				limit = { has_adoptive_dynasties = yes }
 				heir_setup_ad = yes
 			}
 			else = {
@@ -1663,7 +1213,7 @@ country_event = {
 		name = usefulheirs.3110.heir_maybe_10
 		trigger = { check_variable = { which = total_scientists value >= 10 } }
 		if = {
-			limit = { NOT = { has_valid_civic = civic_adoptive_dynasties } }
+			limit = { has_adoptive_dynasties = no }
 			add_resource = {
 				unity = -1
 				mult = monthly_unity_prod
@@ -1675,7 +1225,7 @@ country_event = {
 				set_leader_flag = appointed_heir
 			}
 			if = {
-				limit = { has_valid_civic = civic_adoptive_dynasties }
+				limit = { has_adoptive_dynasties = yes }
 				heir_setup_ad = yes
 			}
 			else = {
@@ -1694,33 +1244,33 @@ country_event = {
 
 # New Heir - Adopt Dynastic Name?
 country_event = {
-	id = usefulheirs.3500
+	id = usefulheirs.3400
 	picture = GFX_evt_arena
-	title = usefulheirs.3500.name
-	desc = usefulheirs.3500.desc
+	title = usefulheirs.3400.name
+	desc = usefulheirs.3400.desc
 	hide_window = no
 	is_triggered_only = yes
 
 	immediate = {
 		random_owned_leader = {
-			limit = { has_leader_flag = dynastic_name_leader }
+			limit = { is_dynastic_name_leader = yes }
 			save_event_target_as = dynastic_name_leader
 		}
 	}
 
 	# No Name Change
 	option = {
-		name = usefulheirs.3500.no_name_change
+		name = usefulheirs.3400.no_name_change
 	}
 
 	# Yes Name Change
 	option = {
-		name = usefulheirs.3500.yes_name_change
-		custom_tooltip = usefulheirs.3500.yes_name_change.tooltip
+		name = usefulheirs.3400.yes_name_change
+		custom_tooltip = usefulheirs.3400.yes_name_change.tooltip
 		hidden_effect = {
 			heir = {
 				set_name = {
-					key = "usefulheirs.3500.new_heir_name"
+					key = "usefulheirs.3400.new_heir_name"
 					variable_string = "[this.GetName]"
 					variable_string = "[event_target:dynastic_name_leader.GetName]"
 				}
@@ -1733,7 +1283,7 @@ country_event = {
 		hidden_effect = {
 			if = {
 				limit = { has_country_flag = dissed_heir }
-				country_event = { id = usefulheirs.3501 }
+				country_event = { id = usefulheirs.3500 }
 			}
 		}
 	}
@@ -1741,10 +1291,10 @@ country_event = {
 
 # New Heir Proclaimed, but old heir is upset
 country_event = {
-	id = usefulheirs.3501
+	id = usefulheirs.3500
 	picture = GFX_evt_coronation
-	title = usefulheirs.3501.name
-	desc = usefulheirs.3501.desc
+	title = usefulheirs.3500.name
+	desc = usefulheirs.3500.desc
 	hide_window = no
 	is_triggered_only = yes
 
@@ -1776,126 +1326,11 @@ country_event = {
 				}
 			}
 			if = {
-				limit = { has_global_flag = civil_wars_active }
-				country_event = { id = civheir.1000 }
-			}
-		}
-	}
-}
-
-# Check for dynastic heir and set flag monthly
-country_event = {
-	id = usefulheirs.3600
-	hide_window = yes
-	is_triggered_only = yes
-
-	trigger = {
-		is_imperial = yes
-		has_civic = civic_adoptive_dynasties
-		exists = heir
-		heir = { NOT = { has_leader_flag = dynastic_heir } }
-		heir = { NOT = { has_leader_flag = appointed_heir } }
-	}
-
-	immediate = {
-		heir = { set_leader_flag = dynastic_heir }
-	}
-}
-
-# On Ruler set, if dynastic heir, set penalties
-country_event = {
-	id = usefulheirs.3800
-	hide_window = yes
-	is_triggered_only = yes
-
-	trigger = {
-		is_imperial = yes
-		has_civic = civic_adoptive_dynasties
-		ruler = { has_leader_flag = dynastic_heir }
-	}
-
-	immediate = {
-		country_event = { id = usefulheirs.3810 days = 7 }
-	}
-}
-
-# New Non-Designated Ruler
-country_event = {
-	id = usefulheirs.3810
-	picture = GFX_evt_news_room
-	title = usefulheirs.3810.name
-	desc = usefulheirs.3810.desc
-	hide_window = no
-	is_triggered_only = yes
-
-	option = {
-		name = usefulheirs.3810.a
-		hidden_effect = {
-			every_owned_planet = {
 				limit = {
-					num_pops > 0
-					is_capital = no
+					has_civil_wars_mod = yes
+					NOT = { exists = event_target:disinherited_heir_fatherland }
 				}
-				add_modifier = {
-					modifier = dynastic_heir
-					years = 10
-				}
-			}
-			capital_scope = {
-				add_modifier = {
-					modifier = dynastic_heir_capital
-					years = 10
-				}
-			}
-			event_target:deceased_ruler = {
-				kill_leader = { show_notification = no }
-			}
-		}
-	}
-}
-
-# Dead Designated Heir - Initializer
-country_event = {
-	id = usefulheirs.3900
-	hide_window = yes
-	is_triggered_only = yes
-
-	trigger = {
-		from = {
-			has_leader_flag = appointed_heir
-			NOT = { has_leader_flag = dead_ruler }
-			NOT = { has_leader_flag = switch_ruler }
-		}
-		has_civic = civic_adoptive_dynasties
-	}
-
-	immediate = {
-		from = { save_event_target_as = deceased_heir }
-		clone_leader = {
-			target = event_target:deceased_heir
-			effect = {
-				set_leader_flag = dead_ruler
-				save_event_target_as = deceased_heir
-			}
-		}
-		country_event = { id = usefulheirs.3910 }
-	}
-}
-
-# Designated Heir Dies - Notification
-country_event = {
-	id = usefulheirs.3910
-	picture = GFX_evt_space_funeral
-	title = usefulheirs.3910.name
-	desc = usefulheirs.3910.desc
-	hide_window = no
-	is_triggered_only = yes
-
-	option = {
-		name = usefulheirs.3910.a
-		hidden_effect = {
-			event_target:deceased_heir = {
-				kill_leader = { show_notification = no }
+				country_event = { id = civheir.1000 }
 			}
 		}
 	}
@@ -1941,167 +1376,12 @@ country_event = {
 	option = {
 		name = usefulheirs.4000.c
 		custom_tooltip = usefulheirs.4000.c.tooltip
-		hidden_effect = { country_event = { id = usefulheirs.4010 } }
+		hidden_effect = {
+			ruler = { remove_trait = trait_imperial_heir }
+			heir = { save_event_target_as = new_ruler }
+			set_leader = event_target:new_ruler
+		}
 		ai_chance = { factor = 1 }
-	}
-}
-
-# Decide to become another leader type
-country_event = {
-	id = usefulheirs.4010
-	title = usefulheirs.4010.name
-	desc = usefulheirs.4010.desc
-	hide_window = no
-	is_triggered_only = yes
-
-	diplomatic = yes
-
-	picture_event_data = {
-		portrait = event_target:heir_leader
-		planet_background = root.owner
-		graphical_culture = root.owner
-		city_level = root.owner
-		room = root.owner
-	}
-
-	# Governor
-	option = {
-		name = usefulheirs.4010.a
-		hidden_effect = { country_event = { id = usefulheirs.4011 } }
-		ai_chance = { factor = 5 }
-	}
-
-	# Admiral
-	option = {
-		name = usefulheirs.4010.b
-		hidden_effect = { country_event = { id = usefulheirs.4012 } }
-		ai_chance = { factor = 4 }
-	}
-
-	# General
-	option = {
-		name = usefulheirs.4010.c
-		hidden_effect = { country_event = { id = usefulheirs.4013 } }
-		ai_chance = { factor = 2 }
-	}
-
-	# Scientist
-	option = {
-		name = usefulheirs.4010.d
-		hidden_effect = { country_event = { id = usefulheirs.4014 } }
-		ai_chance = { factor = 2 }
-	}
-}
-
-# Make Ruler Governor
-country_event = {
-	id = usefulheirs.4011
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = {
-
-		ruler = { save_event_target_as = old_ruler }
-
-		heir = {
-			save_event_target_as = new_ruler
-			set_leader_flag = new_ruler_via_abdication
-		}
-
-		clone_leader = {
-			target = event_target:old_ruler
-			class = governor
-			effect = {
-				set_leader_flag = abdicated_ruler
-				save_event_target_as = abdicated_ruler_new
-			}
-		}
-
-		ruler = { kill_leader = { show_notification = no } }
-	}
-}
-
-# Make Ruler Admiral
-country_event = {
-	id = usefulheirs.4012
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = {
-
-		ruler = { save_event_target_as = old_ruler }
-
-		heir = {
-			save_event_target_as = new_ruler
-			set_leader_flag = new_ruler_via_abdication
-		}
-
-		clone_leader = {
-			target = event_target:old_ruler
-			class = admiral
-			effect = {
-				set_leader_flag = abdicated_ruler
-				save_event_target_as = abdicated_ruler_new
-			}
-		}
-
-		ruler = { kill_leader = { show_notification = no } }
-	}
-}
-
-# Make Ruler General
-country_event = {
-	id = usefulheirs.4013
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = {
-
-		ruler = { save_event_target_as = old_ruler }
-
-		heir = {
-			save_event_target_as = new_ruler
-			set_leader_flag = new_ruler_via_abdication
-		}
-
-		clone_leader = {
-			target = event_target:old_ruler
-			class = general
-			effect = {
-				set_leader_flag = abdicated_ruler
-				save_event_target_as = abdicated_ruler_new
-			}
-		}
-
-		ruler = { kill_leader = { show_notification = no } }
-	}
-}
-
-# Make Ruler Scientist
-country_event = {
-	id = usefulheirs.4014
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = {
-
-		ruler = { save_event_target_as = old_ruler }
-
-		heir = {
-			save_event_target_as = new_ruler
-			set_leader_flag = new_ruler_via_abdication
-		}
-
-		clone_leader = {
-			target = event_target:old_ruler
-			class = scientist
-			effect = {
-				set_leader_flag = abdicated_ruler
-				save_event_target_as = abdicated_ruler_new
-			}
-		}
-
-		ruler = { kill_leader = { show_notification = no } }
 	}
 }
 
@@ -2116,12 +1396,16 @@ country_event = {
 	trigger = { 
 		is_ai = yes
 		exists = heir
+		is_country_type_with_subjects = yes
 		heir = {
 			NOR = {
-				leader_class = governor
-				leader_class = admiral
-				leader_class = general
+				leader_class = official
+				leader_class = commander
 				leader_class = scientist
+			}
+			NAND = {
+				has_leader_flag = dynastic_heir
+				root = { has_adoptive_dynasties = yes }
 			}
 		}
 	}
@@ -2142,11 +1426,8 @@ country_event = {
 		is_ai = yes
 		exists = heir
 		is_at_war = no
-		ruler = {
-			NOT = {
-				has_trait = leader_trait_ruler_chosen
-			}
-		}
+		is_country_type_with_subjects = yes
+		ruler = { is_immortal = no }
 	}
 
 	immediate = {
@@ -2157,7 +1438,7 @@ country_event = {
 					leader_age < 75
 				}
 			}
-			random = { chance = 10 country_event = { id = usefulheirs.4000 } }
+			random = { chance = 2 country_event = { id = usefulheirs.4000 } }
 		}
 		else_if = {
 			limit = {
@@ -2166,7 +1447,7 @@ country_event = {
 					leader_age < 80
 				}
 			}
-			random = { chance = 15 country_event = { id = usefulheirs.4000 } }
+			random = { chance = 5 country_event = { id = usefulheirs.4000 } }
 		}
 		else_if = {
 			limit = {
@@ -2175,7 +1456,7 @@ country_event = {
 					leader_age < 85
 				}
 			}
-			random = { chance = 20 country_event = { id = usefulheirs.4000 } }
+			random = { chance = 7 country_event = { id = usefulheirs.4000 } }
 		}
 		else_if = {
 			limit = {
@@ -2184,7 +1465,7 @@ country_event = {
 					leader_age < 90
 				}
 			}
-			random = { chance = 25 country_event = { id = usefulheirs.4000 } }
+			random = { chance = 10 country_event = { id = usefulheirs.4000 } }
 		}
 		else_if = {
 			limit = {
@@ -2193,7 +1474,7 @@ country_event = {
 					leader_age < 95
 				}
 			}
-			random = { chance = 30 country_event = { id = usefulheirs.4000 } }
+			random = { chance = 12 country_event = { id = usefulheirs.4000 } }
 		}
 		else_if = {
 			limit = {
@@ -2202,7 +1483,7 @@ country_event = {
 					leader_age < 100
 				}
 			}
-			random = { chance = 35 country_event = { id = usefulheirs.4000 } }
+			random = { chance = 15 country_event = { id = usefulheirs.4000 } }
 		}
 		else_if = {
 			limit = {
@@ -2211,7 +1492,7 @@ country_event = {
 					leader_age < 105
 				}
 			}
-			random = { chance = 40 country_event = { id = usefulheirs.4000 } }
+			random = { chance = 20 country_event = { id = usefulheirs.4000 } }
 		}
 		else_if = {
 			limit = {
@@ -2219,27 +1500,8 @@ country_event = {
 					leader_age >= 105
 				}
 			}
-			random = { chance = 45 country_event = { id = usefulheirs.4000 } }
+			random = { chance = 25 country_event = { id = usefulheirs.4000 } }
 		}
-	}
-}
-
-# AI Designate Heir event
-country_event = {
-	id = usefulheirs.9002
-	hide_window = yes
-	is_triggered_only = yes
-
-	trigger = { 
-		is_ai = yes
-		exists = heir
-		has_valid_civic = civic_adoptive_dynasties
-		heir = { NOT = { has_leader_flag = appointed_heir } }
-	}
-
-	immediate = {
-		heir = { save_event_target_as = heir_leader }
-		country_event = { id = usefulheirs.3000 }
 	}
 }
 
@@ -2252,18 +1514,15 @@ country_event = {
 	trigger = { 
 		is_ai = yes
 		exists = heir
+		is_country_type_with_subjects = yes
 	}
 
 	immediate = {
 
-		random_list = {
-			# Nothing
-			97 = { }
-			# Heir Disinherited
-			3 = {
-				heir = { save_event_target_as = heir_leader }
-				country_event = { id = usefulheirs.3000 }
-			}
+		random = {
+			chance = 7
+			heir = { save_event_target_as = heir_leader }
+			country_event = { id = usefulheirs.3000 }
 		}
 	}
 }
@@ -2275,7 +1534,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		NOT = { has_global_flag = civil_wars_active }
+		NOT = { has_civil_wars_mod = yes } # This is handled in that mod
 		ruler = { has_leader_flag = appointed_heir }
 	}
 
@@ -2295,7 +1554,11 @@ country_event = {
 
 	trigger = {
 		is_imperial = yes
-		ruler = { NOT = { is_exact_same_species = owner_species } }
+		is_country_type_with_subjects = yes
+		ruler = {
+			is_immortal = no
+			NOT = { is_exact_same_species = owner_species }
+		}
 	}
 
 	immediate = {
@@ -2311,20 +1574,25 @@ country_event = {
 
 	trigger = {
 		is_imperial = yes
+		is_country_type_with_subjects = yes
+		exists = ruler
 		ruler = { NOT = { has_leader_flag = adopted_dynastic_name } }
 	}
 
 	immediate = {
+
+		ruler = { save_event_target_as = dynasty_name }
+
 		if = {
-			limit = { NOT = { any_owned_leader = { has_leader_flag = dynastic_name_leader } } }
+			limit = { NOT = { any_owned_leader = { is_dynastic_name_leader = yes } } }
 			create_leader = {
-				class = ruler
+				class = official
 				species = owner_main_species
 				name = random
 				immortal = yes
+				hide_leader = yes
 				event_leader = yes
 				effect = {
-					set_leader_flag = dummy_leader
 					set_leader_flag = dynastic_name_leader
 					set_name = {
 						key = saved_dynastic_name
@@ -2335,195 +1603,13 @@ country_event = {
 		}
 		else = {
 			random_owned_leader = {
-				limit = { has_leader_flag = dynastic_name_leader }
+				limit = { is_dynastic_name_leader = yes }
 				set_name = {
 					key = saved_dynastic_name
 					variable_string = "[root.ruler.GetSecondName]"
 				}
 			}
-		}		
-	}
-}
-
-# Uncivic Compatch
-leader_event = {
-	id = usefulheirs.9400
-	hide_window = yes
-	is_triggered_only = yes
-
-	trigger = {
-		owner = { is_imperial = yes }
-		from = { has_leader_flag = appointed_heir }
-	}
-
-	immediate = {
-		set_leader_flag = appointed_heir
-		if = {
-		    limit = { from = { has_leader_flag = adopted_dynastic_name } }
-		    set_leader_flag = adopted_dynastic_name
-		}
-		owner = { set_heir = root }
-	}
-}
-
-# Psionic Fix - Give heir correct trait
-country_event = {
-	id = usefulheirs.9500
-	hide_window = yes
-	is_triggered_only = yes
-
-	trigger = {
-		exists = heir
-		heir = {
-			has_trait = leader_trait_ruler_psionic
-			NOR = {
-				has_trait = leader_trait_governor_psionic
-				has_trait = leader_trait_admiral_psionic
-				has_trait = leader_trait_general_psionic
-				has_trait = leader_trait_scientist_psionic
-			}
-			OR = {
-				leader_class = governor
-				leader_class = admiral
-				leader_class = general
-				leader_class = scientist
-			}
-		}
-	}
-
-	immediate = {
-
-		heir = {
-			if = {
-				limit = { leader_class = governor }
-				add_trait = leader_trait_governor_psionic
-			}
-			else_if = {
-				limit = { leader_class = admiral }
-				add_trait = leader_trait_admiral_psionic
-			}
-			else_if = {
-				limit = { leader_class = general }
-				add_trait = leader_trait_general_psionic
-			}
-			else_if = {
-				limit = { leader_class = scientist }
-				add_trait = leader_trait_scientist_psionic
-			}
-		}
-	}
-}
-
-# Psionic Fix - Remove traits after switching jobs
-country_event = {
-	id = usefulheirs.9510
-	hide_window = yes
-	is_triggered_only = yes
-
-	trigger = {
-		exists = heir
-		heir = {
-			OR = {
-				AND = {
-					has_trait = leader_trait_governor_psionic
-					OR = {
-						has_trait = leader_trait_admiral_psionic
-						has_trait = leader_trait_general_psionic
-						has_trait = leader_trait_scientist_psionic
-					}
-				}
-				AND = {
-					has_trait = leader_trait_admiral_psionic
-					OR = {
-						has_trait = leader_trait_governor_psionic
-						has_trait = leader_trait_general_psionic
-						has_trait = leader_trait_scientist_psionic
-					}
-				}
-				AND = {
-					has_trait = leader_trait_general_psionic
-					OR = {
-						has_trait = leader_trait_governor_psionic
-						has_trait = leader_trait_admiral_psionic
-						has_trait = leader_trait_scientist_psionic
-					}
-				}
-				AND = {
-					has_trait = leader_trait_scientist_psionic
-					OR = {
-						has_trait = leader_trait_governor_psionic
-						has_trait = leader_trait_admiral_psionic
-						has_trait = leader_trait_scientist_psionic
-					}
-				}
-			}
-		}
-	}
-
-	immediate = {
-
-		heir = {
-			if = {
-				limit = { leader_class = governor }
-				if = {
-					limit = { has_trait = leader_trait_admiral_psionic }
-					remove_trait = leader_trait_admiral_psionic
-				}
-				if = {
-					limit = { has_trait = leader_trait_general_psionic }
-					remove_trait = leader_trait_general_psionic
-				}
-				if = {
-					limit = { has_trait = leader_trait_scientist_psionic }
-					remove_trait = leader_trait_scientist_psionic
-				}
-			}
-			else_if = {
-				limit = { leader_class = admiral }
-				if = {
-					limit = { has_trait = leader_trait_governor_psionic }
-					remove_trait = leader_trait_governor_psionic
-				}
-				if = {
-					limit = { has_trait = leader_trait_general_psionic }
-					remove_trait = leader_trait_general_psionic
-				}
-				if = {
-					limit = { has_trait = leader_trait_scientist_psionic }
-					remove_trait = leader_trait_scientist_psionic
-				}
-			}
-			else_if = {
-				limit = { leader_class = general }
-				if = {
-					limit = { has_trait = leader_trait_admiral_psionic }
-					remove_trait = leader_trait_admiral_psionic
-				}
-				if = {
-					limit = { has_trait = leader_trait_governor_psionic }
-					remove_trait = leader_trait_governor_psionic
-				}
-				if = {
-					limit = { has_trait = leader_trait_scientist_psionic }
-					remove_trait = leader_trait_scientist_psionic
-				}
-			}
-			else_if = {
-				limit = { leader_class = scientist }
-				if = {
-					limit = { has_trait = leader_trait_admiral_psionic }
-					remove_trait = leader_trait_admiral_psionic
-				}
-				if = {
-					limit = { has_trait = leader_trait_general_psionic }
-					remove_trait = leader_trait_general_psionic
-				}
-				if = {
-					limit = { has_trait = leader_trait_governor_psionic }
-					remove_trait = leader_trait_governor_psionic
-				}
-			}
-		}
+		}	
 	}
 }
 
@@ -2541,7 +1627,7 @@ country_event = {
 				has_leader_flag = appointed_heir
 			}
 		}
-		ruler = { NOT = { has_trait = leader_trait_ruler_chosen } }
+		ruler = { is_immortal = no }
 	}
 
 	immediate = {
@@ -2550,10 +1636,7 @@ country_event = {
 		set_variable = { which = ruler_age_for_calc_2 value = leader.trigger:leader_age }
 		set_variable = { which = heir_age value = heir.trigger:leader_age }
 
-		subtract_variable = {
-			which = ruler_age_for_calc_1
-			value = heir_age
-		}
+		subtract_variable = { which = ruler_age_for_calc_1 value = heir_age }
 
 		if = {
 			limit = { heir.species = { NOT = { has_trait = trait_venerable } } }

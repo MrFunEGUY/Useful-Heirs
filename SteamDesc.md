@@ -68,7 +68,7 @@ This can even happen if you change your government type away from Imperial (or a
 
 [h1]Credit:[/h1]
 
-- Russian translation by [url=https://steamcommunity.com/profiles/76561198084274558]Tuvka[/url]. Thank you!
+- Russian translation by [url=https://steamcommunity.com/id/mahpell]Mahpell[/url]. Thank you!
 
 - Chinese translation by [url=https://steamcommunity.com/profiles/76561198840278562]Del[/url]. Thank you!
 
@@ -100,19 +100,24 @@ This can even happen if you change your government type away from Imperial (or a
 
 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2732567565]- No More Exclaves[/url]
 
-[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2801992671]- Occupied Resources[/url]
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2949463581]- Ethics and Civics Alternative - FunEFork[/url]
 
-[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2183551683]- Vassals Expanded and Reworked - FunEFork[/url]
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2956036384]- Galactic Bank - FunEFork[/url]
 
 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2177145527]- Intervene: Help Friendly Nations - FunEFork[/url]
 
-===
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2183551683]- Vassals Expanded and Reworked - FunEFork[/url]
 
-[url=https://ko-fi.com/mrfuneguy][img]https://i.imgur.com/EEyEFg6.png[/img][/url]
+
+[hr][/hr]
 
 [url=https://www.patreon.com/mrfuneguy][img]https://i.imgur.com/pdV33j3.png[/img][/url]
 
-===
+[url=https://paypal.me/Abreuhaha][img]https://i.imgur.com/OwoGCrW.png[/img][/url]
+
+[url=https://ko-fi.com/mrfuneguy][img]https://i.imgur.com/EEyEFg6.png[/img][/url]
+
+[hr][/hr]
 
 [h1]Support:[/h1]
 

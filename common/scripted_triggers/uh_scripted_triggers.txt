@@ -1,8 +1,33 @@
 
+has_useful_heirs_active = {
+	optimize_memory
+	always = yes
+}
+
 is_fake_leader = {
 	OR = {
+		# Civil Wars Compat
 		has_leader_flag = dead_ruler
 		has_leader_flag = dummy_leader
-		has_leader_flag = switch_ruler
+		has_leader_flag = dynastic_name_leader
+		has_leader_flag = civil_war_leader_nationalist_faction
+		has_leader_flag = new_faction_ruler
 	}
+}
+
+has_adoptive_dynasties = {
+	optimize_memory
+	has_valid_civic = civic_adoptive_dynasties
+}
+
+is_heir = {
+	OR = {
+		has_leader_flag = appointed_heir
+		has_leader_flag = dynastic_heir
+		is_same_value = root.owner.heir
+	}
+}
+
+is_dynastic_name_leader = {
+	has_leader_flag = dynastic_name_leader
 }

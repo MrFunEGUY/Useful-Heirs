@@ -1,0 +1,201 @@
+######################
+# Useful Heir Events #
+######################
+
+namespace = uh_adoptive
+
+# Check for dynastic heir and set flag monthly
+country_event = {
+	id = uh_adoptive.1000
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_imperial = yes
+		has_adoptive_dynasties = yes
+		exists = heir
+		heir = {
+			NOR = {
+				has_leader_flag = dynastic_heir
+				has_leader_flag = appointed_heir
+			}
+		}
+	}
+
+	immediate = {
+		heir = { set_leader_flag = dynastic_heir }
+	}
+}
+
+# On Ruler set, if dynastic heir, set penalties
+country_event = {
+	id = uh_adoptive.1100
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_imperial = yes
+		has_adoptive_dynasties = yes
+		ruler = { has_leader_flag = dynastic_heir }
+	}
+
+	immediate = {
+		country_event = { id = uh_adoptive.1110 days = 2 random = 12 }
+	}
+}
+
+# New Non-Designated Ruler Notification
+country_event = {
+	id = uh_adoptive.1110
+	picture = GFX_evt_news_room
+	title = uh_adoptive.1110.name
+	desc = uh_adoptive.1110.desc
+	hide_window = no
+	is_triggered_only = yes
+
+	option = {
+		name = uh_adoptive.1110.a
+		hidden_effect = {
+			every_owned_planet = {
+				limit = {
+					num_pops > 0
+					is_capital = no
+				}
+				add_modifier = {
+					modifier = dynastic_heir
+					years = 10
+				}
+			}
+			capital_scope = {
+				add_modifier = {
+					modifier = dynastic_heir_capital
+					years = 10
+				}
+			}
+		}
+	}
+}
+
+# Dead Designated Heir - Initializer
+country_event = {
+	id = uh_adoptive.2000
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_adoptive_dynasties = yes
+		from = {
+			is_fake_leader = no
+			has_leader_flag = appointed_heir
+		}
+	}
+
+	immediate = {
+		from = { save_event_target_as = deceased_heir }
+		clone_leader = {
+			target = event_target:deceased_heir
+			effect = {
+				set_leader_flag = dead_ruler
+				save_event_target_as = deceased_heir
+			}
+		}
+		country_event = { id = uh_adoptive.2010 }
+	}
+}
+
+# Designated Heir Dies - Notification
+country_event = {
+	id = uh_adoptive.2010
+	picture = GFX_evt_space_funeral
+	title = uh_adoptive.2010.name
+	desc = uh_adoptive.2010.desc
+	hide_window = no
+	is_triggered_only = yes
+
+	option = {
+		name = uh_adoptive.2010.a
+		hidden_effect = {
+			event_target:deceased_heir = {
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+}
+
+# Government Reform - Pre Check for AD
+country_event = {
+	id = uh_adoptive.3000
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_imperial = yes
+		has_adoptive_dynasties = yes
+	}
+
+	immediate = {
+		set_timed_country_flag = { flag = had_adoptive_dynasties days = 20 }
+	}
+}
+
+# Government Reform - Post Check for AD
+country_event = {
+	id = uh_adoptive.3010
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_imperial = yes
+		has_adoptive_dynasties = no
+		has_country_flag = had_adoptive_dynasties
+	}
+
+	immediate = {
+		country_event = { id = uh_adoptive.3015 days = 1 random = 21 }
+	}
+}
+
+# New Non-Designated Ruler Notification
+country_event = {
+	id = uh_adoptive.3015
+	picture = GFX_evt_grand_speech
+	title = uh_adoptive.3015.name
+	desc = uh_adoptive.3015.desc
+	hide_window = no
+	is_triggered_only = yes
+
+	option = {
+		name = uh_adoptive.3015.a
+		hidden_effect = {
+			every_owned_planet = {
+				limit = {
+					num_pops > 0
+					is_capital = no
+				}
+				add_modifier = { modifier = dynastic_heir years = 10 }
+			}
+			capital_scope = {
+				add_modifier = { modifier = dynastic_heir_capital years = 10 }
+			}
+		}
+	}
+}
+
+# AI Designate Heir event
+country_event = {
+	id = uh_adoptive.9000
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = { 
+		is_ai = yes
+		exists = heir
+		heir = { has_leader_flag = dynastic_heir }
+		has_valid_civic = civic_adoptive_dynasties
+	}
+
+	immediate = {
+		heir = { save_event_target_as = heir_leader }
+		country_event = { id = uh_adoptive.3000 }
+	}
+}

@@ -1,0 +1,20 @@
+
+# THIS = leader
+# FROM = Astral Rift checked
+# Checks if the selected leader can explore the rift
+can_leader_explore_astral_rift = {
+	custom_tooltip = {
+		fail_text = "CANNOT_EXPLORE_WITH_COUNCIL_LEADER"
+		OR = {
+			is_councilor = no
+			AND = {
+				is_councilor = yes
+				is_heir = yes
+			}
+		}
+	}
+	# custom_tooltip = {
+	# 	fail_text = "CANNOT_EXPLORE_WITH_HEIR_LEADER"
+	# 	is_heir = no
+	# }
+}

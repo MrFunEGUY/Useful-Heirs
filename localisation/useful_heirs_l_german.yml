@@ -6,6 +6,8 @@ l_german:
 # l_russian:
 # l_braz_por:
 # l_simp_chinese:
+# l_korean:
+# l_japanese:
 
 # Translation by Lucanoria
 
@@ -27,7 +29,7 @@ l_german:
  #usefulheirs.1000.desc:0 "You summoned me, [root.GetRulerTitle]?"
  usefulheirs.1000.desc:0 "Du hast mich gerufen, [root.GetRulerTitle]?"
 
- #usefulheirs.1000.a:0 "You need to gain experience within our empire."
+ #usefulheirs.1000.a:0 "I need you to take on a different role."
  usefulheirs.1000.a:0 "Ihr solltet Erfahrungen in unserem Imperium sammeln."
  #usefulheirs.1000.a.tooltip:0 "Will we will able to assign our heir to a leadership position within our empire."
  usefulheirs.1000.a.tooltip:0 "Wird es uns gelingen, unseren Erben in eine Führungsposition innerhalb unseres Reiches zu bringen."
@@ -44,25 +46,17 @@ l_german:
  #usefulheirs.1000.d:0 "Nevermind."
  usefulheirs.1000.d:0 "Vergiss es."
 
- #usefulheirs.2000.desc:0 "How may I best serve you and the [Root.GetName]?"
- usefulheirs.2000.desc:0 "Wie kann ich Ihnen und der [Root.GetName] am besten dienen?"
+ #usefulheirs.2000.cesc:0 "How may I best serve you and the [Root.GetName]?"
+ usefulheirs.2000.cesc:0 "Wie kann ich Ihnen und der [Root.GetName] am besten dienen?"
 
- #usefulheirs.2000.a:0 "As a Governor of one of our sectors."
- usefulheirs.2000.a:0 "Als Gouverneur eines unserer Sektoren."
- #usefulheirs.2000.b:0 "As an Admiral in our navy."
- usefulheirs.2000.b:0 "Als Admiral in unserer Kriegsflotte."
- #usefulheirs.2000.c:0 "As a General in our army."
- usefulheirs.2000.c:0 "Wie ein General in unserer Armee."
- #usefulheirs.2000.d:0 "As a Scientist within our empire."
- usefulheirs.2000.d:0 "Als Wissenschaftler innerhalb unseres Reiches."
- #usefulheirs.2000.back:0 "Actually, you don't need any other resposibilities."
- usefulheirs.2000.back:0 "Eigentlich brauchst du keine weiteren Aufgaben zu übernehmen."
- #usefulheirs.2000.name_color_deactivated:0 "Heir Name Color: §EDefault§!"
- usefulheirs.2000.name_color_deactivated:0 "Erbe Name Farbe: §EStandard§!"
- #usefulheirs.2000.name_color_deactivated.tooltip:0 "Activating this will make your heir's name §Horange§! if you assign them as a leader. Once their name is §Horange§!, it will be §Horange§! for the rest of their life."
- usefulheirs.2000.name_color_deactivated.tooltip:0 "Wenn Sie dies aktivieren, wird der Name Ihres Erben §Horange§! sein, wenn Sie ihn als Anführer einsetzen. Sobald ihr Name §Horange§! ist, wird er für den Rest ihres Lebens §Horange§! sein."
- #usefulheirs.2000.name_color_activated:0 "Heir Name Color: §HOrange§!"
- usefulheirs.2000.name_color_activated:0 "Erbe Name Farbe: §HOrange§!"
+ #usefulheirs.2000.a:0 "As an $official_with_icon$"
+ usefulheirs.2000.a:0 "Als $official_with_icon$."
+ #usefulheirs.2000.b:0 "As a $commander_with_icon$"
+ usefulheirs.2000.b:0 "Als $commander_with_icon$."
+ #usefulheirs.2000.c:0 "As a $scientist_with_icon$"
+ usefulheirs.2000.c:0 "Als $scientist_with_icon$."
+ #usefulheirs.2000.back:0 "Actually, your current role is fine."
+ usefulheirs.2000.back:0 "Eigentlich ist Ihre derzeitige Rolle in Ordnung."
 
  #usefulheirs.3000.desc:0 "My [root.GetRulerTitle], I beg you to reconsider!"
  usefulheirs.3000.desc:0 "Mein [root.GetRulerTitle], ich bitte dich, das zu überdenken!"
@@ -74,12 +68,10 @@ l_german:
  #usefulheirs.3100.desc:0 "Who is worthy to be my heir?"
  usefulheirs.3100.desc:0 "Wer ist es würdig, mein Erbe zu sein?"
 
- #usefulheirs.3000.a:0 "One of our §YGovernors! shall be my heir."
+ #usefulheirs.3000.a:0 "One of our §YOfficials! shall be my heir."
  usefulheirs.3000.a:0 "Einer unserer §YGouverneure§! soll mein Erbe sein."
- #usefulheirs.3000.b:0 "One of our §YAdmirals! shall be my heir."
- usefulheirs.3000.b:0 "Einer unserer §YAdmirale§! soll mein Erbe sein."
- #usefulheirs.3000.c:0 "One of our §YGenerals! shall be my heir."
- usefulheirs.3000.c:0 "Einer unserer §YGeneräle§! soll mein Erbe sein."
+ #usefulheirs.3000.b:0 "One of our §YCommanders! shall be my heir."
+ usefulheirs.3000.b:0 "Einer unserer §YKommandeure§! soll mein Erbe sein."
  #usefulheirs.3000.d:0 "One of our §YScientists§! shall be my heir."
  usefulheirs.3000.d:0 "Einer unserer §YWissenschaftler§! soll mein Erbe sein."
  #usefulheirs.3000.e:0 "The next in the line of succession shall take your place."
@@ -89,14 +81,12 @@ l_german:
  #usefulheirs.3000.f.ad:0 "The time is not yet right."
  usefulheirs.3000.f.ad:0 "Die Zeit ist noch nicht reif."
 
- #usefulheirs.3110.name: "Governors"
+ #usefulheirs.3110.name: "Officials"
  usefulheirs.3110.name: "Gouverneure"
- #usefulheirs.3120.name: "Admirals"
- usefulheirs.3120.name: "Admirale"
- #usefulheirs.3130.name: "Generals"
- usefulheirs.3130.name: "Generäle"
- #usefulheirs.3140.name: "Scientists"
- usefulheirs.3140.name: "Wissenschaftler"
+ #usefulheirs.3120.name: "Commanders"
+ usefulheirs.3120.name: "Kommandeure"
+ #usefulheirs.3130.name: "Scientists"
+ usefulheirs.3130.name: "Wissenschaftler"
  #usefulheirs.3110.desc: "Who is worthy of being heir to the empire?"
  usefulheirs.3110.desc: "Wer ist würdig, Erbe des Reiches zu sein?"
 
@@ -113,40 +103,42 @@ l_german:
  usefulheirs.3110.heir_maybe_9: "§Y[heir_maybe_9.GetName]§!"
  usefulheirs.3110.heir_maybe_10: "§Y[heir_maybe_10.GetName]§!"
 
- #usefulheirs.3500.name: "§YCoronation Preparations§!"
- usefulheirs.3500.name: "§YKrönungsvorbereitungen§!"
- #usefulheirs.3500.desc: "As we prepare for the coronation of §H[new_chosen_heir.GetName]§!, the decision must be made as to whether or not they will join the imperial House. If not, they shall keep their old name.
- usefulheirs.3500.desc: "Während wir uns auf die Krönung von §H[new_chosen_heir.GetName]§! vorbereiten, muss die Entscheidung getroffen werden, ob sie dem kaiserlichen Haus beitreten werden oder nicht. Wenn nicht, sollen sie ihren alten Namen behalten."
+ usefulheirs.3400.name: "§YDynastische Belange§!"
+ usefulheirs.3400.desc: "Während wir uns auf die Krönung von §H[new_chosen_heir.GetName]§! vorbereiten, muss die Entscheidung getroffen werden, ob sie der kaiserlichen Dynastie beitreten werden oder nicht. Wenn nicht, behalten sie ihren alten Namen."
 
- #usefulheirs.3500.no_name_change: "They shall keep the name they were born with."
- usefulheirs.3500.no_name_change: "Sie sollen den Namen behalten, mit dem sie geboren wurden."
- #usefulheirs.3500.yes_name_change: "They shall join the House of §H[ruler.GetSecondName]§! and adopt our name."
- usefulheirs.3500.yes_name_change: "Sie werden sich dem Haus von [ruler.GetSecondName] anschließen und unseren Namen annehmen."
- #usefulheirs.3500.yes_name_change.tooltip: "§H[new_chosen_heir.GetName]§! will adopt the §H[ruler.GetSecondName]§! name and become §H[new_chosen_heir.GetName] [ruler.GetSecondName]§!."
- usefulheirs.3500.yes_name_change.tooltip: "§H[new_chosen_heir.GetName]§! übernimmt den Namen §H[ruler.GetSecondName]§! und wird zu §H[new_chosen_heir.GetName] [ruler.GetSecondName]§!."
+ usefulheirs.3400.no_name_change: "Sie sollen den Namen behalten, mit dem sie geboren wurden."
+ usefulheirs.3400.yes_name_change: "Sie werden sich dem Haus des §H[event_target:dynastic_name_leader.GetName]§! anschließen und unseren Namen annehmen."
+ usefulheirs.3400.yes_name_change.tooltip: "§H[new_chosen_heir.GetName]§! übernimmt den Namen §H[event_target:dynastic_name_leader.GetName]§! und wird §H[new_chosen_heir.GetName] [event_target:dynastic_name_leader.GetName]§!."
 
- #usefulheirs.3501.name: "§YNew Heir Apparent§!"
- usefulheirs.3501.name: "§YNeuer Thronfolger§!"
- #usefulheirs.3501.desc: "A grand coronation ceremony was held today in the capital, and broadcast throughout our empire. §H[new_chosen_heir.GetName]§! has been proclaimed the new §Y[root.GetHeirTitle]§!, and is now §Yheir§! to the throne. As expected with a change of this magnitude, there are some in the empire that have been expressing their discontent. The former §Yheir§!, §H[disinherited_heir_first.GetName]§!, still has their supporters. However, this discontent is likely to die down given enough time."
- usefulheirs.3501.desc: "Heute fand in der Hauptstadt eine große Krönungszeremonie statt, die im ganzen Reich übertragen wurde. §H[new_chosen_heir.GetName]§! wurde zum neuen §Y[root.GetHeirTitle]§! ausgerufen und ist nun §YErbe§! auf dem Thron. Wie bei einem Wechsel dieser Größenordnung nicht anders zu erwarten, gibt es im Reich einige, die ihre Unzufriedenheit zum Ausdruck bringen. Der frühere §Erbe§!, §H[Enterbter_Erbe_erster.GetName]§!, hat immer noch seine Anhänger. Diese Unzufriedenheit wird sich jedoch mit der Zeit legen."
- #usefulheirs.3501.ad.desc: "In line with our customs and traditions, a grand coronation ceremony was held today in the capital, and broadcast throughout our empire. §H[new_chosen_heir.GetName]§! has been proclaimed the new §Y[root.GetHeirTitle]§!, and is now heir to the throne."
- usefulheirs.3501.ad.desc: "Gemäß unseren Sitten und Gebräuchen wurde heute in der Hauptstadt eine große Krönungszeremonie abgehalten, die im ganzen Reich übertragen wurde. §H[new_chosen_heir.GetName]§! wurde zum neuen §Y[root.GetHeirTitle]§! ausgerufen und ist nun Thronfolger."
+ usefulheirs.3400.new_heir_name: "[this.GetName] [event_target:dynastic_name_leader.GetName]"
+ saved_dynastic_name: "[root.ruler.GetSecondName]"
+ new_dynastic_name: "[root.GetName]"
 
- #usefulheirs.3810.name: "§RDynastic Heir Ascends§!"
- usefulheirs.3810.name: "§RDynastic Heir Ascends§!"
- #usefulheirs.3810.desc: "In a break with tradition, §H[deceased_ruler.GetName]§! passed away without desginating an heir. As the next in the dynastic line of succession, §H[root.ruler.GetName]§! has ascended to the throne. This has caused widespread unease, with the populace worried that the newly-crowned §Y[root.GetRulerTitle]§! §H[root.ruler.GetName]§! will not be up to the task."
- usefulheirs.3810.desc: "In einem Bruch mit der Tradition ist §H[deceased_ruler.GetName]§! verstorben, ohne einen Erben zu benennen. Als nächster in der dynastischen Erbfolge bestieg §H[root.ruler.GetName]§! den Thron. Dies hat zu großer Unruhe geführt, da die Bevölkerung befürchtet, dass der neu gekrönte §Y[root.GetRulerTitle]§! §H[root.ruler.GetName]§! der Aufgabe nicht gewachsen sein wird."
+ #usefulheirs.3500.name: "§YNew Heir Presumptive§!"
+ usefulheirs.3500.name: "§YNeuer Thronfolger§!"
+ #usefulheirs.3500.desc: "A grand coronation ceremony was held today in the capital, and broadcast throughout our empire. §H[new_chosen_heir.GetName]§! has been proclaimed the new §Y[root.GetHeirTitle]§!, and is now §Yheir§! to the throne. As expected with a change of this magnitude, there are some in the empire that have been expressing their discontent. The former §Yheir§!, §H[disinherited_heir_first.GetName]§!, still has their supporters. However, this discontent is likely to die down given enough time."
+ usefulheirs.3500.desc: "Heute fand in der Hauptstadt eine große Krönungszeremonie statt, die im ganzen Reich übertragen wurde. §H[new_chosen_heir.GetName]§! wurde zum neuen §Y[root.GetHeirTitle]§! ausgerufen und ist nun §YErbe§! auf dem Thron. Wie bei einem Wechsel dieser Größenordnung nicht anders zu erwarten, gibt es im Reich einige, die ihre Unzufriedenheit zum Ausdruck bringen. Der frühere §Erbe§!, §H[Enterbter_Erbe_erster.GetName]§!, hat immer noch seine Anhänger. Diese Unzufriedenheit wird sich jedoch mit der Zeit legen."
+ #usefulheirs.3500.ad.desc: "In line with our customs and traditions, a grand coronation ceremony was held today in the capital, and broadcast throughout our empire. §H[new_chosen_heir.GetName]§! has been proclaimed the new §Y[root.GetHeirTitle]§!, and is now heir to the throne."
+ usefulheirs.3500.ad.desc: "Gemäß unseren Sitten und Gebräuchen wurde heute in der Hauptstadt eine große Krönungszeremonie abgehalten, die im ganzen Reich übertragen wurde. §H[new_chosen_heir.GetName]§! wurde zum neuen §Y[root.GetHeirTitle]§! ausgerufen und ist nun Thronfolger."
 
- #usefulheirs.3810.a: "We will prove ourselves."
- usefulheirs.3810.a: "Wir werden uns beweisen."
+ #uh_adoptive.1110.name: "§RDynastic Heir Ascends§!"
+ uh_adoptive.1110.name: "§RDynastisches Erbe§!"
+ #uh_adoptive.1110.desc: "In a break with tradition, §H[deceased_ruler.GetName]§! passed away without desginating an heir. As the next in the dynastic line of succession, §H[root.ruler.GetName]§! has ascended to the throne. This has caused widespread unease, with the populace worried that the newly-crowned §Y[root.GetRulerTitle]§! §H[root.ruler.GetName]§! will not be up to the task."
+ uh_adoptive.1110.desc: "In einem Bruch mit der Tradition ist unser vorheriger Herrscher verstorben, ohne einen Erben zu bestimmen. Als nächster in der dynastischen Erbfolge hat §H[ruler.GetName]§! den Thron bestiegen. Dies hat zu großer Unruhe geführt, da die Bevölkerung befürchtet, dass der neu gekrönte §Y[root.GetRulerTitle]§! §H[root.ruler.GetName]§! nicht für das Amt geeignet ist."
 
- #usefulheirs.3910.name: "§RDer designierte Erbe stirbt§!"
- usefulheirs.3910.name: "§RDer designierte Erbe stirbt§!"
- #usefulheirs.3910.desc: "In a great loss to the empire, [deceased_heir.GetTitle] §H[deceased_heir.GetName]§!, the §Yheir apparent§!, has passed away. A new §Yheir§! will need to be appointed."
- usefulheirs.3910.desc: "Ein großer Verlust für das Reich ist der Tod von [deceased_heir.GetTitle] <@H[deceased_heir.GetName]§!, dem §YThronfolger§! Ein neuer §YErbe§! muss ernannt werden."
+ #uh_adoptive.1110.a: "We will prove ourselves."
+ uh_adoptive.1110.a: "Wir werden uns beweisen."
 
- #usefulheirs.3910.a: "Tragic."
- usefulheirs.3910.a: "Tragisch."
+ #uh_adoptive.2010.name: "§RDer designierte Erbe stirbt§!"
+ uh_adoptive.2010.name: "§RDer designierte Erbe stirbt§!"
+ #uh_adoptive.2010.desc: "In a great loss to the empire, [deceased_heir.GetTitle] §H[deceased_heir.GetName]§!, the §Yheir apparent§!, has passed away. A new §Yheir§! will need to be appointed."
+ uh_adoptive.2010.desc: "Ein großer Verlust für das Reich ist der Tod von [deceased_heir.GetTitle] <@H[deceased_heir.GetName]§!, dem §YThronfolger§! Ein neuer §YErbe§! muss ernannt werden."
+
+ #uh_adoptive.2010.a: "Tragic."
+ uh_adoptive.2010.a: "Tragisch."
+
+ uh_adoptive.3015.name: "§RDynastic Succession Restored§!"
+ uh_adoptive.3015.desc: "In einer großen Rede vor der Nation hat heute §Y[root.GetRulerTitle]§! §H[ruler.GetName]§! die Entscheidung bekannt, mit der Tradition zu brechen und die dynastische Erbfolge wieder einzuführen. Diese Entscheidung ist in der Bevölkerung nicht gut aufgenommen worden. Sie befürchten, dass der Thron wie in der Vergangenheit irgendwann an jemanden übergehen wird, der der Verantwortung nicht würdig ist."
 
  #heir_fired_name:0 "[event_target:clone_leader_name_1.GetName]"
  heir_fired_name:0 "[event_target:clone_leader_name_1.GetName]"
@@ -176,12 +168,10 @@ l_german:
  #usefulheirs.4010.desc:0 "If that is what you wish. I won't dissapoint you. What do you want to do?"
  usefulheirs.4010.desc:0 "Wenn Sie das wünschen. Ich werde Sie nicht enttäuschen. Was möchten Sie tun?"
 
- #usefulheirs.4010.a:0 "I will preside over one of our sectors as a Governor."
+ #usefulheirs.4010.a:0 "I will serve as an Official within our realm."
  usefulheirs.4010.a:0 "Ich werde einem unserer Sektoren als Gouverneur vorstehen."
- #usefulheirs.4010.b:0 "I will lead one of our fleets as an Admiral."
- usefulheirs.4010.b:0 "Ich werde eine unserer Flotten als Admiral anführen."
- #usefulheirs.4010.c:0 "I will lead our troops as a General."
- usefulheirs.4010.c:0 "Ich werde unsere Truppen als General anführen."
+ #usefulheirs.4010.b:0 "I will lead our troops as a Commander."
+ usefulheirs.4010.b:0 "Ich werde unsere Truppen als Kommandeur führen."
  #usefulheirs.4010.d:0 "I will pursue knowledge as a Scientist"
  usefulheirs.4010.d:0 "Ich werde als Wissenschaftlerin nach Wissen streben."
 
@@ -201,8 +191,9 @@ l_german:
  civic_adoptive_dynasties: "Adoptivdynastien"
  #civic_adoptive_dynasties_desc: "A dynasty of inneffective rulers in the distant past has led to a tradition in this society whereby the monarch typically appoints their heir from amongst the most capable individuals in their court. This has resulted in a very stable empire. However, until an heir is appointed, the heir is still chosen via absolute primogeniture."
  civic_adoptive_dynasties_desc: "Eine Dynastie unfähiger Herrscher in der fernen Vergangenheit hat in dieser Gesellschaft zu der Tradition geführt, dass der Monarch seinen Erben in der Regel aus den fähigsten Personen seines Hofes ernennt. Dies hat zu einem sehr stabilen Imperium geführt. Bis zur Ernennung eines Erben wird dieser jedoch weiterhin durch das absolute Erstgeburtsrecht ausgewählt."
- #civic_tooltip_adoptive_dynasties_effects: "No £stability£ §YStability§! penalty or £influence£ §YInfluence§! cost to designate an heir. A non-designated heir becoming ruler will lower £stability£ §YStability§! for §R10§! years by §Y20§! on every planet except the capital, where stability will be lowered by §Y25§!."
- civic_tooltip_adoptive_dynasties_effects: "Keine £stability£ §YStabilität§! oder £influence£ §YEinfluss§! kostet es, einen Erben zu bestimmen. Ein nicht designierter Erbe, der Herrscher wird, senkt die £stability£ §YStabilität§! für §R10§! Jahre um §Y20§! auf jedem Planeten außer der Hauptstadt, wo die Stabilität um §Y25§! gesenkt wird."
+ civic_tooltip_adoptive_dynasties_effects: "Keine £stability£ §YStabilität§! oder £influence£ §YEinfluss§! kostet es, einen Erben zu bestimmen."
+ civic_tooltip_adoptive_dynasties_negative_effects: "Ein nicht designierter Erbe, der Herrscher wird, senkt die £stability£ §YStabilität§! für §Y10 Jahre§! um §R20§! auf jedem Planeten außer der Hauptstadt, wo die Stabilität um §R25§! gesenkt wird."
+
 
  # Modifiers
  #chose_new_heir: "New Heir"
@@ -224,3 +215,10 @@ l_german:
  dynastic_heir_capital: "Dynastieherrscher"
  #dynastic_heir_capital_desc: "Due to trauma from the past, the ascension of a dynastic heir has caused a considerable amount of distress in the capital."
  dynastic_heir_capital_desc: "Aufgrund eines Traumas aus der Vergangenheit hat der Aufstieg eines dynastischen Erben in der Hauptstadt für erhebliche Unruhe gesorgt."
+
+ # Councilors
+ councilor_adoptive_dynasties:0 "Mutmaßlicher Erbe"
+ councilor_adoptive_dynasties_female:0 "Mutmaßlicher Erbe"
+ councilor_adoptive_dynasties_desc:0 "Um sich auf seine Nachfolge vorzubereiten, erhält der $TITLE$ eine umfassende Ausbildung in der Verwaltung des Reiches."
+ mod_councilor_adoptive_dynasties_exp_gain: "$councilor_adoptive_dynasties_official_with_icon$ $exp_gain$"
+ councilor_adoptive_dynasties_official_with_icon:0 "£ruler£ $councilor_adoptive_dynasties$"

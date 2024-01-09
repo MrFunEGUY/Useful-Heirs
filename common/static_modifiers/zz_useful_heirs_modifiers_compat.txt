@@ -1,0 +1,3 @@
+rogue_target = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_alien_propaganda.dds"
+}
