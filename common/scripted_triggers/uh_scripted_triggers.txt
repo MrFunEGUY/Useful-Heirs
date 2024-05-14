@@ -1,6 +1,5 @@
 
 has_useful_heirs_active = {
-	optimize_memory
 	always = yes
 }
 
@@ -16,7 +15,6 @@ is_fake_leader = {
 }
 
 has_adoptive_dynasties = {
-	optimize_memory
 	has_valid_civic = civic_adoptive_dynasties
 }
 

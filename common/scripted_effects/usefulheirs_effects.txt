@@ -3,19 +3,181 @@
 ### Useful Heirs by MrFunEGUY ###
 #################################
 
-# Heir Setup Non - Adoptive Ddnasties
-heir_setup_non_ad = {
+get_heir_setup = {
 	if = {
-		limit = {
-			exists = heir
-			AND = {
+		limit = { has_adoptive_dynasties = yes }
+		if = {
+			limit = {
+				exists = heir
+				AND = {
+					has_civil_wars_mod = yes
+					has_fatherland_mod = yes
+				}
+				heir = { has_leader_flag = appointed_heir }
+			}
+			set_country_flag = dissed_heir
+			heir = {
+				random_list = {
+					70 = {
+						save_event_target_as = disinherited_heir
+						root = { country_event = { id = civheir.1000 } }
+					}
+					30 = { get_fatherland_chance = yes }
+				}
+			}
+
+		}
+		else_if = {
+			limit = {
 				has_civil_wars_mod = yes
+				exists = heir
+				heir = { has_leader_flag = appointed_heir }
+			}
+			heir = { save_event_target_as = disinherited_heir }
+			country_event = { id = civheir.1000 }
+			set_country_flag = dissed_heir
+		}
+		else_if = {
+			limit = {
 				has_fatherland_mod = yes
+				exists = heir
+				heir = { has_leader_flag = appointed_heir }
+			}
+			heir = { get_fatherland_chance = yes }
+			set_country_flag = dissed_heir
+		}
+		else_if = {
+			limit = { exists = heir }
+			heir = {
+				set_leader_flag = dead_ruler
+				kill_leader = { show_notification = no }
 			}
 		}
-		set_country_flag = dissed_heir
-		random_list = {
-			35 = { # Civil Wars
+		set_heir = event_target:new_chosen_heir
+		event_target:new_chosen_heir = { set_leader_flag = appointed_heir }
+		country_event = { id = usefulheirs.3500 }
+	}
+	else = {
+		if = {
+			limit = {
+				exists = heir
+				AND = {
+					has_civil_wars_mod = yes
+					has_fatherland_mod = yes
+				}
+			}
+			set_country_flag = dissed_heir
+			heir = {
+				random_list = {
+					70 = { # Civil Wars
+						if = {
+							limit = { is_heir = no }
+							set_leader_flag = true_born_heir
+						}
+						save_event_target_as = disinherited_heir
+						root = { country_event = { id = civheir.1000 } }
+					}
+					30 = { # Fatherland
+						if = {
+							limit = { is_heir = no }
+							set_leader_flag = true_born_heir
+						}
+						get_fatherland_chance = yes
+					}
+				}
+			}
+
+		}
+		else_if = {
+			limit = {
+				exists = heir
+				has_civil_wars_mod = yes
+			}
+			heir = {
+				if = {
+					limit = { is_heir = no }
+					set_leader_flag = true_born_heir
+				}
+				save_event_target_as = disinherited_heir
+				root = { country_event = { id = civheir.1000 } }
+			}
+			set_country_flag = dissed_heir
+		}
+		else_if = {
+			limit = {
+				exists = heir
+				has_fatherland_mod = yes
+			}
+			heir = {
+				if = {
+					limit = { is_heir = no }
+					set_leader_flag = true_born_heir
+				}
+				get_fatherland_chance = yes
+			}
+			set_country_flag = dissed_heir
+		}
+		else_if = {
+			limit = { exists = heir }
+			heir = {
+				set_leader_flag = dead_ruler
+				kill_leader = { show_notification = no }
+			}
+		}
+		set_heir = event_target:new_chosen_heir
+		event_target:new_chosen_heir = { set_leader_flag = appointed_heir }
+		country_event = { id = usefulheirs.3400 }
+	}
+
+	event_target:new_chosen_heir = {
+		if = {
+			limit = { NOT = { has_trait = trait_imperial_heir } }
+			add_trait = trait_imperial_heir
+		}
+	}
+}
+
+heir_setup_just_disinherit = {
+	if = {
+		limit =  { has_civil_wars_mod = yes }
+		if = {
+			limit = { has_adoptive_dynasties = no }
+			if = {
+				limit = {
+					exists = heir
+					AND = {
+						has_civil_wars_mod = yes
+						has_fatherland_mod = yes
+					}
+				}
+				set_country_flag = dissed_heir
+				random_list = {
+					35 = {
+						heir = {
+							if = {
+								limit = { is_heir = no }
+								set_leader_flag = true_born_heir
+							}
+							save_event_target_as = disinherited_heir
+						}
+						country_event = { id = civheir.1000 }
+					}
+					65 = {
+						heir = {
+							if = {
+								limit = { is_heir = no }
+								set_leader_flag = true_born_heir
+							}
+							get_fatherland_chance = yes
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_civil_wars_mod = yes
+					exists = heir
+				}
 				heir = {
 					if = {
 						limit = { is_heir = no }
@@ -23,126 +185,14 @@ heir_setup_non_ad = {
 					}
 					save_event_target_as = disinherited_heir
 				}
-			}
-			65 = { # Fatherland
-				heir = {
-					if = {
-						limit = { is_heir = no }
-						set_leader_flag = true_born_heir
-					}
-					get_fatherland_chance = yes
-				}
-			}
-		}
-	}
-	else_if = {
-		limit = {
-			exists = heir
-			has_civil_wars_mod = yes
-		}
-		heir = {
-			if = {
-				limit = { is_heir = no }
-				set_leader_flag = true_born_heir
-			}
-			save_event_target_as = disinherited_heir
-		}
-		set_country_flag = dissed_heir
-	}
-	else_if = {
-		limit = {
-			exists = heir
-			has_fatherland_mod = yes
-		}
-		heir = {
-			if = {
-				limit = { is_heir = no }
-				set_leader_flag = true_born_heir
-			}
-			get_fatherland_chance = yes
-		}
-		set_country_flag = dissed_heir
-	}
-	else_if = {
-		limit = { exists = heir }
-		heir = {
-			set_leader_flag = dead_ruler
-			kill_leader = { show_notification = no }
-		}
-	}
-	set_heir = event_target:new_chosen_heir
-	country_event = { id = usefulheirs.3400 }
-}
-
-# Heir Setup Adoptive Ddnasties
-heir_setup_ad = {
-	if = {
-		limit = {
-			exists = heir
-			AND = {
-				has_civil_wars_mod = yes
-				has_fatherland_mod = yes
-			}
-			heir = { has_leader_flag = appointed_heir }
-		}
-		set_country_flag = dissed_heir
-		random_list = {
-			35 = { heir = { save_event_target_as = disinherited_heir } }
-			65 = { heir = { get_fatherland_chance = yes } }
-		}
-	}
-	else_if = {
-		limit = {
-			has_civil_wars_mod = yes
-			exists = heir
-			heir = { has_leader_flag = appointed_heir }
-		}
-		heir = { save_event_target_as = disinherited_heir }
-		set_country_flag = dissed_heir
-	}
-	else_if = {
-		limit = {
-			has_fatherland_mod = yes
-			exists = heir
-			heir = { has_leader_flag = appointed_heir }
-		}
-		heir = { get_fatherland_chance = yes }
-		set_country_flag = dissed_heir
-	}
-	else_if = {
-		limit = { exists = heir }
-		heir = {
-			set_leader_flag = dead_ruler
-			kill_leader = { show_notification = no }
-		}
-	}
-	set_heir = event_target:new_chosen_heir
-	country_event = { id = usefulheirs.3500 }
-}
-
-# Heir Setup Non - Adoptive Ddnasties
-heir_setup_non_ad_just_disinherit = {
-	if = {
-		limit = {
-			exists = heir
-			AND = {
-				has_civil_wars_mod = yes
-				has_fatherland_mod = yes
-			}
-		}
-		set_country_flag = dissed_heir
-		random_list = {
-			35 = {
-				heir = {
-					if = {
-						limit = { is_heir = no }
-						set_leader_flag = true_born_heir
-					}
-					save_event_target_as = disinherited_heir
-				}
+				set_country_flag = dissed_heir
 				country_event = { id = civheir.1000 }
 			}
-			65 = {
+			else_if = {
+				limit = {
+					has_fatherland_mod = yes
+					exists = heir
+				}
 				heir = {
 					if = {
 						limit = { is_heir = no }
@@ -150,93 +200,68 @@ heir_setup_non_ad_just_disinherit = {
 					}
 					get_fatherland_chance = yes
 				}
+				set_country_flag = dissed_heir
+			}
+			else_if = {
+				limit = { exists = heir }
+				heir = {
+					set_leader_flag = dead_ruler
+					kill_leader = { show_notification = no }
+				}
 			}
 		}
-	}
-	else_if = {
-		limit = {
-			has_civil_wars_mod = yes
-			exists = heir
-		}
-		heir = {
+		else_if = {
+			limit = {
+				has_adoptive_dynasties = yes
+				heir = { has_leader_flag = appointed_heir }
+			}
 			if = {
-				limit = { is_heir = no }
-				set_leader_flag = true_born_heir
+				limit = {
+					exists = heir
+					AND = {
+						has_civil_wars_mod = yes
+						has_fatherland_mod = yes
+					}
+					heir = { has_leader_flag = appointed_heir }
+				}
+				set_country_flag = dissed_heir
+				random_list = {
+					35 = {
+						heir = { save_event_target_as = disinherited_heir }
+						country_event = { id = civheir.1000 }
+					}
+					65 = { heir = { get_fatherland_chance = yes } }
+				}
 			}
-			save_event_target_as = disinherited_heir
-		}
-		set_country_flag = dissed_heir
-		country_event = { id = civheir.1000 }
-	}
-	else_if = {
-		limit = {
-			has_fatherland_mod = yes
-			exists = heir
-		}
-		heir = {
-			if = {
-				limit = { is_heir = no }
-				set_leader_flag = true_born_heir
-			}
-			get_fatherland_chance = yes
-		}
-		set_country_flag = dissed_heir
-	}
-	else_if = {
-		limit = { exists = heir }
-		heir = {
-			set_leader_flag = dead_ruler
-			kill_leader = { show_notification = no }
-		}
-	}
-}
-
-# Heir Setup Adoptive Ddnasties
-heir_setup_ad_just_disinherit = {
-	if = {
-		limit = {
-			exists = heir
-			AND = {
-				has_civil_wars_mod = yes
-				has_fatherland_mod = yes
-			}
-			heir = { has_leader_flag = appointed_heir }
-		}
-		set_country_flag = dissed_heir
-		random_list = {
-			35 = {
+			else_if = {
+				limit = {
+					has_civil_wars_mod = yes
+					exists = heir
+					heir = { has_leader_flag = appointed_heir }
+				}
 				heir = { save_event_target_as = disinherited_heir }
+				set_country_flag = dissed_heir
 				country_event = { id = civheir.1000 }
 			}
-			65 = { heir = { get_fatherland_chance = yes } }
+			else_if = {
+				limit = {
+					has_fatherland_mod = yes
+					exists = heir
+					heir = { has_leader_flag = appointed_heir }
+				}
+				heir = { get_fatherland_chance = yes }
+				set_country_flag = dissed_heir
+			}
+			else_if = {
+				limit = { exists = heir }
+				heir = {
+					set_leader_flag = dead_ruler
+					kill_leader = { show_notification = no }
+				}
+			}
 		}
 	}
-	else_if = {
-		limit = {
-			has_civil_wars_mod = yes
-			exists = heir
-			heir = { has_leader_flag = appointed_heir }
-		}
-		heir = { save_event_target_as = disinherited_heir }
-		set_country_flag = dissed_heir
-		country_event = { id = civheir.1000 }
-	}
-	else_if = {
-		limit = {
-			has_fatherland_mod = yes
-			exists = heir
-			heir = { has_leader_flag = appointed_heir }
-		}
-		heir = { get_fatherland_chance = yes }
-		set_country_flag = dissed_heir
-	}
-	else_if = {
-		limit = { exists = heir }
-		heir = {
-			set_leader_flag = dead_ruler
-			kill_leader = { show_notification = no }
-		}
-	}
+	heir = { kill_leader = { show_notification = no } }
 }
 
 ##############
@@ -248,6 +273,7 @@ get_officials_heir = {
 	every_owned_leader = {
 		limit = {
 			is_heir = no
+			is_ruler = no
 			is_fake_leader = no
 			leader_class = official
 		}
@@ -339,13 +365,14 @@ get_officials_heir = {
 	country_event = { id = usefulheirs.3110 }
 }
 
-# Get Commander Leaders
+# Get Commanders
 get_commanders_heir = {
 	set_variable = { which = total_commanders value = 0 }
 
 	every_owned_leader = {
 		limit = {
 			is_heir = no
+			is_ruler = no
 			is_fake_leader = no
 			leader_class = commander
 		}
@@ -437,13 +464,14 @@ get_commanders_heir = {
 	country_event = { id = usefulheirs.3120 }
 }
 
-# Get Scientist Leaders
+# Get Scientists
 get_scientists_heir = {
 	set_variable = { which = total_scientists value = 0 }
 
 	every_owned_leader = {
 		limit = {
 			is_heir = no
+			is_ruler = no
 			is_fake_leader = no
 			leader_class = scientist
 		}

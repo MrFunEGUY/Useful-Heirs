@@ -7,7 +7,6 @@ on_game_start_country = {
 
 on_monthly_pulse_country = {
 	events = {
-		usefulheirs.9600 			# Set Realistic Heir Ages
 		uh_adoptive.1000			# Check for dynastic heir and set flag monthly
 	}
 }
@@ -21,7 +20,6 @@ on_bi_yearly_pulse_country = {
 # this = country
 on_five_year_pulse_country = {
 	events = {
-		usefulheirs.9000			# AI Heir Leader event
 		usefulheirs.9001			# AI Abdication event
 	}
 }
@@ -47,7 +45,6 @@ on_leader_death = {
 on_ruler_set = {
 	events = {
 		uh_adoptive.1100			# On Ruler set, if dynastic heir, set penalties
-		usefulheirs.9100			# Remove heir flag from ruler
 		usefulheirs.9200			# Change Country Species to new ruler species so new heirs are of the new species
 		usefulheirs.9300			# Save dynastic name
 	}
@@ -67,5 +64,21 @@ on_post_government_changed = {
 	events = {
 		usefulheirs.9300			# Save dynastic name
 		uh_adoptive.3010			# Government Reform - Post Check for AD
+	}
+}
+
+# Executed when a new heir is appointed
+# This = Heir
+on_new_heir = {
+	events = {
+		usefulheirs.9600		# New Heir appointed, set age.
+	}
+}
+
+# Executed when an heir is promoted to ruler
+# This = Heir
+on_heir_promoted_to_ruler = {
+	events = {
+		usefulheirs.9100			# Remove heir flag from ruler
 	}
 }

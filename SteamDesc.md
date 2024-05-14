@@ -4,11 +4,13 @@ I've always thought that heirs should be more useful and interesting in this gam
 
 With Useful Heirs, you can:
 
-- Appoint your heir as a leader.
+- Change the leader class of your heir.
 
 - Designate any of your leaders as your heir.
 
 - Abdicate the throne in favor of your heir.
+
+- Play with a new civic, Adoptive Dynasties.
 
 
 [hr][/hr]
@@ -17,15 +19,7 @@ With Useful Heirs, you can:
 
 - Former Heirs won't stick around. Politically speaking, it would be pretty wild.
 
-- If you fire your Leader Heir, they will also be removed as your heir. On the one hand, this is a little annoying. On the other hand, this lets you get rid of heirs you don't like and reroll them, essentially. In the future, I will be looking for ways around this, but it may be out of my control.
-
-- When your Heir becomes your Ruler, they will not be able to continue doing their old job. Running an empire is a full-time gig.
-
-- There is currently no way to completely unassign an heir so that they are not a leader anymore. I will try to figure out a way around this.
-
 - In relation to my Civil Wars mod, heirs have unique rebellion mechanics. Check out that mod for more information.
-
-- Sometimes, there is a small graphical bug that occurs after switching an heir's leader role where they will appear as -1 years old, unnamed, and not be able to be fired. This is only graphical, and can be fixed by reassigning a leader or recruiting a new leader.
 
 --
 
@@ -39,11 +33,9 @@ With Useful Heirs, you can:
 
 - For species with the Venerable trait: If your leader is 100 years of age or older when they ascend to the throne, your heir will now be limited to being between 30 and 94 years younger than them. So, for example, if you have a ruler who takes the throne at 203 years of age, the heir that spawns will be between 109 and 173 years old.
 
-- However, I couldn't find a way to set the heir's age as they spawn, so wait for the month to change for the age-fixing event to take place.
-
 - The AI will use the feature to designate their heir as a leader.
 
-- Starting at age 70, an AI will begin to consider abdicating the throne to their heir every year. The chance that they will abdicate increases every five years. The abdicating ruler may also decide to become a regular leader in the empire. This isn't really relevant to the player, but if you like RP and stuff like I do it's neat.
+- Starting at age 70, an AI will begin to consider abdicating the throne to their heir every year, unless they are immortal. The chance that they will abdicate increases every five years. The abdicating ruler may also decide to become a regular leader in the empire. This isn't really relevant to the player, but if you like RP and stuff like I do it's neat.
 
 
 [hr][/hr]

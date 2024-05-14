@@ -5,5 +5,5 @@ tags={
 	"Gameplay"
 }
 name="Useful Heirs"
-supported_version="3.10.*"
+supported_version="3.12.*"
 remote_file_id="2491283817"

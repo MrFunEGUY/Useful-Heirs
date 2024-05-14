@@ -189,13 +189,24 @@ country_event = {
 
 	trigger = { 
 		is_ai = yes
-		exists = heir
-		heir = { has_leader_flag = dynastic_heir }
+		OR = {
+			NOT = { exists = heir }
+			AND = {
+				exists = heir
+				heir = { has_leader_flag = dynastic_heir }
+			}
+		}
 		has_valid_civic = civic_adoptive_dynasties
 	}
 
 	immediate = {
-		heir = { save_event_target_as = heir_leader }
-		country_event = { id = uh_adoptive.3000 }
+		if = {
+			limit = { exists = heir }
+			heir = { save_event_target_as = heir_leader }
+			country_event = { id = usefulheirs.3000 days = 1 random = 90 }
+		}
+		else = {
+			country_event = { id = usefulheirs.3100 days = 1 random = 90 }
+		}
 	}
 }

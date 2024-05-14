@@ -146,6 +146,8 @@ country_event = {
 		room = root.owner
 	}
 
+	trigger = { exists = event_target:heir_leader }
+
 	immediate = {
 		set_variable = { which = monthly_unity_prod value = 0 }
 
@@ -227,21 +229,7 @@ country_event = {
 	option = {
 		name = usefulheirs.3000.e
 		hidden_effect = {
-			if = {
-				limit =  { has_civil_wars_mod = yes }
-				if = {
-					limit = { has_adoptive_dynasties = no }
-					heir_setup_non_ad_just_disinherit = yes
-				}
-				else_if = {
-					limit = {
-						has_adoptive_dynasties = yes
-						heir = { has_leader_flag = appointed_heir }
-					}
-					heir_setup_ad_just_disinherit = yes
-				}
-			}
-			heir = { kill_leader = { show_notification = no } }
+			heir_setup_just_disinherit = yes
 		}
 		ai_chance = { factor = 1 }
 	}
@@ -346,28 +334,13 @@ country_event = {
 	option = {
 		name = usefulheirs.3000.e
 		hidden_effect = {
-			if = {
-				limit =  { has_civil_wars_mod = yes }
-				if = {
-					log = "HEIR EVENT"
-					limit = { has_adoptive_dynasties = no }
-					heir_setup_non_ad_just_disinherit = yes
-				}
-				else_if = {
-					limit = {
-						has_adoptive_dynasties = yes
-						heir = { has_leader_flag = appointed_heir }
-					}
-					heir_setup_ad_just_disinherit = yes
-				}
-			}
-			heir = { kill_leader = { show_notification = no } }
+			heir_setup_just_disinherit = yes
 		}
 		ai_chance = { factor = 0 }
 	}
 }
 
-# Commander
+# Official
 country_event = {
 	id = usefulheirs.3110
 	title = usefulheirs.3110.name
@@ -404,17 +377,7 @@ country_event = {
 			}
 		}		
 		hidden_effect = {
-			event_target:heir_maybe_1 = {
-				save_event_target_as = new_chosen_heir
-				set_leader_flag = appointed_heir
-			}
-			if = {
-				limit = { has_adoptive_dynasties = yes }
-				heir_setup_ad = yes
-			}
-			else = {
-				heir_setup_non_ad = yes
-			}
+			event_target:heir_maybe_1 = { save_event_target_as = new_chosen_heir }
 		}
 		ai_chance = { factor = 1 }
 	}
@@ -430,17 +393,7 @@ country_event = {
 			}
 		}		
 		hidden_effect = {
-			event_target:heir_maybe_2 = {
-				save_event_target_as = new_chosen_heir
-				set_leader_flag = appointed_heir
-			}
-			if = {
-				limit = { has_adoptive_dynasties = yes }
-				heir_setup_ad = yes
-			}
-			else = {
-				heir_setup_non_ad = yes
-			}
+			event_target:heir_maybe_2 = { save_event_target_as = new_chosen_heir }
 		}
 		ai_chance = { factor = 1 }
 	}
@@ -456,17 +409,7 @@ country_event = {
 			}
 		}		
 		hidden_effect = {
-			event_target:heir_maybe_3 = {
-				save_event_target_as = new_chosen_heir
-				set_leader_flag = appointed_heir
-			}
-			if = {
-				limit = { has_adoptive_dynasties = yes }
-				heir_setup_ad = yes
-			}
-			else = {
-				heir_setup_non_ad = yes
-			}
+			event_target:heir_maybe_3 = { save_event_target_as = new_chosen_heir }
 		}
 		ai_chance = { factor = 1 }
 	}
@@ -482,17 +425,7 @@ country_event = {
 			}
 		}		
 		hidden_effect = {
-			event_target:heir_maybe_4 = {
-				save_event_target_as = new_chosen_heir
-				set_leader_flag = appointed_heir
-			}
-			if = {
-				limit = { has_adoptive_dynasties = yes }
-				heir_setup_ad = yes
-			}
-			else = {
-				heir_setup_non_ad = yes
-			}
+			event_target:heir_maybe_4 = { save_event_target_as = new_chosen_heir }
 		}
 		ai_chance = { factor = 1 }
 	}
@@ -508,17 +441,7 @@ country_event = {
 			}
 		}		
 		hidden_effect = {
-			event_target:heir_maybe_5 = {
-				save_event_target_as = new_chosen_heir
-				set_leader_flag = appointed_heir
-			}
-			if = {
-				limit = { has_adoptive_dynasties = yes }
-				heir_setup_ad = yes
-			}
-			else = {
-				heir_setup_non_ad = yes
-			}
+			event_target:heir_maybe_5 = { save_event_target_as = new_chosen_heir }
 		}
 		ai_chance = { factor = 1 }
 	}
@@ -534,17 +457,7 @@ country_event = {
 			}
 		}		
 		hidden_effect = {
-			event_target:heir_maybe_6 = {
-				save_event_target_as = new_chosen_heir
-				set_leader_flag = appointed_heir
-			}
-			if = {
-				limit = { has_adoptive_dynasties = yes }
-				heir_setup_ad = yes
-			}
-			else = {
-				heir_setup_non_ad = yes
-			}
+			event_target:heir_maybe_6 = { save_event_target_as = new_chosen_heir }
 		}
 		ai_chance = { factor = 1 }
 	}
@@ -560,17 +473,7 @@ country_event = {
 			}
 		}		
 		hidden_effect = {
-			event_target:heir_maybe_7 = {
-				save_event_target_as = new_chosen_heir
-				set_leader_flag = appointed_heir
-			}
-			if = {
-				limit = { has_adoptive_dynasties = yes }
-				heir_setup_ad = yes
-			}
-			else = {
-				heir_setup_non_ad = yes
-			}
+			event_target:heir_maybe_7 = { save_event_target_as = new_chosen_heir }
 		}
 		ai_chance = { factor = 1 }
 	}
@@ -586,17 +489,7 @@ country_event = {
 			}
 		}		
 		hidden_effect = {
-			event_target:heir_maybe_8 = {
-				save_event_target_as = new_chosen_heir
-				set_leader_flag = appointed_heir
-			}
-			if = {
-				limit = { has_adoptive_dynasties = yes }
-				heir_setup_ad = yes
-			}
-			else = {
-				heir_setup_non_ad = yes
-			}
+			event_target:heir_maybe_8 = { save_event_target_as = new_chosen_heir }
 		}
 		ai_chance = { factor = 1 }
 	}
@@ -612,17 +505,7 @@ country_event = {
 			}
 		}		
 		hidden_effect = {
-			event_target:heir_maybe_9 = {
-				save_event_target_as = new_chosen_heir
-				set_leader_flag = appointed_heir
-			}
-			if = {
-				limit = { has_adoptive_dynasties = yes }
-				heir_setup_ad = yes
-			}
-			else = {
-				heir_setup_non_ad = yes
-			}
+			event_target:heir_maybe_9 = { save_event_target_as = new_chosen_heir }
 		}
 		ai_chance = { factor = 1 }
 	}
@@ -638,23 +521,19 @@ country_event = {
 			}
 		}		
 		hidden_effect = {
-			event_target:heir_maybe_10 = {
-				save_event_target_as = new_chosen_heir
-				set_leader_flag = appointed_heir
-			}
-			if = {
-				limit = { has_adoptive_dynasties = yes }
-				heir_setup_ad = yes
-			}
-			else = {
-				heir_setup_non_ad = yes
-			}
+			event_target:heir_maybe_10 = { save_event_target_as = new_chosen_heir }
 		}
 		ai_chance = { factor = 1 }
 	}
 
 	after = {
-		hidden_effect = { clear_variable = monthly_unity_prod }
+		hidden_effect = {
+			clear_variable = monthly_unity_prod
+			if = {
+				limit = { exists = event_target:new_chosen_heir }
+				get_heir_setup = yes
+			}
+		}
 	}
 }
 
@@ -695,17 +574,7 @@ country_event = {
 			}
 		}		
 		hidden_effect = {
-			event_target:heir_maybe_1 = {
-				save_event_target_as = new_chosen_heir
-				set_leader_flag = appointed_heir
-			}
-			if = {
-				limit = { has_adoptive_dynasties = yes }
-				heir_setup_ad = yes
-			}
-			else = {
-				heir_setup_non_ad = yes
-			}
+			event_target:heir_maybe_1 = { save_event_target_as = new_chosen_heir }
 		}
 		ai_chance = { factor = 1 }
 	}
@@ -721,17 +590,7 @@ country_event = {
 			}
 		}		
 		hidden_effect = {
-			event_target:heir_maybe_2 = {
-				save_event_target_as = new_chosen_heir
-				set_leader_flag = appointed_heir
-			}
-			if = {
-				limit = { has_adoptive_dynasties = yes }
-				heir_setup_ad = yes
-			}
-			else = {
-				heir_setup_non_ad = yes
-			}
+			event_target:heir_maybe_2 = { save_event_target_as = new_chosen_heir }
 		}
 		ai_chance = { factor = 1 }
 	}
@@ -747,17 +606,7 @@ country_event = {
 			}
 		}		
 		hidden_effect = {
-			event_target:heir_maybe_3 = {
-				save_event_target_as = new_chosen_heir
-				set_leader_flag = appointed_heir
-			}
-			if = {
-				limit = { has_adoptive_dynasties = yes }
-				heir_setup_ad = yes
-			}
-			else = {
-				heir_setup_non_ad = yes
-			}
+			event_target:heir_maybe_3 = { save_event_target_as = new_chosen_heir }
 		}
 		ai_chance = { factor = 1 }
 	}
@@ -773,17 +622,7 @@ country_event = {
 			}
 		}		
 		hidden_effect = {
-			event_target:heir_maybe_4 = {
-				save_event_target_as = new_chosen_heir
-				set_leader_flag = appointed_heir
-			}
-			if = {
-				limit = { has_adoptive_dynasties = yes }
-				heir_setup_ad = yes
-			}
-			else = {
-				heir_setup_non_ad = yes
-			}
+			event_target:heir_maybe_4 = { save_event_target_as = new_chosen_heir }
 		}
 		ai_chance = { factor = 1 }
 	}
@@ -799,17 +638,7 @@ country_event = {
 			}
 		}		
 		hidden_effect = {
-			event_target:heir_maybe_5 = {
-				save_event_target_as = new_chosen_heir
-				set_leader_flag = appointed_heir
-			}
-			if = {
-				limit = { has_adoptive_dynasties = yes }
-				heir_setup_ad = yes
-			}
-			else = {
-				heir_setup_non_ad = yes
-			}
+			event_target:heir_maybe_5 = { save_event_target_as = new_chosen_heir }
 		}
 		ai_chance = { factor = 1 }
 	}
@@ -825,17 +654,7 @@ country_event = {
 			}
 		}		
 		hidden_effect = {
-			event_target:heir_maybe_6 = {
-				save_event_target_as = new_chosen_heir
-				set_leader_flag = appointed_heir
-			}
-			if = {
-				limit = { has_adoptive_dynasties = yes }
-				heir_setup_ad = yes
-			}
-			else = {
-				heir_setup_non_ad = yes
-			}
+			event_target:heir_maybe_6 = { save_event_target_as = new_chosen_heir }
 		}
 		ai_chance = { factor = 1 }
 	}
@@ -851,17 +670,7 @@ country_event = {
 			}
 		}		
 		hidden_effect = {
-			event_target:heir_maybe_7 = {
-				save_event_target_as = new_chosen_heir
-				set_leader_flag = appointed_heir
-			}
-			if = {
-				limit = { has_adoptive_dynasties = yes }
-				heir_setup_ad = yes
-			}
-			else = {
-				heir_setup_non_ad = yes
-			}
+			event_target:heir_maybe_7 = { save_event_target_as = new_chosen_heir }
 		}
 		ai_chance = { factor = 1 }
 	}
@@ -877,17 +686,7 @@ country_event = {
 			}
 		}		
 		hidden_effect = {
-			event_target:heir_maybe_8 = {
-				save_event_target_as = new_chosen_heir
-				set_leader_flag = appointed_heir
-			}
-			if = {
-				limit = { has_adoptive_dynasties = yes }
-				heir_setup_ad = yes
-			}
-			else = {
-				heir_setup_non_ad = yes
-			}
+			event_target:heir_maybe_8 = { save_event_target_as = new_chosen_heir }
 		}
 		ai_chance = { factor = 1 }
 	}
@@ -903,17 +702,7 @@ country_event = {
 			}
 		}		
 		hidden_effect = {
-			event_target:heir_maybe_9 = {
-				save_event_target_as = new_chosen_heir
-				set_leader_flag = appointed_heir
-			}
-			if = {
-				limit = { has_adoptive_dynasties = yes }
-				heir_setup_ad = yes
-			}
-			else = {
-				heir_setup_non_ad = yes
-			}
+			event_target:heir_maybe_9 = { save_event_target_as = new_chosen_heir }
 		}
 		ai_chance = { factor = 1 }
 	}
@@ -929,23 +718,19 @@ country_event = {
 			}
 		}		
 		hidden_effect = {
-			event_target:heir_maybe_10 = {
-				save_event_target_as = new_chosen_heir
-				set_leader_flag = appointed_heir
-			}
-			if = {
-				limit = { has_adoptive_dynasties = yes }
-				heir_setup_ad = yes
-			}
-			else = {
-				heir_setup_non_ad = yes
-			}
+			event_target:heir_maybe_10 = { save_event_target_as = new_chosen_heir }
 		}
 		ai_chance = { factor = 1 }
 	}
 
 	after = {
-		hidden_effect = { clear_variable = monthly_unity_prod }
+		hidden_effect = {
+			clear_variable = monthly_unity_prod
+			if = {
+				limit = { exists = event_target:new_chosen_heir }
+				get_heir_setup = yes
+			}
+		}
 	}
 }
 
@@ -986,17 +771,7 @@ country_event = {
 			}
 		}		
 		hidden_effect = {
-			event_target:heir_maybe_1 = {
-				save_event_target_as = new_chosen_heir
-				set_leader_flag = appointed_heir
-			}
-			if = {
-				limit = { has_adoptive_dynasties = yes }
-				heir_setup_ad = yes
-			}
-			else = {
-				heir_setup_non_ad = yes
-			}
+			event_target:heir_maybe_1 = { save_event_target_as = new_chosen_heir }
 		}
 		ai_chance = { factor = 1 }
 	}
@@ -1012,17 +787,7 @@ country_event = {
 			}
 		}		
 		hidden_effect = {
-			event_target:heir_maybe_2 = {
-				save_event_target_as = new_chosen_heir
-				set_leader_flag = appointed_heir
-			}
-			if = {
-				limit = { has_adoptive_dynasties = yes }
-				heir_setup_ad = yes
-			}
-			else = {
-				heir_setup_non_ad = yes
-			}
+			event_target:heir_maybe_2 = { save_event_target_as = new_chosen_heir }
 		}
 		ai_chance = { factor = 1 }
 	}
@@ -1038,17 +803,7 @@ country_event = {
 			}
 		}		
 		hidden_effect = {
-			event_target:heir_maybe_3 = {
-				save_event_target_as = new_chosen_heir
-				set_leader_flag = appointed_heir
-			}
-			if = {
-				limit = { has_adoptive_dynasties = yes }
-				heir_setup_ad = yes
-			}
-			else = {
-				heir_setup_non_ad = yes
-			}
+			event_target:heir_maybe_3 = { save_event_target_as = new_chosen_heir }
 		}
 		ai_chance = { factor = 1 }
 	}
@@ -1064,17 +819,7 @@ country_event = {
 			}
 		}		
 		hidden_effect = {
-			event_target:heir_maybe_4 = {
-				save_event_target_as = new_chosen_heir
-				set_leader_flag = appointed_heir
-			}
-			if = {
-				limit = { has_adoptive_dynasties = yes }
-				heir_setup_ad = yes
-			}
-			else = {
-				heir_setup_non_ad = yes
-			}
+			event_target:heir_maybe_4 = { save_event_target_as = new_chosen_heir }
 		}
 		ai_chance = { factor = 1 }
 	}
@@ -1090,17 +835,7 @@ country_event = {
 			}
 		}		
 		hidden_effect = {
-			event_target:heir_maybe_5 = {
-				save_event_target_as = new_chosen_heir
-				set_leader_flag = appointed_heir
-			}
-			if = {
-				limit = { has_adoptive_dynasties = yes }
-				heir_setup_ad = yes
-			}
-			else = {
-				heir_setup_non_ad = yes
-			}
+			event_target:heir_maybe_5 = { save_event_target_as = new_chosen_heir }
 		}
 		ai_chance = { factor = 1 }
 	}
@@ -1116,17 +851,7 @@ country_event = {
 			}
 		}		
 		hidden_effect = {
-			event_target:heir_maybe_6 = {
-				save_event_target_as = new_chosen_heir
-				set_leader_flag = appointed_heir
-			}
-			if = {
-				limit = { has_adoptive_dynasties = yes }
-				heir_setup_ad = yes
-			}
-			else = {
-				heir_setup_non_ad = yes
-			}
+			event_target:heir_maybe_6 = { save_event_target_as = new_chosen_heir }
 		}
 		ai_chance = { factor = 1 }
 	}
@@ -1142,17 +867,7 @@ country_event = {
 			}
 		}		
 		hidden_effect = {
-			event_target:heir_maybe_7 = {
-				save_event_target_as = new_chosen_heir
-				set_leader_flag = appointed_heir
-			}
-			if = {
-				limit = { has_adoptive_dynasties = yes }
-				heir_setup_ad = yes
-			}
-			else = {
-				heir_setup_non_ad = yes
-			}
+			event_target:heir_maybe_7 = { save_event_target_as = new_chosen_heir }
 		}
 		ai_chance = { factor = 1 }
 	}
@@ -1168,17 +883,7 @@ country_event = {
 			}
 		}		
 		hidden_effect = {
-			event_target:heir_maybe_8 = {
-				save_event_target_as = new_chosen_heir
-				set_leader_flag = appointed_heir
-			}
-			if = {
-				limit = { has_adoptive_dynasties = yes }
-				heir_setup_ad = yes
-			}
-			else = {
-				heir_setup_non_ad = yes
-			}
+			event_target:heir_maybe_8 = { save_event_target_as = new_chosen_heir }
 		}
 		ai_chance = { factor = 1 }
 	}
@@ -1194,17 +899,7 @@ country_event = {
 			}
 		}		
 		hidden_effect = {
-			event_target:heir_maybe_9 = {
-				save_event_target_as = new_chosen_heir
-				set_leader_flag = appointed_heir
-			}
-			if = {
-				limit = { has_adoptive_dynasties = yes }
-				heir_setup_ad = yes
-			}
-			else = {
-				heir_setup_non_ad = yes
-			}
+			event_target:heir_maybe_9 = { save_event_target_as = new_chosen_heir }
 		}
 		ai_chance = { factor = 1 }
 	}
@@ -1220,23 +915,19 @@ country_event = {
 			}
 		}		
 		hidden_effect = {
-			event_target:heir_maybe_10 = {
-				save_event_target_as = new_chosen_heir
-				set_leader_flag = appointed_heir
-			}
-			if = {
-				limit = { has_adoptive_dynasties = yes }
-				heir_setup_ad = yes
-			}
-			else = {
-				heir_setup_non_ad = yes
-			}
+			event_target:heir_maybe_10 = { save_event_target_as = new_chosen_heir }
 		}
 		ai_chance = { factor = 1 }
 	}
 
 	after = {
-		hidden_effect = { clear_variable = monthly_unity_prod }
+		hidden_effect = {
+			clear_variable = monthly_unity_prod
+			if = {
+				limit = { exists = event_target:new_chosen_heir }
+				get_heir_setup = yes
+			}
+		}
 	}
 }
 
@@ -1387,35 +1078,6 @@ country_event = {
 
 #############################
 
-# AI Heir Leader event
-country_event = {
-	id = usefulheirs.9000
-	hide_window = yes
-	is_triggered_only = yes
-
-	trigger = { 
-		is_ai = yes
-		exists = heir
-		is_country_type_with_subjects = yes
-		heir = {
-			NOR = {
-				leader_class = official
-				leader_class = commander
-				leader_class = scientist
-			}
-			NAND = {
-				has_leader_flag = dynastic_heir
-				root = { has_adoptive_dynasties = yes }
-			}
-		}
-	}
-
-	immediate = {
-		heir = { save_event_target_as = heir_leader }
-		country_event = { id = usefulheirs.2000 }
-	}
-}
-
 # AI Abdication event
 country_event = {
 	id = usefulheirs.9001
@@ -1520,29 +1182,27 @@ country_event = {
 	immediate = {
 
 		random = {
-			chance = 7
+			chance = 4
 			heir = { save_event_target_as = heir_leader }
-			country_event = { id = usefulheirs.3000 }
+			country_event = { id = usefulheirs.3000 days = 0 random = 3600 }
 		}
 	}
 }
 
 # Remove heir flag from ruler
-country_event = {
+leader_event = {
 	id = usefulheirs.9100
 	hide_window = yes
 	is_triggered_only = yes
 
 	trigger = {
-		NOT = { has_civil_wars_mod = yes } # This is handled in that mod
-		ruler = { has_leader_flag = appointed_heir }
+		has_civil_wars_mod = no # This is handled in that mod
+		has_leader_flag = appointed_heir
 	}
 
 	immediate = {
-		ruler = {
-			remove_leader_flag = appointed_heir
-			set_leader_flag = appointed_heir_ruler
-		}
+		remove_leader_flag = appointed_heir
+		set_leader_flag = appointed_heir_ruler
 	}
 }
 
@@ -1614,32 +1274,26 @@ country_event = {
 }
 
 # Set Realistic Heir Ages
-country_event = {
+leader_event = {
 	id = usefulheirs.9600
 	hide_window = yes
 	is_triggered_only = yes
 
 	trigger = {
-		exists = heir
-		heir = {
-			NOR = {
-				has_leader_flag = heir_age_set
-				has_leader_flag = appointed_heir
-			}
-		}
-		ruler = { is_immortal = no }
+		owner.ruler = { is_immortal = no }
+		NOT = { has_leader_flag = heir_age_set }
 	}
 
 	immediate = {
 
-		set_variable = { which = ruler_age_for_calc_1 value = leader.trigger:leader_age }
-		set_variable = { which = ruler_age_for_calc_2 value = leader.trigger:leader_age }
-		set_variable = { which = heir_age value = heir.trigger:leader_age }
+		set_variable = { which = ruler_age_for_calc_1 value = owner.ruler.trigger:leader_age }
+		set_variable = { which = ruler_age_for_calc_2 value = owner.ruler.trigger:leader_age }
+		set_variable = { which = heir_age value = trigger:leader_age }
 
 		subtract_variable = { which = ruler_age_for_calc_1 value = heir_age }
 
 		if = {
-			limit = { heir.species = { NOT = { has_trait = trait_venerable } } }
+			limit = { species = { NOT = { has_trait = trait_venerable } } }
 			if = {
 				limit = { check_variable = { which = ruler_age_for_calc_1 value >= 50 } }
 				random_list = {
@@ -1677,13 +1331,11 @@ country_event = {
 					1 = { subtract_variable = { which = ruler_age_for_calc_2 value = 46 } }
 					1 = { subtract_variable = { which = ruler_age_for_calc_2 value = 47 } }
 				}
-				heir = {
-					set_age = prev.ruler_age_for_calc_2
-					set_leader_flag = heir_age_set
-				}
+				set_age = ruler_age_for_calc_2
+				set_leader_flag = heir_age_set
 			}
 			else = {
-				heir = { set_leader_flag = heir_age_set }
+				set_leader_flag = heir_age_set
 			}
 		}
 		else = {
@@ -1756,13 +1408,11 @@ country_event = {
 					1 = { subtract_variable = { which = ruler_age_for_calc_2 value = 93 } }
 					1 = { subtract_variable = { which = ruler_age_for_calc_2 value = 94 } }
 				}
-				heir = {
-					set_age = prev.ruler_age_for_calc_2
-					set_leader_flag = heir_age_set
-				}
+				set_age = ruler_age_for_calc_2
+				set_leader_flag = heir_age_set
 			}
 			else = {
-				heir = { set_leader_flag = heir_age_set }
+				set_leader_flag = heir_age_set
 			}
 		}
 

@@ -1,14 +1,5 @@
-has_civil_wars_mod = {
-	optimize_memory
-	always = no
-}
+has_civil_wars_mod = { always = no }
 
-has_fatherland_mod = {
-	optimize_memory
-	always = no
-}
+has_fatherland_mod = { always = no }
 
-is_valid_rogue_planet = {
-	optimize_memory
-	always = no
-}
+is_valid_rogue_planet = { always = no }
