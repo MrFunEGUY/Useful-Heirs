@@ -9,11 +9,11 @@ l_russian:
 # l_korean:
 # l_japanese:
 
- edict_useful_heirs_1:0 "Вызвать наследника"
- edict_useful_heirs_1_desc:0 "Есть дела, требующие обсуждения с моим наследником."
+ edict_useful_heirs_1: "Вызвать наследника"
+ edict_useful_heirs_1_desc: "Есть дела, требующие обсуждения с моим наследником."
 
- edict_useful_heirs_2:0 "Назначить наследника"
- edict_useful_heirs_2_desc:0 "Отсутствие наследника - угроза стабильности империи. Необходимо назначить кого-то подходящего."
+ edict_useful_heirs_2: "Назначить наследника"
+ edict_useful_heirs_2_desc: "Отсутствие наследника - угроза стабильности империи. Необходимо назначить кого-то подходящего."
 
  decision_set_dynasty_name: "Объявить начало новой династии"
  decision_set_dynasty_name_desc: "Мы продолжим вести империю в будущее - под контролем новой династии."
@@ -21,38 +21,38 @@ l_russian:
 
  usefulheirs.2000.AI: "ИИ"
 
- usefulheirs.1000.name:0 "[root.GetHeirTitle] §H[event_target:heir_leader.GetName]§!"
- usefulheirs.1000.desc:0 "Вы вызывали меня, о §Y[root.GetRulerTitle]§!?"
+ usefulheirs.1000.name: "[root.GetHeirTitle] §H[event_target:heir_leader.GetName]§!"
+ usefulheirs.1000.desc: "Вы вызывали меня, о §Y[root.GetRulerTitle]§!?"
 
- usefulheirs.1000.a:0 "Мне нужно, чтобы вы взяли на себя другую роль."
- usefulheirs.1000.a.tooltip:0 "Мы назначим нашего наследника на позицию одного из лидеров нашей империи."
- usefulheirs.1000.b:0 "Ты недостоин быть моим наследником."
- usefulheirs.1000.b.ad:0 "Пришло время назначить моего наследника."
- usefulheirs.1000.b.tooltip:0 "Мы можем выбрать нового наследника из наших лидеров, или же просто лишить наследства текущего."
- usefulheirs.1000.c:0 "Я намереваюсь отречься от трона. Пришло твое время править."
- usefulheirs.1000.c.tooltip:0 "Мы уйдем в отставку, и наследник станет правителем."
- usefulheirs.1000.d:0 "Впрочем, забудь."
+ usefulheirs.1000.a: "Мне нужно, чтобы вы взяли на себя другую роль."
+ usefulheirs.1000.a.tooltip: "Мы назначим нашего наследника на позицию одного из лидеров нашей империи."
+ usefulheirs.1000.b: "Ты недостоин быть моим наследником."
+ usefulheirs.1000.b.ad: "Пришло время назначить моего наследника."
+ usefulheirs.1000.b.tooltip: "Мы можем выбрать нового наследника из наших лидеров, или же просто лишить наследства текущего."
+ usefulheirs.1000.c: "Я намереваюсь отречься от трона. Пришло твое время править."
+ usefulheirs.1000.c.tooltip: "Мы уйдем в отставку, и наследник станет правителем."
+ usefulheirs.1000.d: "Впрочем, забудь."
 
- usefulheirs.2000.cesc:0 "Как я могу послужить вам и §Y[Root.GetName]§!?"
+ usefulheirs.2000.cesc: "Как я могу послужить вам и §Y[Root.GetName]§!?"
 
- usefulheirs.2000.a:0 "В качестве губернатора одного из секторов."
- usefulheirs.2000.b:0 "Как адмирал флота."
- usefulheirs.2000.c:0 "В качестве учёного."
- usefulheirs.2000.back:0 "А впрочем новые обязанности тебе ни к чему."
+ usefulheirs.2000.a: "В качестве губернатора одного из секторов."
+ usefulheirs.2000.b: "Как адмирал флота."
+ usefulheirs.2000.c: "В качестве учёного."
+ usefulheirs.2000.back: "А впрочем новые обязанности тебе ни к чему."
 
- usefulheirs.3000.desc:0 "О [root.GetRulerTitle], прошу, пересмотрите ваше решение!"
- usefulheirs.3000.ad.desc:0 "Как пожелаете, о [root.GetRulerTitle]."
+ usefulheirs.3000.desc: "О [root.GetRulerTitle], прошу, пересмотрите ваше решение!"
+ usefulheirs.3000.ad.desc: "Как пожелаете, о [root.GetRulerTitle]."
 
- usefulheirs.3100.name:0 "[root.GetRulerTitle] §H[root.ruler.GetName]§!"
- usefulheirs.3100.desc:0 "Кто же достоин стать наследником короны?"
+ usefulheirs.3100.name: "[root.GetRulerTitle] §H[root.ruler.GetName]§!"
+ usefulheirs.3100.desc: "Кто же достоин стать наследником короны?"
 
- usefulheirs.3000.a:0 "Наследником должен стать один из наших §YГубернаторов§!."
- usefulheirs.3000.b:0 "Наследником должен стать один из наших §YАдмиралов§!."
- usefulheirs.3000.c:0 "Наследником должен стать один из наших §YГенералов§!."
- usefulheirs.3000.d:0 "Наследником должен стать один из наших §YУчёных§!."
- usefulheirs.3000.e:0 "Наследником станет следующий по старшинству."
- usefulheirs.3000.f:0 "Пожалуй, я дам тебе время доказать, что ты достоин."
- usefulheirs.3000.f.ad:0 "Пока ещё не время."
+ usefulheirs.3000.a: "Наследником должен стать один из наших §YГубернаторов§!."
+ usefulheirs.3000.b: "Наследником должен стать один из наших §YАдмиралов§!."
+ usefulheirs.3000.c: "Наследником должен стать один из наших §YГенералов§!."
+ usefulheirs.3000.d: "Наследником должен стать один из наших §YУчёных§!."
+ usefulheirs.3000.e: "Наследником станет следующий по старшинству."
+ usefulheirs.3000.f: "Пожалуй, я дам тебе время доказать, что ты достоин."
+ usefulheirs.3000.f.ad: "Пока ещё не время."
 
  usefulheirs.3110.name: "Губернаторы"
  usefulheirs.3120.name: "Адмиралы"
@@ -101,34 +101,34 @@ l_russian:
 
  uh_adoptive.3015.a: "Наш род докажет, что достоин править."
 
- heir_fired_name:0 "[event_target:clone_leader_name_1.GetName]"
- heir_name_bold:0 "§H[event_target:heir_leader.GetName]§!"
- ruler_name_white:0 "§![root.ruler.GetName]§!"
+ heir_fired_name: "[event_target:clone_leader_name_1.GetName]"
+ heir_name_bold: "§H[event_target:heir_leader.GetName]§!"
+ ruler_name_white: "§![root.ruler.GetName]§!"
 
- usefulheirs.4000.name:0 "[root.GetHeirTitle] [event_target:heir_leader.GetName]"
- usefulheirs.4000.desc:0 "О [root.GetRulerTitle], вы уверены?"
+ usefulheirs.4000.name: "[root.GetHeirTitle] [event_target:heir_leader.GetName]"
+ usefulheirs.4000.desc: "О [root.GetRulerTitle], вы уверены?"
 
- usefulheirs.4000.a:0 "На самом деле, нет. Я подумаю об этом еще."
- usefulheirs.4000.b:0 "Я уверен. Пришло твое время. Я ухожу в отставку."
- usefulheirs.4000.b.tooltip:0 "Мы отрекаемся от трона и уходим в отставку."
- usefulheirs.4000.c:0 "Уверен. Однако, я знаю, что всё ещё могу вносить свой вклад в иные нужды."
- usefulheirs.4000.c.tooltip:0 "Мы отрекаемся от трона, но выберем иную позицию лидера нашей империи."
+ usefulheirs.4000.a: "На самом деле, нет. Я подумаю об этом еще."
+ usefulheirs.4000.b: "Я уверен. Пришло твое время. Я ухожу в отставку."
+ usefulheirs.4000.b.tooltip: "Мы отрекаемся от трона и уходим в отставку."
+ usefulheirs.4000.c: "Уверен. Однако, я знаю, что всё ещё могу вносить свой вклад в иные нужды."
+ usefulheirs.4000.c.tooltip: "Мы отрекаемся от трона, но выберем иную позицию лидера нашей империи."
 
- usefulheirs.4010.name:0 "[root.GetHeirTitle] [event_target:heir_leader.GetName]"
- usefulheirs.4010.desc:0 "Как пожелаете. Я вас не подведу. Чем вы хотите заняться?"
+ usefulheirs.4010.name: "[root.GetHeirTitle] [event_target:heir_leader.GetName]"
+ usefulheirs.4010.desc: "Как пожелаете. Я вас не подведу. Чем вы хотите заняться?"
 
- usefulheirs.4010.a:0 "Я буду управлять одним из секторов в качестве Губернатора."
- usefulheirs.4010.b:0 "Я стану Адмиралом нашей флотилии."
- usefulheirs.4010.c:0 "Я поведу наши войска в качестве Генерала."
- usefulheirs.4010.d:0 "Я буду стремиться к знаниям, как один из Ученых."
+ usefulheirs.4010.a: "Я буду управлять одним из секторов в качестве Губернатора."
+ usefulheirs.4010.b: "Я стану Адмиралом нашей флотилии."
+ usefulheirs.4010.c: "Я поведу наши войска в качестве Генерала."
+ usefulheirs.4010.d: "Я буду стремиться к знаниям, как один из Ученых."
 
 
- usefulheirs.4051.a:0 "Я буду править."
+ usefulheirs.4051.a: "Я буду править."
 
- response_they_shall_accept:0 "Они примут это."
- response_excellent:0 "Отлично."
+ response_they_shall_accept: "Они примут это."
+ response_excellent: "Отлично."
 
- unity_fail_text:0 "§RТребуется§! §Y[Root.monthly_unity_prod]§! £unity£ §YЕдинства§!"
+ unity_fail_text: "§RТребуется§! §Y[Root.monthly_unity_prod]§! £unity£ §YЕдинства§!"
 
  ### Civics
  civic_adoptive_dynasties: "Приёмные наследники"
@@ -136,7 +136,7 @@ l_russian:
  civic_tooltip_adoptive_dynasties_effects: "Назначение наследника не вызывает штрафов £stability£ §YСтабильности§! и трат £influence£ §YВлияния§!."
  civic_tooltip_adoptive_dynasties_negative_effects: "Становление родового наследника правителем вызовет снижение £stability£ §YСтабильности§! §R20§! на §Y10 лет§! на всех планетах кроме столицы, где стабильность будет снижена на §R25§!."
 
- civic_tooltip_heir:0 "Должны иметь §YНаследника§!"
+ civic_tooltip_heir: "Должны иметь §YНаследника§!"
 
  # Modifiers
  chose_new_heir: "Новый наследник"
@@ -152,8 +152,8 @@ l_russian:
  dynastic_heir_capital_desc: "По историческим причинам, восхождение на трон родового наследника вызвало существенные волнения в столице."
 
  # Councilors
- councilor_adoptive_dynasties:0 "Предполагаемый наследник"
- councilor_adoptive_dynasties_female:0 "Предполагаемый наследник"
- councilor_adoptive_dynasties_desc:0 "Для того, чтобы подготовиться к своему возможному наследованию, $TITLE$ получает обширное обучение тому, как управлять королевством."
+ councilor_adoptive_dynasties: "Предполагаемый наследник"
+ councilor_adoptive_dynasties_female: "Предполагаемый наследник"
+ councilor_adoptive_dynasties_desc: "Для того, чтобы подготовиться к своему возможному наследованию, $TITLE$ получает обширное обучение тому, как управлять королевством."
  mod_councilor_adoptive_dynasties_exp_gain: "$councilor_adoptive_dynasties_official_with_icon$ $exp_gain$"
- councilor_adoptive_dynasties_official_with_icon:0 "£ruler£ $councilor_adoptive_dynasties$"
+ councilor_adoptive_dynasties_official_with_icon: "£ruler£ $councilor_adoptive_dynasties$"

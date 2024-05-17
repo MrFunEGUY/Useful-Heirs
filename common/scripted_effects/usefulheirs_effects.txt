@@ -70,18 +70,10 @@ get_heir_setup = {
 			heir = {
 				random_list = {
 					70 = { # Civil Wars
-						if = {
-							limit = { is_heir = no }
-							set_leader_flag = true_born_heir
-						}
 						save_event_target_as = disinherited_heir
 						root = { country_event = { id = civheir.1000 } }
 					}
 					30 = { # Fatherland
-						if = {
-							limit = { is_heir = no }
-							set_leader_flag = true_born_heir
-						}
 						get_fatherland_chance = yes
 					}
 				}
@@ -94,10 +86,6 @@ get_heir_setup = {
 				has_civil_wars_mod = yes
 			}
 			heir = {
-				if = {
-					limit = { is_heir = no }
-					set_leader_flag = true_born_heir
-				}
 				save_event_target_as = disinherited_heir
 				root = { country_event = { id = civheir.1000 } }
 			}
@@ -109,10 +97,6 @@ get_heir_setup = {
 				has_fatherland_mod = yes
 			}
 			heir = {
-				if = {
-					limit = { is_heir = no }
-					set_leader_flag = true_born_heir
-				}
 				get_fatherland_chance = yes
 			}
 			set_country_flag = dissed_heir
@@ -154,20 +138,12 @@ heir_setup_just_disinherit = {
 				random_list = {
 					35 = {
 						heir = {
-							if = {
-								limit = { is_heir = no }
-								set_leader_flag = true_born_heir
-							}
 							save_event_target_as = disinherited_heir
 						}
 						country_event = { id = civheir.1000 }
 					}
 					65 = {
 						heir = {
-							if = {
-								limit = { is_heir = no }
-								set_leader_flag = true_born_heir
-							}
 							get_fatherland_chance = yes
 						}
 					}
@@ -179,10 +155,6 @@ heir_setup_just_disinherit = {
 					exists = heir
 				}
 				heir = {
-					if = {
-						limit = { is_heir = no }
-						set_leader_flag = true_born_heir
-					}
 					save_event_target_as = disinherited_heir
 				}
 				set_country_flag = dissed_heir
@@ -194,10 +166,6 @@ heir_setup_just_disinherit = {
 					exists = heir
 				}
 				heir = {
-					if = {
-						limit = { is_heir = no }
-						set_leader_flag = true_born_heir
-					}
 					get_fatherland_chance = yes
 				}
 				set_country_flag = dissed_heir
