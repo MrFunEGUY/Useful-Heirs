@@ -11,7 +11,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		is_imperial = yes
+		is_imperial_authority =yes
 		has_adoptive_dynasties = yes
 		exists = heir
 		heir = {
@@ -34,7 +34,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		is_imperial = yes
+		is_imperial_authority =yes
 		has_adoptive_dynasties = yes
 		ruler = { has_leader_flag = dynastic_heir }
 	}
@@ -129,7 +129,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		is_imperial = yes
+		is_imperial_authority =yes
 		has_adoptive_dynasties = yes
 	}
 
@@ -145,7 +145,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		is_imperial = yes
+		is_imperial_authority =yes
 		has_adoptive_dynasties = no
 		has_country_flag = had_adoptive_dynasties
 	}

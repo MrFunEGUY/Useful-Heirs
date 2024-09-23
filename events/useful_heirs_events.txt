@@ -1213,7 +1213,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		is_imperial = yes
+		is_imperial_authority =yes
 		is_country_type_with_subjects = yes
 		ruler = {
 			is_immortal = no
@@ -1233,7 +1233,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		is_imperial = yes
+		is_imperial_authority =yes
 		is_country_type_with_subjects = yes
 		exists = ruler
 		ruler = { NOT = { has_leader_flag = adopted_dynastic_name } }
