@@ -41,7 +41,7 @@ useful_heirs_2 = {
 	}
 	
 	potential = {
-		is_imperial_authority =yes
+		is_imperial_authority = yes
 		NOT = { exists = heir }
 	}
 	
