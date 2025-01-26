@@ -18,3 +18,30 @@ can_leader_explore_astral_rift = {
 	# 	is_heir = no
 	# }
 }
+
+# this = leader
+can_leader_get_normal_trait = {
+	NOR = {
+		AND = {
+			exists = owner
+			owner = { is_gestalt = yes }
+			OR = {
+				is_councilor = yes
+				has_leader_flag = restored_node
+			}
+		}
+		AND = {
+			has_global_flag = game_started
+			is_ruler = yes
+			exists = owner
+			owner = {
+				is_autocracy = yes
+			}
+			NOT = { has_leader_flag = ignore_autocracy_ruler_trait_restriction }
+		}
+		AND = {
+			is_heir = yes
+			is_councilor = yes
+		}
+	}
+}

@@ -159,3 +159,6 @@
  councilor_adoptive_dynasties_desc: "In order to prepare for their eventual succession, the $TITLE$ receives extensive training on how to manage the realm."
  mod_councilor_adoptive_dynasties_exp_gain: "$councilor_adoptive_dynasties_official_with_icon$ $exp_gain$"
  councilor_adoptive_dynasties_official_with_icon: "£ruler£ $councilor_adoptive_dynasties$"
+
+ ### Override
+ uh_trait_imperial_heir_effects: "$t$§RBlocks selection of non-Council leader traits while on Council§!"
