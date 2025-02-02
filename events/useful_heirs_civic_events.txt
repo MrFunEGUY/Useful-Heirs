@@ -196,7 +196,7 @@ country_event = {
 				heir = { has_leader_flag = dynastic_heir }
 			}
 		}
-		has_valid_civic = civic_adoptive_dynasties
+		has_adoptive_dynasties = yes
 	}
 
 	immediate = {
