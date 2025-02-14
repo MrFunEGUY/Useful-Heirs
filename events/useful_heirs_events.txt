@@ -22,6 +22,10 @@ country_event = {
 		room = root.ruler
 	}
 
+	immediate = {
+		heir = { save_event_target_as = heir_leader }
+	}
+
 	# Nevermind
 	option = {
 		name = usefulheirs.1000.d
@@ -34,18 +38,17 @@ country_event = {
 		hidden_effect = { country_event = { id = usefulheirs.2000 } }
 	}
 
-	# You are unworthy of being my heir.
+	# You are unworthy of being my heir / The time has come to designate an heir.
 	option = {
-		trigger	= { has_adoptive_dynasties = no }
+		name = {
+			text = usefulheirs.1000.b
+			trigger = { has_adoptive_dynasties = no }
+		}
+		name = {
+			text = usefulheirs.1000.b.ad
+			trigger = { has_adoptive_dynasties = yes }
+		}
 		name = usefulheirs.1000.b
-		custom_tooltip = usefulheirs.1000.b.tooltip
-		hidden_effect = { country_event = { id = usefulheirs.3000 } }
-	}
-
-	# The time has come to designate an heir.
-	option = {
-		trigger	= { has_adoptive_dynasties = yes }
-		name = usefulheirs.1000.b.ad
 		custom_tooltip = usefulheirs.1000.b.tooltip
 		hidden_effect = { country_event = { id = usefulheirs.3000 } }
 	}

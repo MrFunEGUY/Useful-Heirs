@@ -53,6 +53,10 @@ country_event = {
 	hide_window = no
 	is_triggered_only = yes
 
+	trigger = {
+		is_country_type_with_subjects = yes
+	}
+
 	option = {
 		name = uh_adoptive.1110.a
 		hidden_effect = {
@@ -76,10 +80,13 @@ country_event = {
 	}
 }
 
-# Dead Designated Heir - Initializer
+# Dead Designated Heir
 country_event = {
 	id = uh_adoptive.2000
-	hide_window = yes
+	picture = GFX_evt_space_funeral
+	title = uh_adoptive.2000.name
+	desc = uh_adoptive.2000.desc
+	hide_window = no
 	is_triggered_only = yes
 
 	trigger = {
@@ -99,28 +106,16 @@ country_event = {
 				save_event_target_as = deceased_heir
 			}
 		}
-		country_event = { id = uh_adoptive.2010 }
 	}
-}
-
-# Designated Heir Dies - Notification
-country_event = {
-	id = uh_adoptive.2010
-	picture = GFX_evt_space_funeral
-	title = uh_adoptive.2010.name
-	desc = uh_adoptive.2010.desc
-	hide_window = no
-	is_triggered_only = yes
 
 	option = {
-		name = uh_adoptive.2010.a
+		name = uh_adoptive.2000.a
 		hidden_effect = {
-			event_target:deceased_heir = {
-				kill_leader = { show_notification = no }
-			}
+			event_target:deceased_heir = { kill_leader = { show_notification = no } }
 		}
 	}
 }
+
 
 # Government Reform - Pre Check for AD
 country_event = {

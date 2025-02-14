@@ -19,7 +19,6 @@ useful_heirs_1 = {
 	}
 	
 	effect = {
-		heir = { save_event_target_as = heir_leader }
 		country_event = { id = usefulheirs.1000 }
 	}
 

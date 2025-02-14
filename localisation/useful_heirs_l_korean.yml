@@ -82,7 +82,7 @@ l_korean:
  new_dynastic_name: "[root.GetName]"
 
  usefulheirs.3500.name: "§YNew Heir Apparent§!"
- usefulheirs.3500.desc: "A grand coronation ceremony was held today in the capital, and broadcast throughout our empire. §H[new_chosen_heir.GetName]§! has been proclaimed the new §Y[root.GetHeirTitle]§!, and is now §Yheir§! to the throne. As expected with a change of this magnitude, there are those throughout the realm that have been expressing their discontent. The former §Yheir§!, §H[disinherited_heir.GetName]§!, still has their supporters. Hopefully this discontent will die down in time."
+ usefulheirs.3500.desc: "A grand coronation ceremony was held today in the capital, and broadcast throughout our empire. §H[new_chosen_heir.GetName]§! has been proclaimed the new §Y[root.GetHeirTitle]§!, and is now §Yheir§! to the throne. As would be expected with a change of this magnitude, there are those throughout the realm that have been expressing their discontent. The former §Yheir§!, §H[disinherited_heir_fatherland.GetName]§!§H[disinherited_heir.GetName]§!, still has their supporters. Hopefully this discontent will die down in time." #This is a convenient little trick
  usefulheirs.3500.ad.desc: "In line with our customs and traditions, a grand coronation ceremony was held today in the capital, and broadcast throughout our empire. §H[new_chosen_heir.GetName]§! has been proclaimed the new §Y[root.GetHeirTitle]§!, and is now heir to the throne."
 
  uh_adoptive.1110.name: "§RDynastic Heir Ascends§!"
@@ -90,10 +90,10 @@ l_korean:
 
  uh_adoptive.1110.a: "We will prove ourselves."
 
- uh_adoptive.2010.name: "§RDesignated Heir Dies§!"
- uh_adoptive.2010.desc: "In a great loss to the empire, [deceased_heir.GetTitle] §H[deceased_heir.GetName]§!, the §Yheir apparent§!, has passed away. A new §Yheir§! will need to be appointed."
+ uh_adoptive.2000.name: "§RDesignated Heir Dies§!"
+ uh_adoptive.2000.desc: "In a great loss to the empire, [deceased_heir.GetTitle] §H[deceased_heir.GetName]§!, the §YHeir Apparent§!, has passed away. A new §Yheir§! will need to be appointed."
 
- uh_adoptive.2010.a: "Tragic."
+ uh_adoptive.2000.a: "Tragic."
 
  uh_adoptive.3015.name: "§RDynastic Succession Restored§!"
  uh_adoptive.3015.desc: "In a grand speech before the nation today, §Y[root.GetRulerTitle]§! §H[ruler.GetName]§! announced decision to break with tradition and reinstate dynastic succession. This decision has not been well-received amongst our populace. They fear that, as in the past, the throne will eventually pass to someone unworthy of the responsibility."
@@ -109,28 +109,22 @@ l_korean:
 
  usefulheirs.4000.a: "Actually, I'm not sure. I'll give it further consideration."
  usefulheirs.4000.b: "I am sure. It's your time. I will retire."
- usefulheirs.4000.b.tooltip: "We will retire."
+ usefulheirs.4000.b.tooltip: "[root.ruler.GetName] will retire from leadership completely."
  usefulheirs.4000.c: "I am. However, I know that I can still contribute in other capacities."
- usefulheirs.4000.c.tooltip: "We will retire from ruling and choose another leadership position within our empire."
-
- usefulheirs.4010.name: "[root.GetHeirTitle] [event_target:heir_leader.GetName]"
- usefulheirs.4010.desc: "If that is what you wish. I won't dissapoint you. What do you want to do?"
-
- usefulheirs.4010.a: "I will serve as an Official within our realm."
- usefulheirs.4010.b: "I will lead our troops as a Commander."
- usefulheirs.4010.d: "I will pursue knowledge as a Scientist."
-
-
- usefulheirs.4051.a: "I will lead."
+ usefulheirs.4000.c.tooltip: "[root.ruler.GetName] will retire from ruling but stay in leadership."
 
  response_they_shall_accept: "They will accept it."
  response_excellent: "Excellent"
+
+ dis_heir_reg: "[event_target:disinherited_heir.GetName]"
+ dis_heir_fatherland: "[event_target:disinherited_heir_fatherland.GetName]"
 
  unity_fail_text: "§RRequires§! §Y[Root.monthly_unity_prod]§! £unity£ §YUnity§!"
 
  ### Civics
  civic_adoptive_dynasties: "Adoptive Dynasties"
  civic_adoptive_dynasties_desc: "Tradition in this society holds that the monarch typically appoints their heir from amongst the most capable individuals in their court. This has resulted in a very stable empire. However, until an heir is appointed, the heir is still chosen via absolute primogeniture."
+ civic_adoptive_dynasties_desc_corporate: "Tradition in this company holds that the the CEO typically appoints their heir from amongst the most capable individuals on their board. This has resulted in a very profitable company. However, until an heir is appointed, the heir is still chosen by the shareholders."
  civic_tooltip_adoptive_dynasties_effects: "No £stability£ §YStability§! penalty or £influence£ §YInfluence§! cost to designate an heir."
  civic_tooltip_adoptive_dynasties_negative_effects: "A non-designated heir becoming ruler will lower £stability£ §YStability§! for §Y10 years§! by §R20§! on every planet except the capital, where stability will be lowered by §R25§!."
 
@@ -155,3 +149,6 @@ l_korean:
  councilor_adoptive_dynasties_desc: "In order to prepare for their eventual succession, the $TITLE$ receives extensive training on how to manage the realm."
  mod_councilor_adoptive_dynasties_exp_gain: "$councilor_adoptive_dynasties_official_with_icon$ $exp_gain$"
  councilor_adoptive_dynasties_official_with_icon: "£ruler£ $councilor_adoptive_dynasties$"
+
+ ### Override
+ uh_trait_imperial_heir_effects: "$t$§RBlocks selection of non-Council leader traits while on Council§!"

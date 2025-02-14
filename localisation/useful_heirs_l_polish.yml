@@ -90,10 +90,10 @@ l_polish:
 
  uh_adoptive.1110.a: "We will prove ourselves."
 
- uh_adoptive.2010.name: "§RDesignated Heir Dies§!"
- uh_adoptive.2010.desc: "In a great loss to the empire, [deceased_heir.GetTitle] §H[deceased_heir.GetName]§!, the §YHeir Apparent§!, has passed away. A new §Yheir§! will need to be appointed."
+ uh_adoptive.2000.name: "§RDesignated Heir Dies§!"
+ uh_adoptive.2000.desc: "In a great loss to the empire, [deceased_heir.GetTitle] §H[deceased_heir.GetName]§!, the §YHeir Apparent§!, has passed away. A new §Yheir§! will need to be appointed."
 
- uh_adoptive.2010.a: "Tragic."
+ uh_adoptive.2000.a: "Tragic."
 
  uh_adoptive.3015.name: "§RDynastic Succession Restored§!"
  uh_adoptive.3015.desc: "In a grand speech before the nation today, §Y[root.GetRulerTitle]§! §H[ruler.GetName]§! announced decision to break with tradition and reinstate dynastic succession. This decision has not been well-received amongst our populace. They fear that, as in the past, the throne will eventually pass to someone unworthy of the responsibility."
@@ -109,19 +109,9 @@ l_polish:
 
  usefulheirs.4000.a: "Actually, I'm not sure. I'll give it further consideration."
  usefulheirs.4000.b: "I am sure. It's your time. I will retire."
- usefulheirs.4000.b.tooltip: "We will retire."
+ usefulheirs.4000.b.tooltip: "[root.ruler.GetName] will retire from leadership completely."
  usefulheirs.4000.c: "I am. However, I know that I can still contribute in other capacities."
- usefulheirs.4000.c.tooltip: "We will retire from ruling and choose another leadership position within our empire."
-
- usefulheirs.4010.name: "[root.GetHeirTitle] [event_target:heir_leader.GetName]"
- usefulheirs.4010.desc: "If that is what you wish. I won't dissapoint you. What do you want to do?"
-
- usefulheirs.4010.a: "I will serve as an Official within our realm."
- usefulheirs.4010.b: "I will lead our troops as a Commander."
- usefulheirs.4010.d: "I will pursue knowledge as a Scientist."
-
-
- usefulheirs.4051.a: "I will lead."
+ usefulheirs.4000.c.tooltip: "[root.ruler.GetName] will retire from ruling but stay in leadership."
 
  response_they_shall_accept: "They will accept it."
  response_excellent: "Excellent"

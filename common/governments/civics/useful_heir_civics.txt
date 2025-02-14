@@ -4,7 +4,6 @@ civic_adoptive_dynasties = {
 	negative_description =  "civic_tooltip_adoptive_dynasties_negative_effects"
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		# authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 	possible = {
 		authority = {
@@ -18,10 +17,10 @@ civic_adoptive_dynasties = {
 	modifier = {
 		planet_stability_add = 5
 	}
-	#
-	# swap_type = {
-	# 	description = "civic_adoptive_dynasties_desc_corporate"
-	#
-	# 	trigger = { is_megacorp = yes }
-	# }
+	
+	swap_type = {
+		description = "civic_adoptive_dynasties_desc_corporate"
+	
+		trigger = { is_megacorp = yes }
+	}
 }

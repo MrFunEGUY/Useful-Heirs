@@ -86,10 +86,10 @@ l_spanish:
 
  uh_adoptive.1110.a: "We will prove ourselves."
 
- uh_adoptive.2010.name: "§RDesignated Heir Dies§!"
- uh_adoptive.2010.desc: "In a great loss to the empire, [deceased_heir.GetTitle] §H[deceased_heir.GetName]§!, the §Yheir apparent§!, has passed away. A new §Yheir§! will need to be appointed."
+ uh_adoptive.2000.name: "§RDesignated Heir Dies§!"
+ uh_adoptive.2000.desc: "In a great loss to the empire, [deceased_heir.GetTitle] §H[deceased_heir.GetName]§!, the §Yheir apparent§!, has passed away. A new §Yheir§! will need to be appointed."
 
- uh_adoptive.2010.a: "Tragic."
+ uh_adoptive.2000.a: "Tragic."
 
  heir_fired_name: "[event_target:clone_leader_name_1.GetName]"
  heir_name_bold: "§H[event_target:heir_leader.GetName]§!"
@@ -100,19 +100,9 @@ l_spanish:
 
  usefulheirs.4000.a: "Actually, I'm not sure. I'll give it further consideration."
  usefulheirs.4000.b: "I am sure. It's your time. I will retire."
- usefulheirs.4000.b.tooltip: "We will retire."
+ usefulheirs.4000.b.tooltip: "[root.ruler.GetName] will retire from leadership completely."
  usefulheirs.4000.c: "I am. However, I know that I can still contribute in other capacities."
- usefulheirs.4000.c.tooltip: "We will retire from ruling and choose another leadership position within our empire."
-
- usefulheirs.4010.name: "[root.GetHeirTitle] [event_target:heir_leader.GetName]"
- usefulheirs.4010.desc: "If that is what you wish. I won't dissapoint you. What do you want to do?"
-
- usefulheirs.4010.a: "I will serve as an Official within our realm."
- usefulheirs.4010.b: "I will lead our troops as a Commander."
- usefulheirs.4010.d: "I will pursue knowledge as a Scientist."
-
-
- usefulheirs.4051.a: "I will lead."
+ usefulheirs.4000.c.tooltip: "[root.ruler.GetName] will retire from ruling but stay in leadership."
 
  response_they_shall_accept: "They will accept it."
  response_excellent: "Excellent"
@@ -122,6 +112,7 @@ l_spanish:
  ### Civics
  civic_adoptive_dynasties: "Adoptive Dynasties"
  civic_adoptive_dynasties_desc: "Tradition in this society holds that the monarch typically appoints their heir from amongst the most capable individuals in their court. This has resulted in a very stable empire. However, until an heir is appointed, the heir is still chosen via absolute primogeniture."
+ civic_adoptive_dynasties_desc_corporate: "Tradition in this company holds that the the CEO typically appoints their heir from amongst the most capable individuals on their board. This has resulted in a very profitable company. However, until an heir is appointed, the heir is still chosen by the shareholders."
  civic_tooltip_adoptive_dynasties_effects: "No £stability£ §YStability§! penalty or £influence£ §YInfluence§! cost to designate an heir."
  civic_tooltip_adoptive_dynasties_negative_effects: "A non-designated heir becoming ruler will lower £stability£ §YStability§! for §Y10 years§! by §R20§! on every planet except the capital, where stability will be lowered by §R25§!."
 
