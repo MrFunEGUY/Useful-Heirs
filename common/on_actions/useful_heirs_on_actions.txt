@@ -1,7 +1,7 @@
 # this = country
 on_game_start_country = {
 	events = {
-		usefulheirs.9300			# Save dynastic name
+		# usefulheirs.9300			# Save dynastic name
 	}
 }
 
@@ -46,7 +46,7 @@ on_ruler_set = {
 	events = {
 		uh_adoptive.1100			# On Ruler set, if dynastic heir, set penalties
 		usefulheirs.9200			# Change Country Species to new ruler species so new heirs are of the new species
-		usefulheirs.9300			# Save dynastic name
+		# usefulheirs.9300			# Save dynastic name
 	}
 }
 
@@ -62,7 +62,7 @@ on_pre_government_changed = {
 # THIS = country
 on_post_government_changed = {
 	events = {
-		usefulheirs.9300			# Save dynastic name
+		# usefulheirs.9300			# Save dynastic name
 		uh_adoptive.3010			# Government Reform - Post Check for AD
 	}
 }

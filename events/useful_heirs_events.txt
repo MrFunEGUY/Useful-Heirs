@@ -937,51 +937,51 @@ country_event = {
 #############################
 
 # New Heir - Adopt Dynastic Name?
-country_event = {
-	id = usefulheirs.3400
-	picture = GFX_evt_arena
-	title = usefulheirs.3400.name
-	desc = usefulheirs.3400.desc
-	hide_window = no
-	is_triggered_only = yes
+# country_event = {
+# 	id = usefulheirs.3400
+# 	picture = GFX_evt_arena
+# 	title = usefulheirs.3400.name
+# 	desc = usefulheirs.3400.desc
+# 	hide_window = no
+# 	is_triggered_only = yes
 
-	immediate = {
-		random_owned_leader = {
-			limit = { is_dynastic_name_leader = yes }
-			save_event_target_as = dynastic_name_leader
-		}
-	}
+# 	immediate = {
+# 		random_owned_leader = {
+# 			limit = { is_dynastic_name_leader = yes }
+# 			save_event_target_as = dynastic_name_leader
+# 		}
+# 	}
 
-	# No Name Change
-	option = {
-		name = usefulheirs.3400.no_name_change
-	}
+# 	# No Name Change
+# 	option = {
+# 		name = usefulheirs.3400.no_name_change
+# 	}
 
-	# Yes Name Change
-	option = {
-		name = usefulheirs.3400.yes_name_change
-		custom_tooltip = usefulheirs.3400.yes_name_change.tooltip
-		hidden_effect = {
-			heir = {
-				set_name = {
-					key = "usefulheirs.3400.new_heir_name"
-					variable_string = "[this.GetName]"
-					variable_string = "[event_target:dynastic_name_leader.GetName]"
-				}
-				set_leader_flag = adopted_dynastic_name
-			}
-		}
-	}
+# 	# Yes Name Change
+# 	option = {
+# 		name = usefulheirs.3400.yes_name_change
+# 		custom_tooltip = usefulheirs.3400.yes_name_change.tooltip
+# 		hidden_effect = {
+# 			heir = {
+# 				set_name = {
+# 					key = "usefulheirs.3400.new_heir_name"
+# 					variable_string = "[this.GetName]"
+# 					variable_string = "[event_target:dynastic_name_leader.GetName]"
+# 				}
+# 				set_leader_flag = adopted_dynastic_name
+# 			}
+# 		}
+# 	}
 
-	after = {
-		hidden_effect = {
-			if = {
-				limit = { has_country_flag = dissed_heir }
-				country_event = { id = usefulheirs.3500 }
-			}
-		}
-	}
-}
+# 	after = {
+# 		hidden_effect = {
+# 			if = {
+# 				limit = { has_country_flag = dissed_heir }
+# 				country_event = { id = usefulheirs.3500 }
+# 			}
+# 		}
+# 	}
+# }
 
 # New Heir Proclaimed, but old heir is upset
 country_event = {
@@ -1230,51 +1230,51 @@ country_event = {
 }
 
 # On Ruler set, save dynastic name
-country_event = {
-	id = usefulheirs.9300
-	hide_window = yes
-	is_triggered_only = yes
+# country_event = {
+# 	id = usefulheirs.9300
+# 	hide_window = yes
+# 	is_triggered_only = yes
 
-	trigger = {
-		is_imperial_authority = yes
-		is_country_type_with_subjects = yes
-		exists = ruler
-		ruler = { NOT = { has_leader_flag = adopted_dynastic_name } }
-	}
+# 	trigger = {
+# 		is_imperial_authority = yes
+# 		is_country_type_with_subjects = yes
+# 		exists = ruler
+# 		ruler = { NOT = { has_leader_flag = adopted_dynastic_name } }
+# 	}
 
-	immediate = {
+# 	immediate = {
 
-		ruler = { save_event_target_as = dynasty_name }
+# 		ruler = { save_event_target_as = dynasty_name }
 
-		if = {
-			limit = { NOT = { any_owned_leader = { is_dynastic_name_leader = yes } } }
-			create_leader = {
-				class = official
-				species = owner_main_species
-				name = random
-				immortal = yes
-				hide_leader = yes
-				event_leader = yes
-				effect = {
-					set_leader_flag = dynastic_name_leader
-					set_name = {
-						key = saved_dynastic_name
-						variable_string = "[root.ruler.GetSecondName]"
-					}
-				}
-			}
-		}
-		else = {
-			random_owned_leader = {
-				limit = { is_dynastic_name_leader = yes }
-				set_name = {
-					key = saved_dynastic_name
-					variable_string = "[root.ruler.GetSecondName]"
-				}
-			}
-		}	
-	}
-}
+# 		if = {
+# 			limit = { NOT = { any_owned_leader = { is_dynastic_name_leader = yes } } }
+# 			create_leader = {
+# 				class = official
+# 				species = owner_main_species
+# 				name = random
+# 				immortal = yes
+# 				hide_leader = yes
+# 				event_leader = yes
+# 				effect = {
+# 					set_leader_flag = dynastic_name_leader
+# 					set_name = {
+# 						key = saved_dynastic_name
+# 						variable_string = "[root.ruler.GetSecondName]"
+# 					}
+# 				}
+# 			}
+# 		}
+# 		else = {
+# 			random_owned_leader = {
+# 				limit = { is_dynastic_name_leader = yes }
+# 				set_name = {
+# 					key = saved_dynastic_name
+# 					variable_string = "[root.ruler.GetSecondName]"
+# 				}
+# 			}
+# 		}	
+# 	}
+# }
 
 # Set Realistic Heir Ages
 leader_event = {

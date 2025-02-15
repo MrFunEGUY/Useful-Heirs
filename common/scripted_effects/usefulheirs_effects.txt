@@ -110,7 +110,7 @@ get_heir_setup = {
 		}
 		set_heir = event_target:new_chosen_heir
 		event_target:new_chosen_heir = { set_leader_flag = appointed_heir }
-		country_event = { id = usefulheirs.3400 }
+		# country_event = { id = usefulheirs.3400 }
 	}
 
 	event_target:new_chosen_heir = {
