@@ -48,7 +48,6 @@ country_event = {
 			text = usefulheirs.1000.b.ad
 			trigger = { has_adoptive_dynasties = yes }
 		}
-		name = usefulheirs.1000.b
 		custom_tooltip = usefulheirs.1000.b.tooltip
 		hidden_effect = { country_event = { id = usefulheirs.3000 } }
 	}
