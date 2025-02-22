@@ -1,0 +1,14 @@
+name = usefulheirs.3110.heir_maybe_$NUM$
+trigger = { check_variable = { which = total_$CLASS$s value >= $NUM$ } }
+if = {
+	limit = { has_adoptive_dynasties = no }
+	add_resource = {
+		unity = -1
+		mult = monthly_unity_prod
+	}
+}		
+hidden_effect = {
+	event_target:heir_maybe_$NUM$ = { save_event_target_as = new_chosen_heir }
+	get_heir_setup = yes
+}
+ai_chance = { factor = 1 }

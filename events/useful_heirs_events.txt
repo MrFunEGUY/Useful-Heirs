@@ -369,172 +369,48 @@ country_event = {
 	}
 
 	option = {
-		name = usefulheirs.3110.heir_maybe_1
-		trigger = { check_variable = { which = total_officials value >= 1 } }
-		if = {
-			limit = { has_adoptive_dynasties = no }
-			add_resource = {
-				unity = -1
-				mult = monthly_unity_prod
-			}
-		}		
-		hidden_effect = {
-			event_target:heir_maybe_1 = { save_event_target_as = new_chosen_heir }
-		}
-		ai_chance = { factor = 1 }
+		inline_script = { script = events/choose_heir_option CLASS = official NUM = 1 }
 	}
 
 	option = {
-		name = usefulheirs.3110.heir_maybe_2
-		trigger = { check_variable = { which = total_officials value >= 2 } }
-		if = {
-			limit = { has_adoptive_dynasties = no }
-			add_resource = {
-				unity = -1
-				mult = monthly_unity_prod
-			}
-		}		
-		hidden_effect = {
-			event_target:heir_maybe_2 = { save_event_target_as = new_chosen_heir }
-		}
-		ai_chance = { factor = 1 }
+		inline_script = { script = events/choose_heir_option CLASS = official NUM = 2 }
 	}
 
 	option = {
-		name = usefulheirs.3110.heir_maybe_3
-		trigger = { check_variable = { which = total_officials value >= 3 } }
-		if = {
-			limit = { has_adoptive_dynasties = no }
-			add_resource = {
-				unity = -1
-				mult = monthly_unity_prod
-			}
-		}		
-		hidden_effect = {
-			event_target:heir_maybe_3 = { save_event_target_as = new_chosen_heir }
-		}
-		ai_chance = { factor = 1 }
+		inline_script = { script = events/choose_heir_option CLASS = official NUM = 3 }
 	}
 
 	option = {
-		name = usefulheirs.3110.heir_maybe_4
-		trigger = { check_variable = { which = total_officials value >= 4 } }
-		if = {
-			limit = { has_adoptive_dynasties = no }
-			add_resource = {
-				unity = -1
-				mult = monthly_unity_prod
-			}
-		}		
-		hidden_effect = {
-			event_target:heir_maybe_4 = { save_event_target_as = new_chosen_heir }
-		}
-		ai_chance = { factor = 1 }
+		inline_script = { script = events/choose_heir_option CLASS = official NUM = 4 }
 	}
 
 	option = {
-		name = usefulheirs.3110.heir_maybe_5
-		trigger = { check_variable = { which = total_officials value >= 5 } }
-		if = {
-			limit = { has_adoptive_dynasties = no }
-			add_resource = {
-				unity = -1
-				mult = monthly_unity_prod
-			}
-		}		
-		hidden_effect = {
-			event_target:heir_maybe_5 = { save_event_target_as = new_chosen_heir }
-		}
-		ai_chance = { factor = 1 }
+		inline_script = { script = events/choose_heir_option CLASS = official NUM = 5 }
 	}
 
 	option = {
-		name = usefulheirs.3110.heir_maybe_6
-		trigger = { check_variable = { which = total_officials value >= 6 } }
-		if = {
-			limit = { has_adoptive_dynasties = no }
-			add_resource = {
-				unity = -1
-				mult = monthly_unity_prod
-			}
-		}		
-		hidden_effect = {
-			event_target:heir_maybe_6 = { save_event_target_as = new_chosen_heir }
-		}
-		ai_chance = { factor = 1 }
+		inline_script = { script = events/choose_heir_option CLASS = official NUM = 6 }
 	}
 
 	option = {
-		name = usefulheirs.3110.heir_maybe_7
-		trigger = { check_variable = { which = total_officials value >= 7 } }
-		if = {
-			limit = { has_adoptive_dynasties = no }
-			add_resource = {
-				unity = -1
-				mult = monthly_unity_prod
-			}
-		}		
-		hidden_effect = {
-			event_target:heir_maybe_7 = { save_event_target_as = new_chosen_heir }
-		}
-		ai_chance = { factor = 1 }
+		inline_script = { script = events/choose_heir_option CLASS = official NUM = 7 }
 	}
 
 	option = {
-		name = usefulheirs.3110.heir_maybe_8
-		trigger = { check_variable = { which = total_officials value >= 8 } }
-		if = {
-			limit = { has_adoptive_dynasties = no }
-			add_resource = {
-				unity = -1
-				mult = monthly_unity_prod
-			}
-		}		
-		hidden_effect = {
-			event_target:heir_maybe_8 = { save_event_target_as = new_chosen_heir }
-		}
-		ai_chance = { factor = 1 }
+		inline_script = { script = events/choose_heir_option CLASS = official NUM = 8 }
 	}
 
 	option = {
-		name = usefulheirs.3110.heir_maybe_9
-		trigger = { check_variable = { which = total_officials value >= 9 } }
-		if = {
-			limit = { has_adoptive_dynasties = no }
-			add_resource = {
-				unity = -1
-				mult = monthly_unity_prod
-			}
-		}		
-		hidden_effect = {
-			event_target:heir_maybe_9 = { save_event_target_as = new_chosen_heir }
-		}
-		ai_chance = { factor = 1 }
+		inline_script = { script = events/choose_heir_option CLASS = official NUM = 9 }
 	}
 
 	option = {
-		name = usefulheirs.3110.heir_maybe_10
-		trigger = { check_variable = { which = total_officials value >= 10 } }
-		if = {
-			limit = { has_adoptive_dynasties = no }
-			add_resource = {
-				unity = -1
-				mult = monthly_unity_prod
-			}
-		}		
-		hidden_effect = {
-			event_target:heir_maybe_10 = { save_event_target_as = new_chosen_heir }
-		}
-		ai_chance = { factor = 1 }
+		inline_script = { script = events/choose_heir_option CLASS = official NUM = 10 }
 	}
 
 	after = {
 		hidden_effect = {
 			clear_variable = monthly_unity_prod
-			if = {
-				limit = { exists = event_target:new_chosen_heir }
-				get_heir_setup = yes
-			}
 		}
 	}
 }
@@ -566,172 +442,48 @@ country_event = {
 	}
 
 	option = {
-		name = usefulheirs.3110.heir_maybe_1
-		trigger = { check_variable = { which = total_commanders value >= 1 } }
-		if = {
-			limit = { has_adoptive_dynasties = no }
-			add_resource = {
-				unity = -1
-				mult = monthly_unity_prod
-			}
-		}		
-		hidden_effect = {
-			event_target:heir_maybe_1 = { save_event_target_as = new_chosen_heir }
-		}
-		ai_chance = { factor = 1 }
+		inline_script = { script = events/choose_heir_option CLASS = commander NUM = 1 }
 	}
 
 	option = {
-		name = usefulheirs.3110.heir_maybe_2
-		trigger = { check_variable = { which = total_commanders value >= 2 } }
-		if = {
-			limit = { has_adoptive_dynasties = no }
-			add_resource = {
-				unity = -1
-				mult = monthly_unity_prod
-			}
-		}		
-		hidden_effect = {
-			event_target:heir_maybe_2 = { save_event_target_as = new_chosen_heir }
-		}
-		ai_chance = { factor = 1 }
+		inline_script = { script = events/choose_heir_option CLASS = commander NUM = 2 }
 	}
 
 	option = {
-		name = usefulheirs.3110.heir_maybe_3
-		trigger = { check_variable = { which = total_commanders value >= 3 } }
-		if = {
-			limit = { has_adoptive_dynasties = no }
-			add_resource = {
-				unity = -1
-				mult = monthly_unity_prod
-			}
-		}		
-		hidden_effect = {
-			event_target:heir_maybe_3 = { save_event_target_as = new_chosen_heir }
-		}
-		ai_chance = { factor = 1 }
+		inline_script = { script = events/choose_heir_option CLASS = commander NUM = 3 }
 	}
 
 	option = {
-		name = usefulheirs.3110.heir_maybe_4
-		trigger = { check_variable = { which = total_commanders value >= 4 } }
-		if = {
-			limit = { has_adoptive_dynasties = no }
-			add_resource = {
-				unity = -1
-				mult = monthly_unity_prod
-			}
-		}		
-		hidden_effect = {
-			event_target:heir_maybe_4 = { save_event_target_as = new_chosen_heir }
-		}
-		ai_chance = { factor = 1 }
+		inline_script = { script = events/choose_heir_option CLASS = commander NUM = 4 }
 	}
 
 	option = {
-		name = usefulheirs.3110.heir_maybe_5
-		trigger = { check_variable = { which = total_commanders value >= 5 } }
-		if = {
-			limit = { has_adoptive_dynasties = no }
-			add_resource = {
-				unity = -1
-				mult = monthly_unity_prod
-			}
-		}		
-		hidden_effect = {
-			event_target:heir_maybe_5 = { save_event_target_as = new_chosen_heir }
-		}
-		ai_chance = { factor = 1 }
+		inline_script = { script = events/choose_heir_option CLASS = commander NUM = 5 }
 	}
 
 	option = {
-		name = usefulheirs.3110.heir_maybe_6
-		trigger = { check_variable = { which = total_commanders value >= 6 } }
-		if = {
-			limit = { has_adoptive_dynasties = no }
-			add_resource = {
-				unity = -1
-				mult = monthly_unity_prod
-			}
-		}		
-		hidden_effect = {
-			event_target:heir_maybe_6 = { save_event_target_as = new_chosen_heir }
-		}
-		ai_chance = { factor = 1 }
+		inline_script = { script = events/choose_heir_option CLASS = commander NUM = 6 }
 	}
 
 	option = {
-		name = usefulheirs.3110.heir_maybe_7
-		trigger = { check_variable = { which = total_commanders value >= 7 } }
-		if = {
-			limit = { has_adoptive_dynasties = no }
-			add_resource = {
-				unity = -1
-				mult = monthly_unity_prod
-			}
-		}		
-		hidden_effect = {
-			event_target:heir_maybe_7 = { save_event_target_as = new_chosen_heir }
-		}
-		ai_chance = { factor = 1 }
+		inline_script = { script = events/choose_heir_option CLASS = commander NUM = 7 }
 	}
 
 	option = {
-		name = usefulheirs.3110.heir_maybe_8
-		trigger = { check_variable = { which = total_commanders value >= 8 } }
-		if = {
-			limit = { has_adoptive_dynasties = no }
-			add_resource = {
-				unity = -1
-				mult = monthly_unity_prod
-			}
-		}		
-		hidden_effect = {
-			event_target:heir_maybe_8 = { save_event_target_as = new_chosen_heir }
-		}
-		ai_chance = { factor = 1 }
+		inline_script = { script = events/choose_heir_option CLASS = commander NUM = 8 }
 	}
 
 	option = {
-		name = usefulheirs.3110.heir_maybe_9
-		trigger = { check_variable = { which = total_commanders value >= 9 } }
-		if = {
-			limit = { has_adoptive_dynasties = no }
-			add_resource = {
-				unity = -1
-				mult = monthly_unity_prod
-			}
-		}		
-		hidden_effect = {
-			event_target:heir_maybe_9 = { save_event_target_as = new_chosen_heir }
-		}
-		ai_chance = { factor = 1 }
+		inline_script = { script = events/choose_heir_option CLASS = commander NUM = 9 }
 	}
 
 	option = {
-		name = usefulheirs.3110.heir_maybe_10
-		trigger = { check_variable = { which = total_commanders value >= 10 } }
-		if = {
-			limit = { has_adoptive_dynasties = no }
-			add_resource = {
-				unity = -1
-				mult = monthly_unity_prod
-			}
-		}		
-		hidden_effect = {
-			event_target:heir_maybe_10 = { save_event_target_as = new_chosen_heir }
-		}
-		ai_chance = { factor = 1 }
+		inline_script = { script = events/choose_heir_option CLASS = commander NUM = 10 }
 	}
 
 	after = {
 		hidden_effect = {
 			clear_variable = monthly_unity_prod
-			if = {
-				limit = { exists = event_target:new_chosen_heir }
-				get_heir_setup = yes
-			}
 		}
 	}
 }
@@ -763,172 +515,48 @@ country_event = {
 	}
 
 	option = {
-		name = usefulheirs.3110.heir_maybe_1
-		trigger = { check_variable = { which = total_scientists value >= 1 } }
-		if = {
-			limit = { has_adoptive_dynasties = no }
-			add_resource = {
-				unity = -1
-				mult = monthly_unity_prod
-			}
-		}		
-		hidden_effect = {
-			event_target:heir_maybe_1 = { save_event_target_as = new_chosen_heir }
-		}
-		ai_chance = { factor = 1 }
+		inline_script = { script = events/choose_heir_option CLASS = scientist NUM = 1 }
 	}
 
 	option = {
-		name = usefulheirs.3110.heir_maybe_2
-		trigger = { check_variable = { which = total_scientists value >= 2 } }
-		if = {
-			limit = { has_adoptive_dynasties = no }
-			add_resource = {
-				unity = -1
-				mult = monthly_unity_prod
-			}
-		}		
-		hidden_effect = {
-			event_target:heir_maybe_2 = { save_event_target_as = new_chosen_heir }
-		}
-		ai_chance = { factor = 1 }
+		inline_script = { script = events/choose_heir_option CLASS = scientist NUM = 2 }
 	}
 
 	option = {
-		name = usefulheirs.3110.heir_maybe_3
-		trigger = { check_variable = { which = total_scientists value >= 3 } }
-		if = {
-			limit = { has_adoptive_dynasties = no }
-			add_resource = {
-				unity = -1
-				mult = monthly_unity_prod
-			}
-		}		
-		hidden_effect = {
-			event_target:heir_maybe_3 = { save_event_target_as = new_chosen_heir }
-		}
-		ai_chance = { factor = 1 }
+		inline_script = { script = events/choose_heir_option CLASS = scientist NUM = 3 }
 	}
 
 	option = {
-		name = usefulheirs.3110.heir_maybe_4
-		trigger = { check_variable = { which = total_scientists value >= 4 } }
-		if = {
-			limit = { has_adoptive_dynasties = no }
-			add_resource = {
-				unity = -1
-				mult = monthly_unity_prod
-			}
-		}		
-		hidden_effect = {
-			event_target:heir_maybe_4 = { save_event_target_as = new_chosen_heir }
-		}
-		ai_chance = { factor = 1 }
+		inline_script = { script = events/choose_heir_option CLASS = scientist NUM = 4 }
 	}
 
 	option = {
-		name = usefulheirs.3110.heir_maybe_5
-		trigger = { check_variable = { which = total_scientists value >= 5 } }
-		if = {
-			limit = { has_adoptive_dynasties = no }
-			add_resource = {
-				unity = -1
-				mult = monthly_unity_prod
-			}
-		}		
-		hidden_effect = {
-			event_target:heir_maybe_5 = { save_event_target_as = new_chosen_heir }
-		}
-		ai_chance = { factor = 1 }
+		inline_script = { script = events/choose_heir_option CLASS = scientist NUM = 5 }
 	}
 
 	option = {
-		name = usefulheirs.3110.heir_maybe_6
-		trigger = { check_variable = { which = total_scientists value >= 6 } }
-		if = {
-			limit = { has_adoptive_dynasties = no }
-			add_resource = {
-				unity = -1
-				mult = monthly_unity_prod
-			}
-		}		
-		hidden_effect = {
-			event_target:heir_maybe_6 = { save_event_target_as = new_chosen_heir }
-		}
-		ai_chance = { factor = 1 }
+		inline_script = { script = events/choose_heir_option CLASS = scientist NUM = 6 }
 	}
 
 	option = {
-		name = usefulheirs.3110.heir_maybe_7
-		trigger = { check_variable = { which = total_scientists value >= 7 } }
-		if = {
-			limit = { has_adoptive_dynasties = no }
-			add_resource = {
-				unity = -1
-				mult = monthly_unity_prod
-			}
-		}		
-		hidden_effect = {
-			event_target:heir_maybe_7 = { save_event_target_as = new_chosen_heir }
-		}
-		ai_chance = { factor = 1 }
+		inline_script = { script = events/choose_heir_option CLASS = scientist NUM = 7 }
 	}
 
 	option = {
-		name = usefulheirs.3110.heir_maybe_8
-		trigger = { check_variable = { which = total_scientists value >= 8 } }
-		if = {
-			limit = { has_adoptive_dynasties = no }
-			add_resource = {
-				unity = -1
-				mult = monthly_unity_prod
-			}
-		}		
-		hidden_effect = {
-			event_target:heir_maybe_8 = { save_event_target_as = new_chosen_heir }
-		}
-		ai_chance = { factor = 1 }
+		inline_script = { script = events/choose_heir_option CLASS = scientist NUM = 8 }
 	}
 
 	option = {
-		name = usefulheirs.3110.heir_maybe_9
-		trigger = { check_variable = { which = total_scientists value >= 9 } }
-		if = {
-			limit = { has_adoptive_dynasties = no }
-			add_resource = {
-				unity = -1
-				mult = monthly_unity_prod
-			}
-		}		
-		hidden_effect = {
-			event_target:heir_maybe_9 = { save_event_target_as = new_chosen_heir }
-		}
-		ai_chance = { factor = 1 }
+		inline_script = { script = events/choose_heir_option CLASS = scientist NUM = 9 }
 	}
 
 	option = {
-		name = usefulheirs.3110.heir_maybe_10
-		trigger = { check_variable = { which = total_scientists value >= 10 } }
-		if = {
-			limit = { has_adoptive_dynasties = no }
-			add_resource = {
-				unity = -1
-				mult = monthly_unity_prod
-			}
-		}		
-		hidden_effect = {
-			event_target:heir_maybe_10 = { save_event_target_as = new_chosen_heir }
-		}
-		ai_chance = { factor = 1 }
+		inline_script = { script = events/choose_heir_option CLASS = scientist NUM = 10 }
 	}
 
 	after = {
 		hidden_effect = {
 			clear_variable = monthly_unity_prod
-			if = {
-				limit = { exists = event_target:new_chosen_heir }
-				get_heir_setup = yes
-			}
 		}
 	}
 }
