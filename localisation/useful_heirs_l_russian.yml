@@ -21,7 +21,7 @@ l_russian:
 
  usefulheirs.2000.AI: "ИИ"
 
- usefulheirs.1000.name: "[root.GetHeirTitle] §H[event_target:heir_leader.GetName]§!"
+ usefulheirs.1000.name: "[root.GetHeirTitle] §H[heir_leader.GetName]§!"
  usefulheirs.1000.desc: "Вы вызывали меня, о §Y[root.GetRulerTitle]§!?"
 
  usefulheirs.1000.a: "Мне нужно, чтобы вы взяли на себя другую роль."
@@ -102,10 +102,10 @@ l_russian:
  uh_adoptive.3015.a: "Наш род докажет, что достоин править."
 
  heir_fired_name: "[event_target:clone_leader_name_1.GetName]"
- heir_name_bold: "§H[event_target:heir_leader.GetName]§!"
+ heir_name_bold: "§H[heir_leader.GetName]§!"
  ruler_name_white: "§![root.ruler.GetName]§!"
 
- usefulheirs.4000.name: "[root.GetHeirTitle] [event_target:heir_leader.GetName]"
+ usefulheirs.4000.name: "[root.GetHeirTitle] [heir_leader.GetName]"
  usefulheirs.4000.desc: "О [root.GetRulerTitle], вы уверены?"
 
  usefulheirs.4000.a: "На самом деле, нет. Я подумаю об этом еще."

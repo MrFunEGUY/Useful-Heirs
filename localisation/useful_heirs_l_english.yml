@@ -21,7 +21,7 @@
 
  usefulheirs.2000.AI: "AI"
 
- usefulheirs.1000.name: "[root.GetHeirTitle] §H[event_target:heir_leader.GetName]§!"
+ usefulheirs.1000.name: "[root.GetHeirTitle] §H[heir_leader.GetName]§!"
  usefulheirs.1000.desc: "You summoned me, my §Y[root.GetRulerTitle]§!?"
 
  usefulheirs.1000.a: "I need you to take on a different role."
@@ -101,10 +101,10 @@
  uh_adoptive.3015.a: "Our line will prove themselves."
 
  heir_fired_name: "[event_target:clone_leader_name_1.GetName]"
- heir_name_bold: "§H[event_target:heir_leader.GetName]§!"
+ heir_name_bold: "§H[heir_leader.GetName]§!"
  ruler_name_white: "§![root.ruler.GetName]§!"
 
- usefulheirs.4000.name: "[root.GetHeirTitle] [event_target:heir_leader.GetName]"
+ usefulheirs.4000.name: "[root.GetHeirTitle] [heir_leader.GetName]"
  usefulheirs.4000.desc: "My [root.GetRulerTitle], are you sure?"
 
  usefulheirs.4000.a: "Actually, I'm not sure. I'll give it further consideration."

@@ -24,8 +24,8 @@ l_german:
  #usefulheirs.2000.AI: "AI"
  usefulheirs.2000.AI: "KI"
 
- #usefulheirs.1000.name: "[root.GetHeirTitle] §H[event_target:heir_leader.GetName]§!"
- usefulheirs.1000.name: "[root.GetHeirTitle] §H[event_target:heir_leader.GetName]§!"
+ #usefulheirs.1000.name: "[root.GetHeirTitle] §H[heir_leader.GetName]§!"
+ usefulheirs.1000.name: "[root.GetHeirTitle] §H[heir_leader.GetName]§!"
  #usefulheirs.1000.desc: "You summoned me, [root.GetRulerTitle]?"
  usefulheirs.1000.desc: "Du hast mich gerufen, [root.GetRulerTitle]?"
 
@@ -142,13 +142,13 @@ l_german:
 
  #heir_fired_name: "[event_target:clone_leader_name_1.GetName]"
  heir_fired_name: "[event_target:clone_leader_name_1.GetName]"
- #heir_name_bold: "§H[event_target:heir_leader.GetName]§!"
- heir_name_bold: "§H[event_target:heir_leader.GetName]§!"
+ #heir_name_bold: "§H[heir_leader.GetName]§!"
+ heir_name_bold: "§H[heir_leader.GetName]§!"
  #ruler_name_white: "§![root.ruler.GetName]§!"
  ruler_name_white: "§![root.ruler.GetName]§!"
 
- #usefulheirs.4000.name: "[root.GetHeirTitle] [event_target:heir_leader.GetName]"
- usefulheirs.4000.name: "[root.GetHeirTitle] [event_target:heir_leader.GetName]"
+ #usefulheirs.4000.name: "[root.GetHeirTitle] [heir_leader.GetName]"
+ usefulheirs.4000.name: "[root.GetHeirTitle] [heir_leader.GetName]"
  #usefulheirs.4000.desc: "My [root.GetRulerTitle], are you sure?"
  usefulheirs.4000.desc: "Mein [root.GetRulerTitle], sind Sie sicher?"
 
