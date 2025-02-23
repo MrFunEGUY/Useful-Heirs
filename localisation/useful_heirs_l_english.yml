@@ -62,43 +62,43 @@
  
  usefulheirs.3110.leader_1: "§Y[leader_1.GetName]§!: Age - [leader_1.GetAge] | [leader_1.HasEthicIcon]"
  usefulheirs.3110.leader_1.councilor: "§H[leader_1.GetTitle]§! §Y[leader_1.GetName]§!: Age - [leader_1.GetAge] | [leader_1.HasEthicIcon]"
- usefulheirs.3110.leader_1.tooltip: "\n§Y[leader_1.GetName]'s§! - \nLength of Service: §Y[leader_1.GetYearsOfService]§! \nHomeworld: §Y[leader_1.GetBackgroundPlanet]§! \nFormer Occupation: §Y[leader_1.GetBackgroundJob]§! \nSkill Level: §Y[leader_1.GetSkill]§!"
+ usefulheirs.3110.leader_1.tooltip: "\n§Y[leader_1.GetName]'s§! §LBio§! - \n§LLength of Service§!: §Y[leader_1.GetYearsOfService]§! \n§LHomeworld§!: §Y[leader_1.GetBackgroundPlanet]§! in the §Y[leader_1.background_planet.solar_system.GetName]§! system \n§LFormer Occupation§!: §Y[leader_1.GetBackgroundJob]§! \n§LSkill Level§!: §Y[leader_1.GetSkill]§!"
  
  usefulheirs.3110.leader_2: "§Y[leader_2.GetName]§!: Age - [leader_2.GetAge] | [leader_2.HasEthicIcon]"
  usefulheirs.3110.leader_2.councilor: "§H[leader_2.GetTitle]§! §Y[leader_2.GetName]§!: Age - [leader_2.GetAge] | [leader_2.HasEthicIcon]"
- usefulheirs.3110.leader_2.tooltip: "\n§Y[leader_2.GetName]'s§! - \nLength of Service: §Y[leader_2.GetYearsOfService]§! \nHomeworld: §Y[leader_2.GetBackgroundPlanet]§! \nFormer Occupation: §Y[leader_2.GetBackgroundJob]§! \nSkill Level: §Y[leader_2.GetSkill]§!"
+ usefulheirs.3110.leader_2.tooltip: "\n§Y[leader_2.GetName]'s§! §LBio§! - \n§LLength of Service§!: §Y[leader_2.GetYearsOfService]§! \n§LHomeworld§!: §Y[leader_2.GetBackgroundPlanet]§! in the §Y[leader_1.background_planet.solar_system.GetName]§! system \n§LFormer Occupation§!: §Y[leader_2.GetBackgroundJob]§! \n§LSkill Level§!: §Y[leader_2.GetSkill]§!"
  
  usefulheirs.3110.leader_3: "§Y[leader_3.GetName]§!: Age - [leader_3.GetAge] | [leader_3.HasEthicIcon]"
  usefulheirs.3110.leader_3.councilor: "§H[leader_3.GetTitle]§! §Y[leader_3.GetName]§!: Age - [leader_3.GetAge] | [leader_3.HasEthicIcon]"
- usefulheirs.3110.leader_3.tooltip: "\n§Y[leader_3.GetName]'s§! - \nLength of Service: §Y[leader_3.GetYearsOfService]§! \nHomeworld: §Y[leader_3.GetBackgroundPlanet]§! \nFormer Occupation: §Y[leader_3.GetBackgroundJob]§! \nSkill Level: §Y[leader_3.GetSkill]§!"
+ usefulheirs.3110.leader_3.tooltip: "\n§Y[leader_3.GetName]'s§! §LBio§! - \n§LLength of Service§!: §Y[leader_3.GetYearsOfService]§! \n§LHomeworld§!: §Y[leader_3.GetBackgroundPlanet]§! in the §Y[leader_1.background_planet.solar_system.GetName]§! system \n§LFormer Occupation§!: §Y[leader_3.GetBackgroundJob]§! \n§LSkill Level§!: §Y[leader_3.GetSkill]§!"
  
  usefulheirs.3110.leader_4: "§Y[leader_4.GetName]§!: Age - [leader_4.GetAge] | [leader_4.HasEthicIcon]"
  usefulheirs.3110.leader_4.councilor: "§H[leader_4.GetTitle]§! §Y[leader_4.GetName]§!: Age - [leader_4.GetAge] | [leader_4.HasEthicIcon]"
- usefulheirs.3110.leader_4.tooltip: "\n§Y[leader_4.GetName]'s§! - \nLength of Service: §Y[leader_4.GetYearsOfService]§! \nHomeworld: §Y[leader_4.GetBackgroundPlanet]§! \nFormer Occupation: §Y[leader_4.GetBackgroundJob]§! \nSkill Level: §Y[leader_4.GetSkill]§!"
+ usefulheirs.3110.leader_4.tooltip: "\n§Y[leader_4.GetName]'s§! §LBio§! - \n§LLength of Service§!: §Y[leader_4.GetYearsOfService]§! \n§LHomeworld§!: §Y[leader_4.GetBackgroundPlanet]§! in the §Y[leader_1.background_planet.solar_system.GetName]§! system \n§LFormer Occupation§!: §Y[leader_4.GetBackgroundJob]§! \n§LSkill Level§!: §Y[leader_4.GetSkill]§!"
  
  usefulheirs.3110.leader_5: "§Y[leader_5.GetName]§!: Age - [leader_5.GetAge] | [leader_5.HasEthicIcon]"
  usefulheirs.3110.leader_5.councilor: "§H[leader_5.GetTitle]§! §Y[leader_5.GetName]§!: Age - [leader_5.GetAge] | [leader_5.HasEthicIcon]"
- usefulheirs.3110.leader_5.tooltip: "\n§Y[leader_5.GetName]'s§! - \nLength of Service: §Y[leader_5.GetYearsOfService]§! \nHomeworld: §Y[leader_5.GetBackgroundPlanet]§! \nFormer Occupation: §Y[leader_5.GetBackgroundJob]§! \nSkill Level: §Y[leader_5.GetSkill]§!"
+ usefulheirs.3110.leader_5.tooltip: "\n§Y[leader_5.GetName]'s§! §LBio§! - \n§LLength of Service§!: §Y[leader_5.GetYearsOfService]§! \n§LHomeworld§!: §Y[leader_5.GetBackgroundPlanet]§! in the §Y[leader_1.background_planet.solar_system.GetName]§! system \n§LFormer Occupation§!: §Y[leader_5.GetBackgroundJob]§! \n§LSkill Level§!: §Y[leader_5.GetSkill]§!"
  
  usefulheirs.3110.leader_6: "§Y[leader_6.GetName]§!: Age - [leader_6.GetAge] | [leader_6.HasEthicIcon]"
  usefulheirs.3110.leader_6.councilor: "§H[leader_6.GetTitle]§! §Y[leader_6.GetName]§!: Age - [leader_6.GetAge] | [leader_6.HasEthicIcon]"
- usefulheirs.3110.leader_6.tooltip: "\n§Y[leader_6.GetName]'s§! - \nLength of Service: §Y[leader_6.GetYearsOfService]§! \nHomeworld: §Y[leader_6.GetBackgroundPlanet]§! \nFormer Occupation: §Y[leader_6.GetBackgroundJob]§! \nSkill Level: §Y[leader_6.GetSkill]§!"
+ usefulheirs.3110.leader_6.tooltip: "\n§Y[leader_6.GetName]'s§! §LBio§! - \n§LLength of Service§!: §Y[leader_6.GetYearsOfService]§! \n§LHomeworld§!: §Y[leader_6.GetBackgroundPlanet]§! in the §Y[leader_1.background_planet.solar_system.GetName]§! system \n§LFormer Occupation§!: §Y[leader_6.GetBackgroundJob]§! \n§LSkill Level§!: §Y[leader_6.GetSkill]§!"
  
  usefulheirs.3110.leader_7: "§Y[leader_7.GetName]§!: Age - [leader_7.GetAge] | [leader_7.HasEthicIcon]"
  usefulheirs.3110.leader_7.councilor: "§H[leader_7.GetTitle]§! §Y[leader_7.GetName]§!: Age - [leader_7.GetAge] | [leader_7.HasEthicIcon]"
- usefulheirs.3110.leader_7.tooltip: "\n§Y[leader_7.GetName]'s§! - \nLength of Service: §Y[leader_7.GetYearsOfService]§! \nHomeworld: §Y[leader_7.GetBackgroundPlanet]§! \nFormer Occupation: §Y[leader_7.GetBackgroundJob]§! \nSkill Level: §Y[leader_7.GetSkill]§!"
+ usefulheirs.3110.leader_7.tooltip: "\n§Y[leader_7.GetName]'s§! §LBio§! - \n§LLength of Service§!: §Y[leader_7.GetYearsOfService]§! \n§LHomeworld§!: §Y[leader_7.GetBackgroundPlanet]§! in the §Y[leader_1.background_planet.solar_system.GetName]§! system \n§LFormer Occupation§!: §Y[leader_7.GetBackgroundJob]§! \n§LSkill Level§!: §Y[leader_7.GetSkill]§!"
  
  usefulheirs.3110.leader_8: "§Y[leader_8.GetName]§!: Age - [leader_8.GetAge] | [leader_8.HasEthicIcon]"
  usefulheirs.3110.leader_8.councilor: "§H[leader_8.GetTitle]§! §Y[leader_8.GetName]§!: Age - [leader_8.GetAge] | [leader_8.HasEthicIcon]"
- usefulheirs.3110.leader_8.tooltip: "\n§Y[leader_8.GetName]'s§! - \nLength of Service: §Y[leader_8.GetYearsOfService]§! \nHomeworld: §Y[leader_8.GetBackgroundPlanet]§! \nFormer Occupation: §Y[leader_8.GetBackgroundJob]§! \nSkill Level: §Y[leader_8.GetSkill]§!"
+ usefulheirs.3110.leader_8.tooltip: "\n§Y[leader_8.GetName]'s§! §LBio§! - \n§LLength of Service§!: §Y[leader_8.GetYearsOfService]§! \n§LHomeworld§!: §Y[leader_8.GetBackgroundPlanet]§! in the §Y[leader_1.background_planet.solar_system.GetName]§! system \n§LFormer Occupation§!: §Y[leader_8.GetBackgroundJob]§! \n§LSkill Level§!: §Y[leader_8.GetSkill]§!"
  
  usefulheirs.3110.leader_9: "§Y[leader_9.GetName]§!: Age - [leader_9.GetAge] | [leader_9.HasEthicIcon]"
  usefulheirs.3110.leader_9.councilor: "§H[leader_9.GetTitle]§! §Y[leader_9.GetName]§!: Age - [leader_9.GetAge] | [leader_9.HasEthicIcon]"
- usefulheirs.3110.leader_9.tooltip: "\n§Y[leader_9.GetName]'s§! - \nLength of Service: §Y[leader_9.GetYearsOfService]§! \nHomeworld: §Y[leader_9.GetBackgroundPlanet]§! \nFormer Occupation: §Y[leader_9.GetBackgroundJob]§! \nSkill Level: §Y[leader_9.GetSkill]§!"
+ usefulheirs.3110.leader_9.tooltip: "\n§Y[leader_9.GetName]'s§! §LBio§! - \n§LLength of Service§!: §Y[leader_9.GetYearsOfService]§! \n§LHomeworld§!: §Y[leader_9.GetBackgroundPlanet]§! in the §Y[leader_1.background_planet.solar_system.GetName]§! system \n§LFormer Occupation§!: §Y[leader_9.GetBackgroundJob]§! \n§LSkill Level§!: §Y[leader_9.GetSkill]§!"
  
  usefulheirs.3110.leader_10: "§Y[leader_10.GetName]§!: Age - [leader_10.GetAge] | [leader_10.HasEthicIcon]"
  usefulheirs.3110.leader_10.councilor: "§H[leader_10.GetTitle]§! §Y[leader_10.GetName]§!: Age - [leader_10.GetAge] | [leader_10.HasEthicIcon]"
- usefulheirs.3110.leader_10.tooltip: "\n§Y[leader_10.GetName]'s§! - \nLength of Service: §Y[leader_10.GetYearsOfService]§! \nHomeworld: §Y[leader_10.GetBackgroundPlanet]§! \nFormer Occupation: §Y[leader_10.GetBackgroundJob]§! \nSkill Level: §Y[leader_10.GetSkill]§!"
+ usefulheirs.3110.leader_10.tooltip: "\n§Y[leader_10.GetName]'s§! §LBio§! - \n§LLength of Service§!: §Y[leader_10.GetYearsOfService]§! \n§LHomeworld§!: §Y[leader_10.GetBackgroundPlanet]§! in the §Y[leader_1.background_planet.solar_system.GetName]§! system \n§LFormer Occupation§!: §Y[leader_10.GetBackgroundJob]§! \n§LSkill Level§!: §Y[leader_10.GetSkill]§!"
 
  usefulheirs.3400.name: "§YDynastic Concerns§!"
  usefulheirs.3400.desc: "As we prepare for the coronation of §H[new_chosen_heir.GetName]§!, the decision must be made as to whether or not they will join the Imperial dynasty. If not, they shall keep their old name."
