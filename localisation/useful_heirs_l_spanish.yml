@@ -15,10 +15,14 @@ l_spanish:
  edict_useful_heirs_2: "Appoint Heir"
  edict_useful_heirs_2_desc: "The absence of an heir is a danger to the realm. I must appoint an heir."
 
+ decision_set_dynasty_name: "Begin New Dynasty"
+ decision_set_dynasty_name_desc: "We will forge ahead into the future under the care of a new dynasty."
+ decision_set_dynasty_name_tooltip: "This decision will change our dynasty name §Yto that of our capital§!. Should we choose to adopt an heir, we will have the ability to have that heir take this new dynasty name.\n\n Dynasty name will become: §H[root.GetName]§!"
+
  usefulheirs.2000.AI: "AI"
 
  usefulheirs.1000.name: "[root.GetHeirTitle] §H[heir_leader.GetName]§!"
- usefulheirs.1000.desc: "You summoned me, [root.GetRulerTitle]?"
+ usefulheirs.1000.desc: "You summoned me, my §Y[root.GetRulerTitle]§!?"
 
  usefulheirs.1000.a: "I need you to take on a different role."
  usefulheirs.1000.a.tooltip: "Will we will able to assign our heir to a leadership position within our empire."
@@ -29,7 +33,7 @@ l_spanish:
  usefulheirs.1000.c.tooltip: "We will retire and our heir shall take over."
  usefulheirs.1000.d: "Nevermind."
 
- usefulheirs.2000.cesc: "How may I best serve you and the [Root.GetName]?"
+ usefulheirs.2000.cesc: "How may I best serve you and the §Y[Root.GetName]§!?"
 
  usefulheirs.2000.a: "As an $official_with_icon$"
  usefulheirs.2000.b: "As a $commander_with_icon$"
@@ -55,16 +59,26 @@ l_spanish:
  usefulheirs.3110.desc: "Who is worthy of being heir to the empire?"
 
  usefulheirs.3110.back: "None are worthy."
- usefulheirs.3110.heir_maybe_1: "§Y[heir_maybe_1.GetName]§!"
- usefulheirs.3110.heir_maybe_2: "§Y[heir_maybe_2.GetName]§!"
- usefulheirs.3110.heir_maybe_3: "§Y[heir_maybe_3.GetName]§!"
- usefulheirs.3110.heir_maybe_4: "§Y[heir_maybe_4.GetName]§!"
- usefulheirs.3110.heir_maybe_5: "§Y[heir_maybe_5.GetName]§!"
- usefulheirs.3110.heir_maybe_6: "§Y[heir_maybe_6.GetName]§!"
- usefulheirs.3110.heir_maybe_7: "§Y[heir_maybe_7.GetName]§!"
- usefulheirs.3110.heir_maybe_8: "§Y[heir_maybe_8.GetName]§!"
- usefulheirs.3110.heir_maybe_9: "§Y[heir_maybe_9.GetName]§!"
- usefulheirs.3110.heir_maybe_10: "§Y[heir_maybe_10.GetName]§!"
+ usefulheirs.3110.leader_1: "§Y[leader_1.GetName]§!: Age - [leader_1.GetAge] | [leader_1.HasEthicIcon]"
+ usefulheirs.3110.leader_1.tooltip: "\n§Y[leader_1.GetName]'s§! - \nLength of Service: §Y[leader_1.GetYearsOfService]§! \nHomeworld: §Y[leader_1.GetBackgroundPlanet]§! \nFormer Occupation: §Y[leader_1.GetBackgroundJob]§! \nSkill Level: §Y[leader_1.GetSkill]§!"
+ usefulheirs.3110.leader_2: "§Y[leader_2.GetName]§!: Age - [leader_2.GetAge] | [leader_2.HasEthicIcon]"
+ usefulheirs.3110.leader_2.tooltip: "\n§Y[leader_2.GetName]'s§! - \nLength of Service: §Y[leader_2.GetYearsOfService]§! \nHomeworld: §Y[leader_2.GetBackgroundPlanet]§! \nFormer Occupation: §Y[leader_2.GetBackgroundJob]§! \nSkill Level: §Y[leader_2.GetSkill]§!"
+ usefulheirs.3110.leader_3: "§Y[leader_3.GetName]§!: Age - [leader_3.GetAge] | [leader_3.HasEthicIcon]"
+ usefulheirs.3110.leader_3.tooltip: "\n§Y[leader_3.GetName]'s§! - \nLength of Service: §Y[leader_3.GetYearsOfService]§! \nHomeworld: §Y[leader_3.GetBackgroundPlanet]§! \nFormer Occupation: §Y[leader_3.GetBackgroundJob]§! \nSkill Level: §Y[leader_3.GetSkill]§!"
+ usefulheirs.3110.leader_4: "§Y[leader_4.GetName]§!: Age - [leader_4.GetAge] | [leader_4.HasEthicIcon]"
+ usefulheirs.3110.leader_4.tooltip: "\n§Y[leader_4.GetName]'s§! - \nLength of Service: §Y[leader_4.GetYearsOfService]§! \nHomeworld: §Y[leader_4.GetBackgroundPlanet]§! \nFormer Occupation: §Y[leader_4.GetBackgroundJob]§! \nSkill Level: §Y[leader_4.GetSkill]§!"
+ usefulheirs.3110.leader_5: "§Y[leader_5.GetName]§!: Age - [leader_5.GetAge] | [leader_5.HasEthicIcon]"
+ usefulheirs.3110.leader_5.tooltip: "\n§Y[leader_5.GetName]'s§! - \nLength of Service: §Y[leader_5.GetYearsOfService]§! \nHomeworld: §Y[leader_5.GetBackgroundPlanet]§! \nFormer Occupation: §Y[leader_5.GetBackgroundJob]§! \nSkill Level: §Y[leader_5.GetSkill]§!"
+ usefulheirs.3110.leader_6: "§Y[leader_6.GetName]§!: Age - [leader_6.GetAge] | [leader_6.HasEthicIcon]"
+ usefulheirs.3110.leader_6.tooltip: "\n§Y[leader_6.GetName]'s§! - \nLength of Service: §Y[leader_6.GetYearsOfService]§! \nHomeworld: §Y[leader_6.GetBackgroundPlanet]§! \nFormer Occupation: §Y[leader_6.GetBackgroundJob]§! \nSkill Level: §Y[leader_6.GetSkill]§!"
+ usefulheirs.3110.leader_7: "§Y[leader_7.GetName]§!: Age - [leader_7.GetAge] | [leader_7.HasEthicIcon]"
+ usefulheirs.3110.leader_7.tooltip: "\n§Y[leader_7.GetName]'s§! - \nLength of Service: §Y[leader_7.GetYearsOfService]§! \nHomeworld: §Y[leader_7.GetBackgroundPlanet]§! \nFormer Occupation: §Y[leader_7.GetBackgroundJob]§! \nSkill Level: §Y[leader_7.GetSkill]§!"
+ usefulheirs.3110.leader_8: "§Y[leader_8.GetName]§!: Age - [leader_8.GetAge] | [leader_8.HasEthicIcon]"
+ usefulheirs.3110.leader_8.tooltip: "\n§Y[leader_8.GetName]'s§! - \nLength of Service: §Y[leader_8.GetYearsOfService]§! \nHomeworld: §Y[leader_8.GetBackgroundPlanet]§! \nFormer Occupation: §Y[leader_8.GetBackgroundJob]§! \nSkill Level: §Y[leader_8.GetSkill]§!"
+ usefulheirs.3110.leader_9: "§Y[leader_9.GetName]§!: Age - [leader_9.GetAge] | [leader_9.HasEthicIcon]"
+ usefulheirs.3110.leader_9.tooltip: "\n§Y[leader_9.GetName]'s§! - \nLength of Service: §Y[leader_9.GetYearsOfService]§! \nHomeworld: §Y[leader_9.GetBackgroundPlanet]§! \nFormer Occupation: §Y[leader_9.GetBackgroundJob]§! \nSkill Level: §Y[leader_9.GetSkill]§!"
+ usefulheirs.3110.leader_10: "§Y[leader_10.GetName]§!: Age - [leader_10.GetAge] | [leader_10.HasEthicIcon]"
+ usefulheirs.3110.leader_10.tooltip: "\n§Y[leader_10.GetName]'s§! - \nLength of Service: §Y[leader_10.GetYearsOfService]§! \nHomeworld: §Y[leader_10.GetBackgroundPlanet]§! \nFormer Occupation: §Y[leader_10.GetBackgroundJob]§! \nSkill Level: §Y[leader_10.GetSkill]§!"
 
  usefulheirs.3400.name: "§YDynastic Concerns§!"
  usefulheirs.3400.desc: "As we prepare for the coronation of §H[new_chosen_heir.GetName]§!, the decision must be made as to whether or not they will join the Imperial dynasty. If not, they shall keep their old name."
@@ -78,18 +92,23 @@ l_spanish:
  new_dynastic_name: "[root.GetName]"
 
  usefulheirs.3500.name: "§YNew Heir Apparent§!"
- usefulheirs.3500.desc: "A grand coronation ceremony was held today in the capital, and broadcast throughout our empire. §H[new_chosen_heir.GetName]§! has been proclaimed the new §Y[root.GetHeirTitle]§!, and is now §Yheir§! to the throne. As expected with a change of this magnitude, there are some in the empire that have been expressing their discontent. The former §Yheir§!, §H[disinherited_heir_first.GetName]§!, still has their supporters. However, this discontent is likely to die down given enough time."
+ usefulheirs.3500.desc: "A grand coronation ceremony was held today in the capital, and broadcast throughout our empire. §H[new_chosen_heir.GetName]§! has been proclaimed the new §Y[root.GetHeirTitle]§!, and is now §Yheir§! to the throne. As would be expected with a change of this magnitude, there are those throughout the realm that have been expressing their discontent. The former §Yheir§!, §H[disinherited_heir_fatherland.GetName]§!§H[disinherited_heir.GetName]§!, still has their supporters. Hopefully this discontent will die down in time." #This is a convenient little trick
  usefulheirs.3500.ad.desc: "In line with our customs and traditions, a grand coronation ceremony was held today in the capital, and broadcast throughout our empire. §H[new_chosen_heir.GetName]§! has been proclaimed the new §Y[root.GetHeirTitle]§!, and is now heir to the throne."
 
  uh_adoptive.1110.name: "§RDynastic Heir Ascends§!"
- uh_adoptive.1110.desc: "In a break with tradition, §H[deceased_ruler.GetName]§! passed away without desginating an heir. As the next in the dynastic line of succession, §H[root.ruler.GetName]§! has ascended to the throne. This has caused widespread unease, with the populace worried that the newly-crowned §Y[root.GetRulerTitle]§! §H[root.ruler.GetName]§! will not be up to the task."
+ uh_adoptive.1110.desc: "In a break with tradition, our previous ruler passed away without desginating an heir. As the next in the dynastic line of succession, §H[ruler.GetName]§! has ascended to the throne. This has caused widespread unease, with the populace worried that the newly-crowned §Y[root.GetRulerTitle]§! §H[root.ruler.GetName]§! will not be fit for the job."
 
  uh_adoptive.1110.a: "We will prove ourselves."
 
  uh_adoptive.2000.name: "§RDesignated Heir Dies§!"
- uh_adoptive.2000.desc: "In a great loss to the empire, [deceased_heir.GetTitle] §H[deceased_heir.GetName]§!, the §Yheir apparent§!, has passed away. A new §Yheir§! will need to be appointed."
+ uh_adoptive.2000.desc: "In a great loss to the empire, [deceased_heir.GetTitle] §H[deceased_heir.GetName]§!, the §YHeir Apparent§!, has passed away. A new §Yheir§! will need to be appointed."
 
  uh_adoptive.2000.a: "Tragic."
+
+ uh_adoptive.3015.name: "§RDynastic Succession Restored§!"
+ uh_adoptive.3015.desc: "In a grand speech before the nation today, §Y[root.GetRulerTitle]§! §H[ruler.GetName]§! announced decision to break with tradition and reinstate dynastic succession. This decision has not been well-received amongst our populace. They fear that, as in the past, the throne will eventually pass to someone unworthy of the responsibility."
+
+ uh_adoptive.3015.a: "Our line will prove themselves."
 
  heir_fired_name: "[event_target:clone_leader_name_1.GetName]"
  heir_name_bold: "§H[heir_leader.GetName]§!"
@@ -107,6 +126,9 @@ l_spanish:
  response_they_shall_accept: "They will accept it."
  response_excellent: "Excellent"
 
+ dis_heir_reg: "[event_target:disinherited_heir.GetName]"
+ dis_heir_fatherland: "[event_target:disinherited_heir_fatherland.GetName]"
+
  unity_fail_text: "§RRequires§! §Y[Root.monthly_unity_prod]§! £unity£ §YUnity§!"
 
  ### Civics
@@ -115,6 +137,8 @@ l_spanish:
  civic_adoptive_dynasties_desc_corporate: "Tradition in this company holds that the the CEO typically appoints their heir from amongst the most capable individuals on their board. This has resulted in a very profitable company. However, until an heir is appointed, the heir is still chosen by the shareholders."
  civic_tooltip_adoptive_dynasties_effects: "No £stability£ §YStability§! penalty or £influence£ §YInfluence§! cost to designate an heir."
  civic_tooltip_adoptive_dynasties_negative_effects: "A non-designated heir becoming ruler will lower £stability£ §YStability§! for §Y10 years§! by §R20§! on every planet except the capital, where stability will be lowered by §R25§!."
+
+ civic_tooltip_heir: "Must have an §YHeir§!"
 
  # Modifiers
  chose_new_heir: "New Heir"
@@ -135,3 +159,6 @@ l_spanish:
  councilor_adoptive_dynasties_desc: "In order to prepare for their eventual succession, the $TITLE$ receives extensive training on how to manage the realm."
  mod_councilor_adoptive_dynasties_exp_gain: "$councilor_adoptive_dynasties_official_with_icon$ $exp_gain$"
  councilor_adoptive_dynasties_official_with_icon: "£ruler£ $councilor_adoptive_dynasties$"
+
+ ### Override
+ uh_trait_imperial_heir_effects: "$t$§RBlocks selection of non-Council leader traits while on Council§!"

@@ -1,5 +1,5 @@
-name = usefulheirs.3110.heir_maybe_$NUM$
-trigger = { check_variable = { which = total_$CLASS$s value >= $NUM$ } }
+name = usefulheirs.3110.leader_$NUM$
+trigger = { check_variable = { which = total_class_leaders value >= $NUM$ } }
 if = {
 	limit = { has_adoptive_dynasties = no }
 	add_resource = {
@@ -7,8 +7,9 @@ if = {
 		mult = monthly_unity_prod
 	}
 }		
+custom_tooltip = usefulheirs.3110.leader_$NUM$.tooltip
 hidden_effect = {
-	event_target:heir_maybe_$NUM$ = { save_event_target_as = new_chosen_heir }
+	event_target:leader_$NUM$ = { save_event_target_as = new_chosen_heir }
 	get_heir_setup = yes
 }
 ai_chance = { factor = 1 }

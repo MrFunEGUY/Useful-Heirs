@@ -234,301 +234,104 @@ heir_setup_just_disinherit = {
 
 ##############
 
-# Get Officials
-get_officials_heir = {
-	set_variable = { which = total_officials value = 0 }
+get_leaders_in_class_heir = {
+	set_variable = { which = total_class_leaders value = 0 }
 
 	every_owned_leader = {
 		limit = {
 			is_heir = no
 			is_ruler = no
 			is_fake_leader = no
-			leader_class = official
+			leader_class = $CLASS$
 		}
 		set_leader_flag = heir_maybe
-		root = { change_variable = { which = total_officials value = 1 } }
+		prev = { change_variable = { which = total_class_leaders value = 1 } }
 	}
 
+	# Next, we save each subject as an Event Target
+	# As the scripting language doesn't have proper loops, we use a lot of ifs if there are more than 10, the event can be run again.
 	if = {
-		limit = { check_variable = { which = total_officials value >= 1 } }
+		limit = { check_variable = { which = total_class_leaders value >= 1 } }
 		random_owned_leader = {
-			limit = { has_leader_flag = heir_maybe }
-			remove_leader_flag = heir_maybe
-			save_event_target_as = heir_maybe_1
+			limit = { has_leader_flag = $CLASS$_leader }
+			remove_leader_flag = $CLASS$_leader
+			save_event_target_as = leader_1
 		}
 	}
 	if = {
-		limit = { check_variable = { which = total_officials value >= 2 } }
+		limit = { check_variable = { which = total_class_leaders value >= 2 } }
 		random_owned_leader = {
-			limit = { has_leader_flag = heir_maybe }
-			remove_leader_flag = heir_maybe
-			save_event_target_as = heir_maybe_2
+			limit = { has_leader_flag = $CLASS$_leader }
+			remove_leader_flag = $CLASS$_leader
+			save_event_target_as = leader_2
 		}
 	}
 	if = {
-		limit = { check_variable = { which = total_officials value >= 3 } }
+		limit = { check_variable = { which = total_class_leaders value >= 3 } }
 		random_owned_leader = {
-			limit = { has_leader_flag = heir_maybe }
-			remove_leader_flag = heir_maybe
-			save_event_target_as = heir_maybe_3
+			limit = { has_leader_flag = $CLASS$_leader }
+			remove_leader_flag = $CLASS$_leader
+			save_event_target_as = leader_3
 		}
 	}
 	if = {
-		limit = { check_variable = { which = total_officials value >= 4 } }
+		limit = { check_variable = { which = total_class_leaders value >= 4 } }
 		random_owned_leader = {
-			limit = { has_leader_flag = heir_maybe }
-			remove_leader_flag = heir_maybe
-			save_event_target_as = heir_maybe_4
+			limit = { has_leader_flag = $CLASS$_leader }
+			remove_leader_flag = $CLASS$_leader
+			save_event_target_as = leader_4
 		}
 	}
 	if = {
-		limit = { check_variable = { which = total_officials value >= 5 } }
+		limit = { check_variable = { which = total_class_leaders value >= 5 } }
 		random_owned_leader = {
-			limit = { has_leader_flag = heir_maybe }
-			remove_leader_flag = heir_maybe
-			save_event_target_as = heir_maybe_5
+			limit = { has_leader_flag = $CLASS$_leader }
+			remove_leader_flag = $CLASS$_leader
+			save_event_target_as = leader_5
 		}
 	}
 	if = {
-		limit = { check_variable = { which = total_officials value >= 6 } }
+		limit = { check_variable = { which = total_class_leaders value >= 6 } }
 		random_owned_leader = {
-			limit = { has_leader_flag = heir_maybe }
-			remove_leader_flag = heir_maybe
-			save_event_target_as = heir_maybe_6
+			limit = { has_leader_flag = $CLASS$_leader }
+			remove_leader_flag = $CLASS$_leader
+			save_event_target_as = leader_6
 		}
 	}
 	if = {
-		limit = { check_variable = { which = total_officials value >= 7 } }
+		limit = { check_variable = { which = total_class_leaders value >= 7 } }
 		random_owned_leader = {
-			limit = { has_leader_flag = heir_maybe }
-			remove_leader_flag = heir_maybe
-			save_event_target_as = heir_maybe_7
+			limit = { has_leader_flag = $CLASS$_leader }
+			remove_leader_flag = $CLASS$_leader
+			save_event_target_as = leader_7
 		}
 	}
 	if = {
-		limit = { check_variable = { which = total_officials value >= 8 } }
+		limit = { check_variable = { which = total_class_leaders value >= 8 } }
 		random_owned_leader = {
-			limit = { has_leader_flag = heir_maybe }
-			remove_leader_flag = heir_maybe
-			save_event_target_as = heir_maybe_8
+			limit = { has_leader_flag = $CLASS$_leader }
+			remove_leader_flag = $CLASS$_leader
+			save_event_target_as = leader_8
 		}
 	}
 	if = {
-		limit = { check_variable = { which = total_officials value >= 9 } }
+		limit = { check_variable = { which = total_class_leaders value >= 9 } }
 		random_owned_leader = {
-			limit = { has_leader_flag = heir_maybe }
-			remove_leader_flag = heir_maybe
-			save_event_target_as = heir_maybe_9
+			limit = { has_leader_flag = $CLASS$_leader }
+			remove_leader_flag = $CLASS$_leader
+			save_event_target_as = leader_9
 		}
 	}
 	if = {
-		limit = { check_variable = { which = total_officials value >= 10 } }
+		limit = { check_variable = { which = total_class_leaders value >= 10 } }
 		random_owned_leader = {
-			limit = { has_leader_flag = heir_maybe }
-			remove_leader_flag = heir_maybe
-			save_event_target_as = heir_maybe_10
+			limit = { has_leader_flag = $CLASS$_leader }
+			remove_leader_flag = $CLASS$_leader
+			save_event_target_as = leader_10
 		}
 	}
 
 	country_event = { id = usefulheirs.3110 }
-}
-
-# Get Commanders
-get_commanders_heir = {
-	set_variable = { which = total_commanders value = 0 }
-
-	every_owned_leader = {
-		limit = {
-			is_heir = no
-			is_ruler = no
-			is_fake_leader = no
-			leader_class = commander
-		}
-		set_leader_flag = heir_maybe
-		root = { change_variable = { which = total_commanders value = 1 } }
-	}
-
-	if = {
-		limit = { check_variable = { which = total_commanders value >= 1 } }
-		random_owned_leader = {
-			limit = { has_leader_flag = heir_maybe }
-			remove_leader_flag = heir_maybe
-			save_event_target_as = heir_maybe_1
-		}
-	}
-	if = {
-		limit = { check_variable = { which = total_commanders value >= 2 } }
-		random_owned_leader = {
-			limit = { has_leader_flag = heir_maybe }
-			remove_leader_flag = heir_maybe
-			save_event_target_as = heir_maybe_2
-		}
-	}
-	if = {
-		limit = { check_variable = { which = total_commanders value >= 3 } }
-		random_owned_leader = {
-			limit = { has_leader_flag = heir_maybe }
-			remove_leader_flag = heir_maybe
-			save_event_target_as = heir_maybe_3
-		}
-	}
-	if = {
-		limit = { check_variable = { which = total_commanders value >= 4 } }
-		random_owned_leader = {
-			limit = { has_leader_flag = heir_maybe }
-			remove_leader_flag = heir_maybe
-			save_event_target_as = heir_maybe_4
-		}
-	}
-	if = {
-		limit = { check_variable = { which = total_commanders value >= 5 } }
-		random_owned_leader = {
-			limit = { has_leader_flag = heir_maybe }
-			remove_leader_flag = heir_maybe
-			save_event_target_as = heir_maybe_5
-		}
-	}
-	if = {
-		limit = { check_variable = { which = total_commanders value >= 6 } }
-		random_owned_leader = {
-			limit = { has_leader_flag = heir_maybe }
-			remove_leader_flag = heir_maybe
-			save_event_target_as = heir_maybe_6
-		}
-	}
-	if = {
-		limit = { check_variable = { which = total_commanders value >= 7 } }
-		random_owned_leader = {
-			limit = { has_leader_flag = heir_maybe }
-			remove_leader_flag = heir_maybe
-			save_event_target_as = heir_maybe_7
-		}
-	}
-	if = {
-		limit = { check_variable = { which = total_commanders value >= 8 } }
-		random_owned_leader = {
-			limit = { has_leader_flag = heir_maybe }
-			remove_leader_flag = heir_maybe
-			save_event_target_as = heir_maybe_8
-		}
-	}
-	if = {
-		limit = { check_variable = { which = total_commanders value >= 9 } }
-		random_owned_leader = {
-			limit = { has_leader_flag = heir_maybe }
-			remove_leader_flag = heir_maybe
-			save_event_target_as = heir_maybe_9
-		}
-	}
-	if = {
-		limit = { check_variable = { which = total_commanders value >= 10 } }
-		random_owned_leader = {
-			limit = { has_leader_flag = heir_maybe }
-			remove_leader_flag = heir_maybe
-			save_event_target_as = heir_maybe_10
-		}
-	}
-
-	country_event = { id = usefulheirs.3120 }
-}
-
-# Get Scientists
-get_scientists_heir = {
-	set_variable = { which = total_scientists value = 0 }
-
-	every_owned_leader = {
-		limit = {
-			is_heir = no
-			is_ruler = no
-			is_fake_leader = no
-			leader_class = scientist
-		}
-		set_leader_flag = heir_maybe
-		root = { change_variable = { which = total_scientists value = 1 } }
-	}
-
-	if = {
-		limit = { check_variable = { which = total_scientists value >= 1 } }
-		random_owned_leader = {
-			limit = { has_leader_flag = heir_maybe }
-			remove_leader_flag = heir_maybe
-			save_event_target_as = heir_maybe_1
-		}
-	}
-	if = {
-		limit = { check_variable = { which = total_scientists value >= 2 } }
-		random_owned_leader = {
-			limit = { has_leader_flag = heir_maybe }
-			remove_leader_flag = heir_maybe
-			save_event_target_as = heir_maybe_2
-		}
-	}
-	if = {
-		limit = { check_variable = { which = total_scientists value >= 3 } }
-		random_owned_leader = {
-			limit = { has_leader_flag = heir_maybe }
-			remove_leader_flag = heir_maybe
-			save_event_target_as = heir_maybe_3
-		}
-	}
-	if = {
-		limit = { check_variable = { which = total_scientists value >= 4 } }
-		random_owned_leader = {
-			limit = { has_leader_flag = heir_maybe }
-			remove_leader_flag = heir_maybe
-			save_event_target_as = heir_maybe_4
-		}
-	}
-	if = {
-		limit = { check_variable = { which = total_scientists value >= 5 } }
-		random_owned_leader = {
-			limit = { has_leader_flag = heir_maybe }
-			remove_leader_flag = heir_maybe
-			save_event_target_as = heir_maybe_5
-		}
-	}
-	if = {
-		limit = { check_variable = { which = total_scientists value >= 6 } }
-		random_owned_leader = {
-			limit = { has_leader_flag = heir_maybe }
-			remove_leader_flag = heir_maybe
-			save_event_target_as = heir_maybe_6
-		}
-	}
-	if = {
-		limit = { check_variable = { which = total_scientists value >= 7 } }
-		random_owned_leader = {
-			limit = { has_leader_flag = heir_maybe }
-			remove_leader_flag = heir_maybe
-			save_event_target_as = heir_maybe_7
-		}
-	}
-	if = {
-		limit = { check_variable = { which = total_scientists value >= 8 } }
-		random_owned_leader = {
-			limit = { has_leader_flag = heir_maybe }
-			remove_leader_flag = heir_maybe
-			save_event_target_as = heir_maybe_8
-		}
-	}
-	if = {
-		limit = { check_variable = { which = total_scientists value >= 9 } }
-		random_owned_leader = {
-			limit = { has_leader_flag = heir_maybe }
-			remove_leader_flag = heir_maybe
-			save_event_target_as = heir_maybe_9
-		}
-	}
-	if = {
-		limit = { check_variable = { which = total_scientists value >= 10 } }
-		random_owned_leader = {
-			limit = { has_leader_flag = heir_maybe }
-			remove_leader_flag = heir_maybe
-			save_event_target_as = heir_maybe_10
-		}
-	}
-
-	country_event = { id = usefulheirs.3130 }
 }
 
 ########################
