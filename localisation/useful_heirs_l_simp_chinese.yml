@@ -47,24 +47,43 @@ l_simp_chinese:
  usefulheirs.3110.back: "没有人值得。"
 
  usefulheirs.3110.leader_1: "§Y[leader_1.GetName]§!: 年龄 - [leader_1.GetAge] | [leader_1.HasEthicIcon]"
+ usefulheirs.3110.leader_1.councilor: "§H[leader_1.GetTitle]§! §Y[leader_1.GetName]§!: 年龄 - [leader_1.GetAge] | [leader_1.HasEthicIcon]"
  usefulheirs.3110.leader_1.tooltip: "\n§Y[leader_1.GetName]'s§! - \n服务年限: §Y[leader_1.GetYearsOfService]§! \n行星: §Y[leader_1.GetBackgroundPlanet]§! \n前职业: §Y[leader_1.GetBackgroundJob]§! \n技能水平: §Y[leader_1.GetSkill]§!"
+ 
  usefulheirs.3110.leader_2: "§Y[leader_2.GetName]§!: 年龄 - [leader_2.GetAge] | [leader_2.HasEthicIcon]"
+ usefulheirs.3110.leader_2.councilor: "§H[leader_2.GetTitle]§! §Y[leader_2.GetName]§!: 年龄 - [leader_2.GetAge] | [leader_2.HasEthicIcon]"
  usefulheirs.3110.leader_2.tooltip: "\n§Y[leader_2.GetName]'s§! - \n服务年限: §Y[leader_2.GetYearsOfService]§! \n行星: §Y[leader_2.GetBackgroundPlanet]§! \n前职业: §Y[leader_2.GetBackgroundJob]§! \n技能水平: §Y[leader_2.GetSkill]§!"
+ 
  usefulheirs.3110.leader_3: "§Y[leader_3.GetName]§!: 年龄 - [leader_3.GetAge] | [leader_3.HasEthicIcon]"
+ usefulheirs.3110.leader_3.councilor: "§H[leader_3.GetTitle]§! §Y[leader_3.GetName]§!: 年龄 - [leader_3.GetAge] | [leader_3.HasEthicIcon]"
  usefulheirs.3110.leader_3.tooltip: "\n§Y[leader_3.GetName]'s§! - \n服务年限: §Y[leader_3.GetYearsOfService]§! \n行星: §Y[leader_3.GetBackgroundPlanet]§! \n前职业: §Y[leader_3.GetBackgroundJob]§! \n技能水平: §Y[leader_3.GetSkill]§!"
+ 
  usefulheirs.3110.leader_4: "§Y[leader_4.GetName]§!: 年龄 - [leader_4.GetAge] | [leader_4.HasEthicIcon]"
+ usefulheirs.3110.leader_4.councilor: "§H[leader_4.GetTitle]§! §Y[leader_4.GetName]§!: 年龄 - [leader_4.GetAge] | [leader_4.HasEthicIcon]"
  usefulheirs.3110.leader_4.tooltip: "\n§Y[leader_4.GetName]'s§! - \n服务年限: §Y[leader_4.GetYearsOfService]§! \n行星: §Y[leader_4.GetBackgroundPlanet]§! \n前职业: §Y[leader_4.GetBackgroundJob]§! \n技能水平: §Y[leader_4.GetSkill]§!"
+ 
  usefulheirs.3110.leader_5: "§Y[leader_5.GetName]§!: 年龄 - [leader_5.GetAge] | [leader_5.HasEthicIcon]"
+ usefulheirs.3110.leader_5.councilor: "§H[leader_5.GetTitle]§! §Y[leader_5.GetName]§!: 年龄 - [leader_5.GetAge] | [leader_5.HasEthicIcon]"
  usefulheirs.3110.leader_5.tooltip: "\n§Y[leader_5.GetName]'s§! - \n服务年限: §Y[leader_5.GetYearsOfService]§! \n行星: §Y[leader_5.GetBackgroundPlanet]§! \n前职业: §Y[leader_5.GetBackgroundJob]§! \n技能水平: §Y[leader_5.GetSkill]§!"
+ 
  usefulheirs.3110.leader_6: "§Y[leader_6.GetName]§!: 年龄 - [leader_6.GetAge] | [leader_6.HasEthicIcon]"
+ usefulheirs.3110.leader_6.councilor: "§H[leader_6.GetTitle]§! §Y[leader_6.GetName]§!: 年龄 - [leader_6.GetAge] | [leader_6.HasEthicIcon]"
  usefulheirs.3110.leader_6.tooltip: "\n§Y[leader_6.GetName]'s§! - \n服务年限: §Y[leader_6.GetYearsOfService]§! \n行星: §Y[leader_6.GetBackgroundPlanet]§! \n前职业: §Y[leader_6.GetBackgroundJob]§! \n技能水平: §Y[leader_6.GetSkill]§!"
+ 
  usefulheirs.3110.leader_7: "§Y[leader_7.GetName]§!: 年龄 - [leader_7.GetAge] | [leader_7.HasEthicIcon]"
+ usefulheirs.3110.leader_7.councilor: "§H[leader_7.GetTitle]§! §Y[leader_7.GetName]§!: 年龄 - [leader_7.GetAge] | [leader_7.HasEthicIcon]"
  usefulheirs.3110.leader_7.tooltip: "\n§Y[leader_7.GetName]'s§! - \n服务年限: §Y[leader_7.GetYearsOfService]§! \n行星: §Y[leader_7.GetBackgroundPlanet]§! \n前职业: §Y[leader_7.GetBackgroundJob]§! \n技能水平: §Y[leader_7.GetSkill]§!"
+ 
  usefulheirs.3110.leader_8: "§Y[leader_8.GetName]§!: 年龄 - [leader_8.GetAge] | [leader_8.HasEthicIcon]"
+ usefulheirs.3110.leader_8.councilor: "§H[leader_8.GetTitle]§! §Y[leader_8.GetName]§!: 年龄 - [leader_8.GetAge] | [leader_8.HasEthicIcon]"
  usefulheirs.3110.leader_8.tooltip: "\n§Y[leader_8.GetName]'s§! - \n服务年限: §Y[leader_8.GetYearsOfService]§! \n行星: §Y[leader_8.GetBackgroundPlanet]§! \n前职业: §Y[leader_8.GetBackgroundJob]§! \n技能水平: §Y[leader_8.GetSkill]§!"
+ 
  usefulheirs.3110.leader_9: "§Y[leader_9.GetName]§!: 年龄 - [leader_9.GetAge] | [leader_9.HasEthicIcon]"
+ usefulheirs.3110.leader_9.councilor: "§H[leader_9.GetTitle]§! §Y[leader_9.GetName]§!: 年龄 - [leader_9.GetAge] | [leader_9.HasEthicIcon]"
  usefulheirs.3110.leader_9.tooltip: "\n§Y[leader_9.GetName]'s§! - \n服务年限: §Y[leader_9.GetYearsOfService]§! \n行星: §Y[leader_9.GetBackgroundPlanet]§! \n前职业: §Y[leader_9.GetBackgroundJob]§! \n技能水平: §Y[leader_9.GetSkill]§!"
+ 
  usefulheirs.3110.leader_10: "§Y[leader_10.GetName]§!: 年龄 - [leader_10.GetAge] | [leader_10.HasEthicIcon]"
+ usefulheirs.3110.leader_10.councilor: "§H[leader_10.GetTitle]§! §Y[leader_10.GetName]§!: 年龄 - [leader_10.GetAge] | [leader_10.HasEthicIcon]"
  usefulheirs.3110.leader_10.tooltip: "\n§Y[leader_10.GetName]'s§! - \n服务年限: §Y[leader_10.GetYearsOfService]§! \n行星: §Y[leader_10.GetBackgroundPlanet]§! \n前职业: §Y[leader_10.GetBackgroundJob]§! \n技能水平: §Y[leader_10.GetSkill]§!"
 
  usefulheirs.3400.name: "§Y王朝关注§!"

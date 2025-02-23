@@ -1,4 +1,11 @@
-name = usefulheirs.3110.leader_$NUM$
+name = {
+	text = usefulheirs.3110.leader_$NUM$
+	trigger = { event_target:leader_$NUM$ = { is_councilor = no } }
+}
+name = {
+	text = usefulheirs.3110.leader_$NUM$.councilor
+	trigger = { event_target:leader_$NUM$ = { is_councilor = yes } }
+}
 trigger = { check_variable = { which = total_class_leaders value >= $NUM$ } }
 if = {
 	limit = { has_adoptive_dynasties = no }
