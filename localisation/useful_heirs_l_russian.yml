@@ -33,7 +33,7 @@ l_russian:
  usefulheirs.1000.c.tooltip: "Мы уйдем в отставку, и наследник станет правителем."
  usefulheirs.1000.d: "Впрочем, забудь."
 
- usefulheirs.2000.cesc: "Как я могу послужить вам и §Y[Root.GetName]§!?"
+ usefulheirs.2000.desc: "Как я могу послужить вам и §Y[Root.GetName]§!?"
 
  usefulheirs.2000.a: "В качестве губернатора одного из секторов."
  usefulheirs.2000.b: "Как адмирал флота."

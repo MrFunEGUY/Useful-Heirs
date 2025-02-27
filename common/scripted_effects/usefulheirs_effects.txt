@@ -229,7 +229,9 @@ heir_setup_just_disinherit = {
 			}
 		}
 	}
-	heir = { kill_leader = { show_notification = no } }
+	else = {
+		heir = { kill_leader = { show_notification = no } }
+	}
 }
 
 ##############
