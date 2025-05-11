@@ -62,7 +62,7 @@ country_event = {
 		hidden_effect = {
 			every_owned_planet = {
 				limit = {
-					num_pops > 0
+					pop_amount > 0
 					is_capital = no
 				}
 				add_modifier = {
@@ -164,7 +164,7 @@ country_event = {
 		hidden_effect = {
 			every_owned_planet = {
 				limit = {
-					num_pops > 0
+					pop_amount > 0
 					is_capital = no
 				}
 				add_modifier = { modifier = dynastic_heir years = 10 }
