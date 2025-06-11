@@ -39,7 +39,7 @@ trait_imperial_heir = {
 			}
 		}
 		job_priest_add = 1
-		mult = trigger:has_skill
+		mult = trigger:has_base_skill
 	}
 
 	triggered_background_planet_modifier = {
@@ -54,7 +54,7 @@ trait_imperial_heir = {
 			}
 		}
 		job_haruspex_add = 1
-		mult = trigger:has_skill
+		mult = trigger:has_base_skill
 	}
 
 	on_gained_effect = {
