@@ -110,6 +110,7 @@ get_heir_setup = {
 		}
 		set_heir = event_target:new_chosen_heir
 		event_target:new_chosen_heir = { set_leader_flag = appointed_heir }
+		country_event = { id = usefulheirs.3500 }
 		# country_event = { id = usefulheirs.3400 }
 	}
 
@@ -253,8 +254,6 @@ get_leaders_in_class_heir = {
 		prev = { change_variable = { which = total_class_leaders value = 1 } }
 	}
 
-	# Next, we save each subject as an Event Target
-	# As the scripting language doesn't have proper loops, we use a lot of ifs if there are more than 10, the event can be run again.
 	## If we do ordered_owned_leader and there are more than 10, some will be inaccessible.
 	if = {
 		inline_script = { script = effects/get_leaders_effect NUM = 1 }

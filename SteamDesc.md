@@ -25,7 +25,7 @@ With Useful Heirs, you can:
 
 - You can designate any leader as your heir for 2 years worth of Unity. This will also cause your planets to lose some stability for 10 years. -10 Stability for the capital, -2 Stability for every other planet.
 
-- There is a new civic, Adoptive Dynasties, that grants +10 Stability and allows you to designate heirs without the stability hit or Unity cost. If a dynastic heir ascends to the throne while you have this civic, you will lose the bonus stability. The capital will lose 15 stability and every other world will lose 10 stability. Practically, this means that you go from +10 to -10 on non-capital worlds, for a 20 stability hit.
+- There is a new civic, Adoptive Dynasties, that grants +5 base Stability + 0.5 Stability per Councilor level for +10 Stability at level 10. It also allows you to designate heirs without the Stability hit or Unity cost. If a dynastic heir ascends to the throne while you have this civic, you will lose the bonus stability. The capital will lose 15 stability and every other world will lose 10 stability. Practically, this means that you can go from +10 to -10 on non-capital worlds, for a 20 stability hit.
 
 [h1]Other Features:[/h1]
 
