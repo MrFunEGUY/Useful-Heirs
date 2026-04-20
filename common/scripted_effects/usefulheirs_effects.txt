@@ -253,6 +253,8 @@ get_leaders_in_class_heir = {
 		set_leader_flag = heir_maybe
 		prev = { change_variable = { which = total_class_leaders value = 1 } }
 	}
+	
+	ruler = { export_trigger_value_to_variable = { trigger = leader_age variable = ruler_age_var } }
 
 	## If we do ordered_owned_leader and there are more than 10, some will be inaccessible.
 	if = {
@@ -291,6 +293,7 @@ get_leaders_in_class_heir = {
 
 ########################
 
+add_adoptive_dynasties = { force_add_civic = civic_adoptive_dynasties }
 remove_adoptive_dynasties = { force_remove_civic = civic_adoptive_dynasties }
 
 ########################

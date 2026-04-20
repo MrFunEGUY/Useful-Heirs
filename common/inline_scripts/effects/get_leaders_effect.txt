@@ -5,4 +5,5 @@ random_owned_leader = {
 	# order_by = trigger:leader_age
 	remove_leader_flag = heir_maybe
 	save_event_target_as = leader_$NUM$
+	export_trigger_value_to_variable = { trigger = leader_age variable = age_var }
 }
